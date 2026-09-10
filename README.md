@@ -9,10 +9,10 @@
 Taggerist allows you to **individually tag image files** by embedding metadata *directly into filenames*. No database required—just your files and a simple, portable script.
 
 **Key Features**:
-- Add/remove tags via a **GUI or CLI**.
 - Search and filter images using **system search tools** (no database overhead).
 - Fully **portable**: Script works on any system with Python.
-- Ideal for **photographers, archivists, or fetish artists** managing niche collections.
+- Use system tools to manually edit tagnames in files. Edit/Add/remove tags via a **GUI or CLI**.
+- Ideal for **photographers, archivists, or fetish artists** managing large image collections.
 
 ---
 
