@@ -18,6 +18,8 @@ Taggerist allows you to **individually tag image files** by embedding metadata *
 - Use system tools to manually edit individual tagnames in files, if needed. Edit/Add/remove tags via a **GUI or CLI**.
 - Accommodates hundreds of tagnames in simple .CSV file.
 - Ideal for **photographers, archivists, or fetish artists** managing large image collections.
+- GUI includes 3 windows: (1) Files (select file to process), (2) View (visually preview the image) (3) Taglist (select tags to add)
+- Automatically converts obsolete tagnames to new ones. (e.g. Canine,Rover,mutt ---> Dog)
 
 ---
 
