@@ -29,6 +29,10 @@ Taggerist allows you to **individually tag image files** by embedding metadata *
 - PySide6 (for GUI)
 - Pillow (for image handling)
 
+**Install dependencies**:
+```bash
+pip install PySide6 Pillow
+
 ### Installation
 1. Clone the repo:
    ```bash
