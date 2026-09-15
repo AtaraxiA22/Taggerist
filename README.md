@@ -12,12 +12,12 @@ Taggerist allows you to **individually tag image files** by embedding metadata *
 
 **Key Features**:
 - Rapidly add/edit human-readable/meaningful tagnames in image filenames. Oriented to production.
-- Search and filter images using **your system search tools** (no database overhead).
+- **Use your system search tools** to search and filter images using (no database overhead).
 - Fully **portable** (NO database!):
 - GUI Script works on any system with Python.
 - Use system tools to manually edit individual tagnames in files, if needed. Edit/Add/remove tags via a **GUI or CLI**.
 - Accommodates hundreds of tagnames in simple .CSV file.
-- Ideal for **photographers, archivists, or fetish artists** managing large image collections.
+- Ideal for **photographers, archivists, or fetish artists** managing large, complex image collections.
 - GUI includes 3 windows: (1) Files (select file to process), (2) View (visually preview the image) (3) Taglist (select tags to add)
 - Automatically converts obsolete tagnames to new ones. (e.g. Canine,Rover,mutt ---> Dog)
 
