@@ -1,0 +1,34 @@
+V34.03 user feedback:
+
+Keep an eye on the Debugging Library. I am trying to actively upload buglogs, Userfeedbacklogs, main scripts, etc.
+
+First glance: 
+Placement of left-hand buttons is good. 
+Button label names are good.
+Righthand buttons; [Skip] and [?] are both in row#1. [?] should be in row#3 
+
+Pathname line is to the right of TaglistSelector which is good. HOWEVER, a second pathname line appears as (entire) 4th line from top. This should be removed.
+
+Taglist selector buttons work well. 
+
+[Clear] removed all text in filename except DateTypeID and date properly.
+
+Loaded a file which did not have a 'proper' date. Pressing the [@] properly suffixed a properly formatted date to the end of the filename.  That's Good.
+
+Loaded afile with no date and no tags.(IMG-2554.jpg) Changed to [Other] taglist which has 8-9 tags which displayed properly. 
+
+Added a few tags to filename (OK), added a date to filename. Now I have: '|James|JCC|Helix|
+IMG_2255(all)26.0920-1550.2249.JPG'. 
+
+Pressing [Reduce] yielded: '|James|JCC|Helix|(all)26.0920-1550.2249.JPG' which is OK. 
+
+Clicked on [Helix] tagname in the taglist (for the 2nd time). Voila! 'Helix' was removed from the tagname. OK! (I'm impressed!) 
+
+Clicked on [Clear]. It produced: '(all)26.0920-1550.2249.JPG'  That's OK.
+
+New file: 'IMG_2266.JPG'. Added 2 tags. Presed [Process]. The script bombed. here is error:
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ python3 Taggerist_v34.03.py
+free(): invalid pointer
+Aborted (core dumped)
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ 
+
