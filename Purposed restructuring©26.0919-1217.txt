@@ -1,0 +1,80 @@
+Purposed restructuring:
+
+Three sets of buttons in box to left of pathname and FilenameEditBox in TL
+
+=======================================
+First row
+
+(1) Three Taglist selection radio buttons  (configuable)
+
+EXAMPLES: [abcd], [lmno], and [wxyz]   (exclude [brackets])
+
+These buttons alternately display up to three different taglists :   (Button label is specified in [brackets] in filenames. Max = 4 characters each )
+
+/home/jack/Pictures/TAGGERIST/Taggerist.taglist.[abcd].csv,white,red
+/home/jack/Pictures/TAGGERIST/Taggerist.taglist.[lmno].csv,white,yellow
+/home/jack/Pictures/TAGGERIST/Taggerist.taglist.[wxyz].csv,white,green
+
+Button colors specified after path/filenames as (a)font color and (b) backround color respectively.
+
+These path/filenames/parameters are configurable
+
+Button characters are derived  ONLY from the *first three* Taggerist[___]taglist.csv lists in the directory.  Other lists are ignored.  Lengths over six characters for any button are truncated.
+
+The first list is default at startup
+
+===========
+2nd row
+
+(2) Three  Collection Identifier (CI) radio bottons  (configurable)
+
+EXAMPLES: [x], [y] and [z]
+
+These are prefixed to date/timestamp:
+(a.)  If date/timestamp EXISTS (see Date/timestamp Recognition Guidance below), this CI replaces the single character which precedes it. (excludes |pipe or backtick.) The existing date/timestamp, itself, is not altered.
+(b.)  If date/time stamp does NOT EXIST (see Guidance below), THEN the current system date/timestamp is appended  to filename in format: 'new CI'yyyy.mmdd.HHMM.SSnn (nn = nanoseconds.
+
+In either case, IF EXIST '_wm', THEN it is moved to end of date/timestamp. '_wm' is never deleted.
+
+CI's are limited to one character.  These are defined in config lines as
+
+CollectionID#1: x
+CollectionID#2: y
+CollectionID#3: z
+
+Where:
+x, y, z  =  a single character (excludes characters not universally acceptable in filenames)
+
+===========
+3rd row
+
+[Clr] and [Rdc] buttons:
+
+[Clr] clears all text in the filename which is NOT a datestamp OR the single character (i.e. a CI) which prefixes it.
+Exception: If EXIST, '_wm' is NEVER removed and is moved to end of filename.
+
+[Rdc] button 'reduces' filename by deleting all text in the filename EXCEPT the CI, date/timestamp AND any text delimited by 'x','Y', or 'z'.
+Config line:
+Delimiter:x,y,z
+
+Where x,y,z are characters which 'enclose' (delimit) text. Limit three characters.
+
+E.g. if Delimiter is |, then any text delimited by |'s would be retained.
+
+===
+The heights of the TWO ROWS containing the  Pathname and FilenameEditBox (and their fonts) are propotionately expanded  to match the total height of the THREE rows containg the above buttons. [SKIP] and [PROCEED] buttons are also expanded propotionately.
+
+
+============
+===========
+Date/timestamp Recognition Guidance
+
+Existing format may be:
+yy.mmdd-HHMM.?????
+yyyy.mmdd-HHMM.?????
+????.mmdd-HHMM.?????
+
+? = wildcard numeral
+
+The '.mmdd-HHMM.' segment is stable throughout all of the datestamps. This is probably the most reliable and universal indicator of a datestamp: 'dot-4 numbers-hyphen-4 numbers-dot'
+

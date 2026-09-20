@@ -1,0 +1,8 @@
+Date formats may include: ($ = @/© symbol, ? = wildcard which are always numerals or nulls, never alpha's)
+
+$yy.mmdd-HHMM.?????
+$yyyy.mmdd-HHMM.?????
+????.mmdd-HHMM.?????
+
+The '.mmdd-HHMM.' format is stable throughout all of the datestamps. This is probably the most reliable and universal indicator of a datestamp: 'dot-4 numbers-hyphen-4 numbers-dot' 
+

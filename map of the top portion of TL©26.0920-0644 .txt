@@ -1,0 +1,23 @@
+
+
+Here is a map of the top portion of TL 
+(spaces are not in proportion)
+
+| [abcd][mnlo][wxyz] |   Pathname      | [SKIP]    |
+| [x]  [y]  [z]      | FilenameEditBox | [PROCESS] |
+| [Clear]  [Reduce]  |                 |           |
+------------------------
+(main taglist)
+
+
+Buttons:
+1st line is taglist choice
+2nd line is date identifier
+3rd line clears all or some )non-date/timestamp) text
+
+[SKIP] and [PROCESS[ buttons are flush-right.
+
+Pathname and FilenameEditBox lines fill all space between both sets of buttons.
+
+This table has 3 rows and 3 columns
+
