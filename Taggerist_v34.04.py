@@ -1,4 +1,4 @@
-# Taggerist v34.03
+# Taggerist v34.04
 
 # Personal Configurations (fallback defaults; overridden by Taggerist.config.txt)
 TAGLIST_1 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv,white,red'
@@ -13,10 +13,9 @@ DELIMITERS = ['|', '`']
 
 HELP_FILE_PATH = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md'
 # P.D. Reviewed @26.0909-0700.00
-# Taggerist v34.03: rebuild TL top section as clean 3x3 grid; config-derived button labels; fix taglist column fill, row gaps and QDialog/help paths
+# Taggerist v34.04: remove PyQt5/PySide6 double-binding (Process crash); [?] moved to row 3; duplicate pathname bar removed; config file no longer overwritten on exit
 # (c) @26.0830-2150.00 by AtaraxiA under Creative Commons CC BY-SA license
 
-from PyQt5.QtCore import QTimer
 import re
 import re
 
@@ -241,11 +240,6 @@ class TaggeristMainWindow(QMainWindow):
             self.config.add_section('DIRECTORIES')
         self.config.set('DIRECTORIES', 'PROC_DIR', self.tf.proc_dir)
         self.config.set('DIRECTORIES', 'UNPROC_DIR', self.tf.unproc_dir)
-        try:
-            with open(self.config_path, 'w') as f:
-                self.config.write(f)
-        except Exception as e:
-            print(f"Error saving config: {e}")
 
     def closeEvent(self, event):
         self.save_settings()
@@ -253,9 +247,9 @@ class TaggeristMainWindow(QMainWindow):
 
     def update_window_title(self):
         if self.current_file:
-            self.setWindowTitle(f"Taggerist v34.03 - {os.path.basename(self.current_file)}")
+            self.setWindowTitle(f"Taggerist v34.04 - {os.path.basename(self.current_file)}")
         else:
-            self.setWindowTitle("Taggerist v34.03")
+            self.setWindowTitle("Taggerist v34.04")
 
 # ========== TV (Taggerist-Viewer) ==========
 class TaggeristViewer(QFrame):
@@ -458,7 +452,7 @@ class TaggeristList(QFrame):
 
     def setup_ui(self):
         layout = QVBoxLayout(self)
-        with open('Taggerist_v34.03-buglog.txt', 'a') as debug_file:
+        with open('Taggerist_v34.04-buglog.txt', 'a') as debug_file:
             debug_file.write(f"Main layout identified as: {type(layout).__name__}\n")
         top_grid = QGridLayout()
         top_grid.setSpacing(6)
@@ -478,15 +472,7 @@ class TaggeristList(QFrame):
         self.pathname_edit.setReadOnly(True)
         top_grid.addWidget(self.pathname_edit, 0, 1)
         self.skip_btn = QPushButton("[SKIP]")
-        self.help_btn = QPushButton("[?]")
-        self.help_btn.clicked.connect(self.open_readme)
-        skip_help_widget = QWidget()
-        skip_help_layout = QHBoxLayout(skip_help_widget)
-        skip_help_layout.setContentsMargins(0, 0, 0, 0)
-        skip_help_layout.setSpacing(4)
-        skip_help_layout.addWidget(self.skip_btn)
-        skip_help_layout.addWidget(self.help_btn)
-        top_grid.addWidget(skip_help_widget, 0, 2)
+        top_grid.addWidget(self.skip_btn, 0, 2)
         # Row 2: date-identifier (CI) buttons | FilenameEditBox | [PROCESS]
         ci_buttons_widget = QWidget()
         ci_buttons_layout = QHBoxLayout(ci_buttons_widget)
@@ -507,15 +493,18 @@ class TaggeristList(QFrame):
         top_grid.addWidget(self.filename_edit, 1, 1)
         self.process_btn = QPushButton("[PROCESS]")
         top_grid.addWidget(self.process_btn, 1, 2)
-        # Row 3: [Clear]/[Reduce] | empty | empty
+        # Row 3: [Clear]/[Reduce]/[?] | empty | empty
         clear_reduce_widget = QWidget()
         clear_reduce_layout = QHBoxLayout(clear_reduce_widget)
         clear_reduce_layout.setContentsMargins(0, 0, 0, 0)
         clear_reduce_layout.setSpacing(4)
         self.clear_btn = QPushButton("[Clear]")
         self.reduce_btn = QPushButton("[Reduce]")
+        self.help_btn = QPushButton("[?]")
+        self.help_btn.clicked.connect(self.open_readme)
         clear_reduce_layout.addWidget(self.clear_btn)
         clear_reduce_layout.addWidget(self.reduce_btn)
+        clear_reduce_layout.addWidget(self.help_btn)
         top_grid.addWidget(clear_reduce_widget, 2, 0)
         top_grid.setColumnStretch(0, 0)
         top_grid.setColumnStretch(1, 1)
@@ -538,7 +527,6 @@ class TaggeristList(QFrame):
         self.wxyz_btn.clicked.connect(lambda: self.select_taglist(3))
         layout.setSpacing(10)
         layout.setContentsMargins(10, 10, 10, 10)
-        # Yellow bar: original filename
         self.original_filename_label = QLabel()
         self.original_filename_label.setStyleSheet("background-color: #FFFFCC; color: #000; border: 1px solid #FFFFCC;")
         self.original_filename_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
@@ -547,7 +535,7 @@ class TaggeristList(QFrame):
         self.original_filename_label.setFont(QFont("Ubuntu", 12))
         self.original_filename_label.setWordWrap(True)
         self.original_filename_label.setTextFormat(Qt.PlainText)
-        layout.addWidget(self.original_filename_label, stretch=0)
+        self.original_filename_label.hide()
         self.setup_taglist_window(layout)
         bottom_layout = QHBoxLayout()
         self.length_label = QLabel("0/255")
@@ -1179,7 +1167,7 @@ class TaggeristFiles(QFrame):
     def handle_single_click(self, item):
         try:
             # Debugging: Log the start of the single-click handler
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("handle_single_click called at " + str(datetime.now()) + "\n")
 
             # Get the table and row that was clicked
@@ -1187,19 +1175,19 @@ class TaggeristFiles(QFrame):
             row = item.row()
 
             # Debugging: Log the table object ID
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("  -> Clicked table ID: " + str(id(table)) + "\n")
 
             # Get the filename from the clicked row
             filename_item = table.item(row, 0)
             if not filename_item:
-                with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+                with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                     f.write("  -> No filename_item at row " + str(row) + "\n")
                 return
             filename = filename_item.text()
 
             # Debugging: Log the filename
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("  -> Filename: " + str(filename) + "\n")
 
             # Determine the directory (PROC or UNPROC)
@@ -1211,11 +1199,11 @@ class TaggeristFiles(QFrame):
             filepath = os.path.join(directory, filename)
 
             # Debugging: Log the filepath
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("  -> Filepath: " + str(filepath) + "\n")
 
             # Clear highlights in BOTH tables (PROC and UNPROC) regardless of which was clicked
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("  -> Clearing highlights in proc_table (ID: " + str(id(self.proc_table)) + ") and unproc_table (ID: " + str(id(self.unproc_table)) + ")\n")
             self.clear_highlights(self.proc_table)
             self.clear_highlights(self.unproc_table)
@@ -1243,7 +1231,7 @@ class TaggeristFiles(QFrame):
             processed_filename = self.process_filename(filename)
 
             # Debugging: Log the processed filename
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("  -> Processed Filename: " + str(processed_filename) + "\n")
 
             # Load the processed filename into FilenameEditBox
@@ -1258,17 +1246,17 @@ class TaggeristFiles(QFrame):
             self.parent.tv.load_file(filepath)
 
             # Debugging: Log successful completion
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("  -> Successfully loaded file into TV\n\n")
 
         except Exception as e:
             # Debugging: Log any errors
-            with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                 f.write("  -> ERROR: " + str(e) + "\n\n")
 
     def clear_highlights(self, table):
         # Debugging: Log the table being cleared and its object ID
-        with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+        with open('Taggerist_v34.04-buglog.txt', 'a') as f:
             f.write("  -> Clearing highlights in table: " + str(table) + " (ID: " + str(id(table)) + ")\n")
         
         # Clear current cell selection
@@ -1280,7 +1268,7 @@ class TaggeristFiles(QFrame):
                 if item:
                     item.setBackground(QColor("#000"))
                     # Debugging: Log the row and column being cleared
-                    with open('Taggerist_v34.03-buglog.txt', 'a') as f:
+                    with open('Taggerist_v34.04-buglog.txt', 'a') as f:
                         f.write("    -> Cleared row " + str(row) + ", col " + str(col) + "\n")
 
     def process_filename(self, filename):
