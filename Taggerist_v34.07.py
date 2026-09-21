@@ -1,25 +1,23 @@
-# Taggerist v34.06
+# Taggerist v34.07
 
 # Personal Configurations (fallback defaults; overridden by Taggerist.config.txt)
-TAGLIST_1 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv,white,red'
-TAGLIST_2 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,white,yellow'
-TAGLIST_3 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv,white,green'
+TAGLIST_1 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv,©,white,red'
+TAGLIST_2 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,@,white,yellow'
+TAGLIST_3 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv,(all),white,green'
 
-COLLECTION_ID_1 = '©'
-COLLECTION_ID_2 = '@'
-COLLECTION_ID_3 = '(all)'
+TAGLIST_ID_1 = '©'
+TAGLIST_ID_2 = '@'
+TAGLIST_ID_3 = '(all)'
 
 DELIMITERS = ['|', '`']
 
 HELP_FILE_PATH = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md'
 # P.D. Reviewed @26.0909-0700.00
-# Taggerist v34.06: fractional TAGLIST_VERTICAL_SPACING accepted (0.5 etc.); numeric config values hardened against bad entries; free-text filenames preserved; PyQt5 removed; [?] in row 3
+# Taggerist v34.07: TAGLIST_NAME_x/TAGLIST_ID_x config schema with color-coded CI buttons and FilenameEditBox; borders on TV/TL/TF; [?] and [Edit tags] open system editors; taglist load diagnostics
 # (c) @26.0830-2150.00 by AtaraxiA under Creative Commons CC BY-SA license
 
 import re
-import re
-
-
+import html
 import sys
 import os
 import csv
@@ -54,28 +52,28 @@ DEFAULTS = {
     'PROC_DIR': '/home/jack/Pictures/TAGGERIST/test3',
     'UNPROC_DIR': '/home/jack/Pictures/TAGGERIST/Test2',
     'CONFIGS_DIR': '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs',
-    'TAGLIST_1': TAGLIST_1,
-    'TAGLIST_2': TAGLIST_2,
-    'TAGLIST_3': TAGLIST_3,
+    'TAGLIST_NAME_1': TAGLIST_1,
+    'TAGLIST_NAME_2': TAGLIST_2,
+    'TAGLIST_NAME_3': TAGLIST_3,
+    'TAGLIST_ID_1': TAGLIST_ID_1,
+    'TAGLIST_ID_2': TAGLIST_ID_2,
+    'TAGLIST_ID_3': TAGLIST_ID_3,
     'HELP_FILE_PATH': HELP_FILE_PATH,
-    'COLLECTION_ID_1': COLLECTION_ID_1,
-    'COLLECTION_ID_2': COLLECTION_ID_2,
-    'COLLECTION_ID_3': COLLECTION_ID_3,
 }
 
 # ========== CONFIG LOADER ==========
 CONFIG_SECTIONS = {
     'DIRECTORIES': [
-        ('TAGLIST_1', 'Taglist button 1: path,font-color,background-color'),
-        ('TAGLIST_2', 'Taglist button 2: path,font-color,background-color'),
-        ('TAGLIST_3', 'Taglist button 3: path,font-color,background-color'),
+        ('TAGLIST_NAME_1', 'Taglist 1: path,identifying-symbol,font-color,background-color'),
+        ('TAGLIST_NAME_2', 'Taglist 2: path,identifying-symbol,font-color,background-color'),
+        ('TAGLIST_NAME_3', 'Taglist 3: path,identifying-symbol,font-color,background-color'),
         ('PROC_DIR', 'Directory where PROCESS copies files'),
         ('UNPROC_DIR', 'Directory of files waiting to be processed'),
         ('CONFIGS_DIR', 'Directory holding this config and the .csv taglists'),
         ('HELP_FILE_PATH', 'Path of the help file shown by [?]'),
-        ('COLLECTION_ID_1', 'Date identifier for the [x] button (empty = no CI)'),
-        ('COLLECTION_ID_2', 'Date identifier for the [y] button (empty = no CI)'),
-        ('COLLECTION_ID_3', 'Date identifier for the [z] button (empty = no CI)'),
+        ('TAGLIST_ID_1', 'Date identifier for taglist 1 (used only if not given in TAGLIST_NAME_1)'),
+        ('TAGLIST_ID_2', 'Date identifier for taglist 2 (used only if not given in TAGLIST_NAME_2)'),
+        ('TAGLIST_ID_3', 'Date identifier for taglist 3 (used only if not given in TAGLIST_NAME_3)'),
     ],
     'DISPLAY': [
         ('TAGLIST_COLUMNS', 'Max columns of tagnames (list wraps to a new column at screen bottom)'),
@@ -182,6 +180,43 @@ class TaggeristMainWindow(QMainWindow):
         except:
             return DEFAULTS.get(key)
 
+    def _config_file_only(self):
+        file_cfg = configparser.ConfigParser()
+        try:
+            file_cfg.read(self.config_path)
+        except Exception:
+            pass
+        return file_cfg
+
+    def get_taglist_spec(self, number):
+        file_cfg = self._config_file_only()
+        for key in (f'TAGLIST_NAME_{number}', f'TAGLIST_{number}'):
+            if file_cfg.has_option('DIRECTORIES', key):
+                return strip_comment(file_cfg.get('DIRECTORIES', key))
+        return strip_comment(self.config.get('DIRECTORIES', f'TAGLIST_NAME_{number}', fallback=DEFAULTS.get(f'TAGLIST_NAME_{number}', '')))
+
+    def get_taglist_id(self, number):
+        parts = [p.strip() for p in self.get_taglist_spec(number).split(',')]
+        if len(parts) >= 4 and parts[1]:
+            return parts[1]
+        file_cfg = self._config_file_only()
+        for key in (f'TAGLIST_ID_{number}', f'COLLECTION_ID_{number}'):
+            if file_cfg.has_option('DIRECTORIES', key):
+                value = strip_comment(file_cfg.get('DIRECTORIES', key))
+                if value:
+                    return value
+        return strip_comment(self.config.get('DIRECTORIES', f'TAGLIST_ID_{number}', fallback=DEFAULTS.get(f'TAGLIST_ID_{number}', '')))
+
+    def get_taglist_colors(self, number):
+        parts = [p.strip() for p in self.get_taglist_spec(number).split(',')]
+        if len(parts) >= 4:
+            fg = parts[2] if len(parts) > 2 else 'white'
+            bg = parts[3] if len(parts) > 3 else 'black'
+        else:
+            fg = parts[1] if len(parts) > 1 else 'white'
+            bg = parts[2] if len(parts) > 2 else 'black'
+        return fg, bg
+
     def setup_ui(self):
         main_widget = QWidget()
         main_layout = QHBoxLayout(main_widget)
@@ -194,6 +229,9 @@ class TaggeristMainWindow(QMainWindow):
         main_layout.addWidget(self.tl, stretch=55)
         self.tf = TaggeristFiles(self)
         main_layout.addWidget(self.tf, stretch=20)
+        for frame in (self.tv, self.tl, self.tf):
+            frame.setObjectName(frame.__class__.__name__)
+            frame.setStyleSheet(f"#{frame.__class__.__name__} {{ border: 1px solid #FFFFCC; }}")
         self.setStyleSheet("""
             background-color: #000;
             color: #fff;
@@ -259,9 +297,9 @@ class TaggeristMainWindow(QMainWindow):
 
     def update_window_title(self):
         if self.current_file:
-            self.setWindowTitle(f"Taggerist v34.06 - {os.path.basename(self.current_file)}")
+            self.setWindowTitle(f"Taggerist v34.07 - {os.path.basename(self.current_file)}")
         else:
-            self.setWindowTitle("Taggerist v34.06")
+            self.setWindowTitle("Taggerist v34.07")
 
 # ========== TV (Taggerist-Viewer) ==========
 class TaggeristViewer(QFrame):
@@ -365,6 +403,35 @@ class TaggeristViewer(QFrame):
             except:
                 QMessageBox.warning(self, "Error", "Could not open external viewer.")
 
+# ========== FilenameEditBox (rich text: color-coded date prefixes) ==========
+class FilenameEdit(QTextEdit):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ci_colors = {}
+        self.setFixedHeight(34)
+        self.setLineWrapMode(QTextEdit.NoWrap)
+        self.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.setTabChangesFocus(True)
+
+    def text(self):
+        return self.toPlainText()
+
+    def setText(self, plain):
+        rendered = html.escape(plain or '')
+        for sym in sorted(self.ci_colors, key=len, reverse=True):
+            fg, bg = self.ci_colors[sym]
+            esc_sym = html.escape(sym)
+            rendered = rendered.replace(esc_sym, f'<span style="color:{fg}; background-color:{bg};">{esc_sym}</span>')
+        self.blockSignals(True)
+        self.setHtml(rendered)
+        self.blockSignals(False)
+        self.textChanged.emit()
+
+    def clear(self):
+        self.setText('')
+
+
 # ========== TL (Taggerist-List) ==========
 class TaggeristList(QFrame):
     def update_date_prefix(self, symbol):
@@ -394,9 +461,10 @@ class TaggeristList(QFrame):
         self.update_length_monitor()
 
     def select_taglist(self, number):
-        spec = strip_comment(self.parent.get_config('DIRECTORIES', f'TAGLIST_{number}'))
-        parts = [p.strip() for p in spec.split(',')]
-        path = parts[0]
+        spec = self.parent.get_taglist_spec(number)
+        path = spec.split(',')[0].strip()
+        with open('Taggerist_v34.07-buglog.txt', 'a') as dbg:
+            dbg.write(f"select_taglist: number={number} path={path} exists={os.path.exists(path)}\n")
         if not os.path.exists(path):
             QMessageBox.warning(self, "Taglist not found", f"Taglist file not found:\n{path}")
             return
@@ -426,15 +494,20 @@ class TaggeristList(QFrame):
                                         self.conversion_table[old_tag.lower()] = new_tag
             except Exception as e:
                 print(f"Error loading taglist: {e}")
+                with open('Taggerist_v34.07-buglog.txt', 'a') as dbg:
+                    dbg.write(f"load_taglist ERROR: {e}\n")
+        else:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as dbg:
+                dbg.write(f"load_taglist: file missing or no path set: {taglist_file}\n")
         self.all_tags = sorted(set(self.all_tags))
+        with open('Taggerist_v34.07-buglog.txt', 'a') as dbg:
+            dbg.write(f"load_taglist: {len(self.all_tags)} tags, {len(self.conversion_table)} conversions from {taglist_file}\n")
         self.populate_taglist()
 
     def refresh_taglist_buttons(self):
         buttons = [self.abcd_btn, self.mnlo_btn, self.wxyz_btn]
         for i, btn in enumerate(buttons, start=1):
-            spec = strip_comment(self.parent.get_config('DIRECTORIES', f'TAGLIST_{i}'))
-            parts = [p.strip() for p in spec.split(',')]
-            f, b = parts[1] if len(parts) > 1 else 'white', parts[2] if len(parts) > 2 else 'black'
+            f, b = self.parent.get_taglist_colors(i)
             if i == self.active_taglist_number:
                 btn.setStyleSheet(f"color: {f}; background-color: {b}; border: 1px solid #FFFFCC; padding: 2px;")
             else:
@@ -464,7 +537,7 @@ class TaggeristList(QFrame):
 
     def setup_ui(self):
         layout = QVBoxLayout(self)
-        with open('Taggerist_v34.06-buglog.txt', 'a') as debug_file:
+        with open('Taggerist_v34.07-buglog.txt', 'a') as debug_file:
             debug_file.write(f"Main layout identified as: {type(layout).__name__}\n")
         top_grid = QGridLayout()
         top_grid.setSpacing(6)
@@ -497,7 +570,7 @@ class TaggeristList(QFrame):
         ci_buttons_layout.addWidget(self.y_btn)
         ci_buttons_layout.addWidget(self.z_btn)
         top_grid.addWidget(ci_buttons_widget, 1, 0)
-        self.filename_edit = QLineEdit()
+        self.filename_edit = FilenameEdit()
         self.filename_edit.setFont(QFont("Ubuntu", 12))
         self.filename_edit.setStyleSheet("background-color: #000; color: #fff; border: 1px solid #FFFFCC;")
         self.filename_edit.textChanged.connect(self.update_tag_highlights)
@@ -527,9 +600,9 @@ class TaggeristList(QFrame):
         layout.addLayout(top_grid, stretch=0)
         self.refresh_taglist_button_labels()
         # Connect buttons to their logic
-        self.x_btn.clicked.connect(lambda: self.update_date_prefix(strip_comment(self.parent.get_config('DIRECTORIES', 'COLLECTION_ID_1'))))
-        self.y_btn.clicked.connect(lambda: self.update_date_prefix(strip_comment(self.parent.get_config('DIRECTORIES', 'COLLECTION_ID_2'))))
-        self.z_btn.clicked.connect(lambda: self.update_date_prefix(strip_comment(self.parent.get_config('DIRECTORIES', 'COLLECTION_ID_3'))))
+        self.x_btn.clicked.connect(lambda: self.update_date_prefix(self.parent.get_taglist_id(1)))
+        self.y_btn.clicked.connect(lambda: self.update_date_prefix(self.parent.get_taglist_id(2)))
+        self.z_btn.clicked.connect(lambda: self.update_date_prefix(self.parent.get_taglist_id(3)))
         self.clear_btn.clicked.connect(self.clear_filename_edit)
         self.reduce_btn.clicked.connect(self.reduce_filename_edit)
         self.skip_btn.clicked.connect(self.skip_file)
@@ -553,12 +626,18 @@ class TaggeristList(QFrame):
         self.length_label = QLabel("0/255")
         self.length_label.setStyleSheet("color: #fff;")
         bottom_layout.addWidget(self.length_label)
+        self.taglist_status_label = QLabel("0 tags")
+        self.taglist_status_label.setStyleSheet("color: #fff;")
+        bottom_layout.addWidget(self.taglist_status_label)
         bottom_layout.addStretch()
+        self.edit_tags_btn = QPushButton("[Edit tags]")
+        self.edit_tags_btn.clicked.connect(self.open_current_taglist)
+        bottom_layout.addWidget(self.edit_tags_btn)
         self.refresh_btn = QPushButton("Refresh Tags")
         self.refresh_btn.clicked.connect(self.parent.refresh_taglist)
         bottom_layout.addWidget(self.refresh_btn)
         self.help_btn2 = QPushButton("[?]")
-        self.help_btn2.clicked.connect(self.open_help_window)
+        self.help_btn2.clicked.connect(self.open_readme)
         bottom_layout.addWidget(self.help_btn2)
         self.help_window = None
         bottom_layout.addStretch()
@@ -566,14 +645,22 @@ class TaggeristList(QFrame):
 
     def refresh_taglist_button_labels(self):
         for i, btn in enumerate([self.abcd_btn, self.mnlo_btn, self.wxyz_btn], start=1):
-            spec = strip_comment(self.parent.get_config('DIRECTORIES', f'TAGLIST_{i}'))
+            spec = self.parent.get_taglist_spec(i)
             path = spec.split(',')[0].strip()
             base = os.path.splitext(os.path.basename(path))[0]
             idx = base.rfind('[')
             btn.setText(base[idx:] if idx >= 0 else f"[{base}]")
         for i, btn in enumerate([self.x_btn, self.y_btn, self.z_btn], start=1):
-            cid = strip_comment(self.parent.get_config('DIRECTORIES', f'COLLECTION_ID_{i}'))
-            btn.setText(f"[{cid}]")
+            cid = self.parent.get_taglist_id(i)
+            btn.setText(f"[{cid}]" if cid else "[-]")
+            fg, bg = self.parent.get_taglist_colors(i)
+            btn.setStyleSheet(f"color: {fg}; background-color: {bg}; border: 1px solid #FFFFCC; padding: 2px;")
+        self.filename_edit.ci_colors = {}
+        for i in (1, 2, 3):
+            ident = self.parent.get_taglist_id(i)
+            if ident:
+                fg, bg = self.parent.get_taglist_colors(i)
+                self.filename_edit.ci_colors[ident] = (fg, bg)
 
     def setup_taglist_window(self, layout):
         self.scroll_area = QScrollArea()
@@ -591,6 +678,10 @@ class TaggeristList(QFrame):
         self.scroll_area.setWidget(self.grid_layout_widget)
 
     def populate_taglist(self):
+        if hasattr(self, 'taglist_status_label'):
+            n = len(self.all_tags)
+            base = os.path.basename(self.active_taglist_path) if self.active_taglist_path else 'no taglist selected'
+            self.taglist_status_label.setText(f"{n} tags — {base}" if n else f"0 tags — {base} (empty or unreadable)")
         for i in reversed(range(self.grid_layout.count())):
             item = self.grid_layout.itemAt(i)
             if item and item.widget():
@@ -818,31 +909,11 @@ class TaggeristList(QFrame):
             self.parent.tv.load_file(oldest_filepath)
             self.parent.tf.highlight_current_file(oldest_filepath)
 
-    def open_help_window(self):
-        if self.help_window is None:
-            # Create a floating window
-            self.help_window = QDialog(self, Qt.WindowStaysOnTopHint)
-            self.help_window.setWindowTitle("Taggerist Help")
-            self.help_window.setGeometry(100, 100, 600, 400)
-
-            # Add a QTextEdit to display the help file
-            self.help_text = QTextEdit(self.help_window)
-            self.help_text.setReadOnly(True)
-            layout = QVBoxLayout(self.help_window)
-            layout.addWidget(self.help_text)
-
-            # Load the help file
-            help_path = os.path.expanduser(strip_comment(self.parent.get_config('DIRECTORIES', 'HELP_FILE_PATH')))
-            try:
-                with open(help_path, "r", encoding="utf-8") as file:
-                    self.help_text.setPlainText(file.read())
-            except Exception:
-                self.help_text.setPlainText(f"Help file not found:\n{help_path}")
-
-        # Show the window and bring it to the front
-        self.help_window.show()
-        self.help_window.raise_()
-        self.help_window.activateWindow()
+    def open_current_taglist(self):
+        if self.active_taglist_path and os.path.exists(self.active_taglist_path):
+            subprocess.Popen(['xdg-open', self.active_taglist_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        else:
+            QMessageBox.warning(self, "Taglist not found", f"Taglist file not found:\n{self.active_taglist_path}")
 
     def open_readme(self):
         help_path = os.path.expanduser(strip_comment(self.parent.get_config('DIRECTORIES', 'HELP_FILE_PATH')))
@@ -1179,7 +1250,7 @@ class TaggeristFiles(QFrame):
     def handle_single_click(self, item):
         try:
             # Debugging: Log the start of the single-click handler
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("handle_single_click called at " + str(datetime.now()) + "\n")
 
             # Get the table and row that was clicked
@@ -1187,19 +1258,19 @@ class TaggeristFiles(QFrame):
             row = item.row()
 
             # Debugging: Log the table object ID
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("  -> Clicked table ID: " + str(id(table)) + "\n")
 
             # Get the filename from the clicked row
             filename_item = table.item(row, 0)
             if not filename_item:
-                with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+                with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                     f.write("  -> No filename_item at row " + str(row) + "\n")
                 return
             filename = filename_item.text()
 
             # Debugging: Log the filename
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("  -> Filename: " + str(filename) + "\n")
 
             # Determine the directory (PROC or UNPROC)
@@ -1211,11 +1282,11 @@ class TaggeristFiles(QFrame):
             filepath = os.path.join(directory, filename)
 
             # Debugging: Log the filepath
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("  -> Filepath: " + str(filepath) + "\n")
 
             # Clear highlights in BOTH tables (PROC and UNPROC) regardless of which was clicked
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("  -> Clearing highlights in proc_table (ID: " + str(id(self.proc_table)) + ") and unproc_table (ID: " + str(id(self.unproc_table)) + ")\n")
             self.clear_highlights(self.proc_table)
             self.clear_highlights(self.unproc_table)
@@ -1243,7 +1314,7 @@ class TaggeristFiles(QFrame):
             processed_filename = self.process_filename(filename)
 
             # Debugging: Log the processed filename
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("  -> Processed Filename: " + str(processed_filename) + "\n")
 
             # Load the processed filename into FilenameEditBox
@@ -1258,17 +1329,17 @@ class TaggeristFiles(QFrame):
             self.parent.tv.load_file(filepath)
 
             # Debugging: Log successful completion
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("  -> Successfully loaded file into TV\n\n")
 
         except Exception as e:
             # Debugging: Log any errors
-            with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+            with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                 f.write("  -> ERROR: " + str(e) + "\n\n")
 
     def clear_highlights(self, table):
         # Debugging: Log the table being cleared and its object ID
-        with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+        with open('Taggerist_v34.07-buglog.txt', 'a') as f:
             f.write("  -> Clearing highlights in table: " + str(table) + " (ID: " + str(id(table)) + ")\n")
         
         # Clear current cell selection
@@ -1280,7 +1351,7 @@ class TaggeristFiles(QFrame):
                 if item:
                     item.setBackground(QColor("#000"))
                     # Debugging: Log the row and column being cleared
-                    with open('Taggerist_v34.06-buglog.txt', 'a') as f:
+                    with open('Taggerist_v34.07-buglog.txt', 'a') as f:
                         f.write("    -> Cleared row " + str(row) + ", col " + str(col) + "\n")
 
     def process_filename(self, filename):
