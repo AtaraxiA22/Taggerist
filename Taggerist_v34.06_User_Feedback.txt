@@ -1,0 +1,28 @@
+Taggerist_v34.06_User_Feedback.txt
+
+1.) Taglists do not load. (However, I do see proper tagname labels in the TAGLIST button). 
+---
+2.) Please add borders to  TF, TL and TV frames
+---
+3.) Currently, [?] loads floating, moveable window containing the READMTAGLIST_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,white,yellow   ; Taglist button 2: path,font-color,background-colorE.md file. 
+Please change [?] to load system default .md editor with README.md file. (This let's me edit the file as needed.)
+---
+4.) In TL, to left of [Refresh Tags]  add [Edit tags] which loads the CURRENT taglist[xxx].csv file into system default .CSV editor.  
+
+-OR-
+
+Add [Edit (taglist 1 name) tags], [Edit (taglist 2 name) tags] and [Edit (taglist 3 name) tags]     Color code them to correspond with taglist buttons in row#1
+---
+5.) Color code COLLECTION_ID_# to correspond with colors specified in TAGLIST_# in configs.  (i.e if the first taglist button  white on yellow, make the COLLECTION_ID button under it the same color scheme.
+---
+6.) In FilenameEditBox, identify date prefx and color it to correspond the Taglist button colors. 
+(I..e. IF TAGLIST_1 is white/yellow _AND_ it's COLLECTION_ID=@, THEN make any occurrence of  '@' in the FilenameEditBox white/yellow) 
+---
+Perhaps it would be less confusing if the Configs file had a line like this; 
+TAGLIST_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,@,white,yellow   ; Taglist button 2: path,identifying symbol,font-color,background-color
+
+Note the addition of the '@'.  This defines the COLLECTION_ID_1 and colors in the same line as TAGLIST_1   
+----
+Suggest variable name changes:
+TAGLIST_x  --> TAGLIST_NAME_x
+COLLECTION_ID_x  -->TAGLIST_ID_x
