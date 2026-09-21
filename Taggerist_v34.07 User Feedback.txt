@@ -1,0 +1,17 @@
+Taggerist_v34.07 User Feedback.txt
+==================
+
+1.)  At startup, colors in TAGLIST radio buttons were correct and toggled properly. (OK)
+HOWEVER, no taglist was displayed. (PROBLEM)
+
+2.)  PROC and UNPROC operated normally. Selected images were displayed in TV properly.  (OK)
+
+3.)  FilenameEditBox properly identified the date prefix tag with specified color schema. (Yay!)
+
+4.)  [SKIP] properly touched date of current file in UNPROC and PROC with current date. (OK)
+
+5.)  Both [?] properly loaded README.md into default editor. (OK)
+
+6.) [Edit Tags] loaded current CSV into system default editor (OK)
+
+As the taglist did not display, I could not ascertain that [Refresh Tags] was working. (?)
