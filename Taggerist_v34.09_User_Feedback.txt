@@ -1,0 +1,15 @@
+Taggerist_v34.09_User_Feedback.txt
+================
+
+1.) (OK)  Used [Edit Tags] to add a tag.   Saved file in editor. [Refresh Tags] properly added the new tag to the displayed taglist  AND properly sorted the displayed list. 
+
+2.) (OK)   Same as #1 above except deleted a tag. All worked well. (OK)
+
+3.a.) (NOT OK)  When a file is loaded into FilenameEditBox, exisiting |tags| are not reliably being highlighted in the taglist. (Some are, some are not.)  
+3.b.)  Parameters found in taglist are not being converted to primary tagname. 
+
+(e.g. Taggerist_taglist.[NC].csv contains this line:
+'CHR_Thalia,Tx'
+When I load this file: '|Tx|[|hat|in|@26.0921-1327.1245_wm.jpg' into FilenameEditBox, the '|Tx|' is not being converted to 'CHR_Thalia". 
+NOTE: this conversion should be case INsensitive.
+
