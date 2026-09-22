@@ -1,0 +1,1416 @@
+Main layout identified as: QVBoxLayout
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv exists=True
+load_taglist: 15 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28c1f250) at 0x7fd03b866700> (ID: 140532328589056)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28abc820) at 0x7fd03b866e80> (ID: 140532328590976)
+load_taglist: 15 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+refill: 15 labels, rows_fit=15, viewport_h=703, font_color='#fff', bg='#000'
+handle_single_click called at 2026-09-21 13:53:08.896219
+  -> Clicked table ID: 140532328590976
+  -> Filename: @24.0928 - At green Front- SDC,JCC, KKC by Casey.jpg
+  -> Filepath: /media/jack/Data-B/@.0000000000 this is DATA - B static  ============== /TE01.CRAWFORDIA.PIX/2024/@24.0928 - At green Front- SDC,JCC, KKC by Casey.jpg
+  -> Clearing highlights in proc_table (ID: 140532328589056) and unproc_table (ID: 140532328590976)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28c1f250) at 0x7fd03b866700> (ID: 140532328589056)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28abc820) at 0x7fd03b866e80> (ID: 140532328590976)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+  -> Processed Filename: @24.0928 - At green Front- SDC,JCC, KKC by Casey.jpg
+  -> Successfully loaded file into TV
+
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv exists=True
+load_taglist: 15 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv exists=True
+load_taglist: 15 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+select_taglist: number=2 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+handle_single_click called at 2026-09-21 13:54:57.911027
+  -> Clicked table ID: 140532328590976
+  -> Filename: cocktails`Lx`lightning`[watching`Tx`(c)26.0811-1458.00014_wm.jpg
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/test3/cocktails`Lx`lightning`[watching`Tx`(c)26.0811-1458.00014_wm.jpg
+  -> Clearing highlights in proc_table (ID: 140532328589056) and unproc_table (ID: 140532328590976)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28c1f250) at 0x7fd03b866700> (ID: 140532328589056)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28abc820) at 0x7fd03b866e80> (ID: 140532328590976)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+  -> Processed Filename: cocktails|Lx|lightning|[watching|Tx|(c)26.0811-1458.00014_wm.jpg
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-21 13:55:19.083414
+  -> Clicked table ID: 140532328590976
+  -> Filename: in`Tx`.Forest`[`hat`!William.Wx`!Thalia.tx`$Meditate`©26.0811-1446.00010_wm.jpg
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/test3/in`Tx`.Forest`[`hat`!William.Wx`!Thalia.tx`$Meditate`©26.0811-1446.00010_wm.jpg
+  -> Clearing highlights in proc_table (ID: 140532328589056) and unproc_table (ID: 140532328590976)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28c1f250) at 0x7fd03b866700> (ID: 140532328589056)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28abc820) at 0x7fd03b866e80> (ID: 140532328590976)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+  -> Processed Filename: in|Tx|.Forest|[|hat|!William.Wx|!Thalia.tx|$Meditate|©26.0811-1446.00010_wm.jpg
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-21 13:56:01.980516
+  -> Clicked table ID: 140532328589056
+  -> Filename: in|CHR_Thalia|LOC_forest|[|hat|!William.CHR_William|!Thalia.CHR_Thalia|$Medita%_100%|(c)26.0811-1446.00010_wm.jpg
+  -> Filepath: /home/jack/MEGA/ai.NIGHT CAFE/!PIX.rn @26.0426+500/in|CHR_Thalia|LOC_forest|[|hat|!William.CHR_William|!Thalia.CHR_Thalia|$Medita%_100%|(c)26.0811-1446.00010_wm.jpg
+  -> Clearing highlights in proc_table (ID: 140532328589056) and unproc_table (ID: 140532328590976)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28c1f250) at 0x7fd03b866700> (ID: 140532328589056)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28abc820) at 0x7fd03b866e80> (ID: 140532328590976)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+  -> Processed Filename: in|CHR_Thalia|LOC_forest|[|hat|!William.CHR_William|!Thalia.CHR_Thalia|$Medita%_100%|(c)26.0811-1446.00010_wm.jpg
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-21 13:57:40.194514
+  -> Clicked table ID: 140532328589056
+  -> Filename: in|CHR_Thalia|LOC_forest|[|hat|William|CHR_William|!Thalia.CHR_Thalia|$Medita|%_100%|(c)26.0811-1446.00010_wm.jpg
+  -> Filepath: /home/jack/MEGA/ai.NIGHT CAFE/!PIX.rn @26.0426+500/in|CHR_Thalia|LOC_forest|[|hat|William|CHR_William|!Thalia.CHR_Thalia|$Medita|%_100%|(c)26.0811-1446.00010_wm.jpg
+  -> Clearing highlights in proc_table (ID: 140532328589056) and unproc_table (ID: 140532328590976)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28c1f250) at 0x7fd03b866700> (ID: 140532328589056)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28abc820) at 0x7fd03b866e80> (ID: 140532328590976)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+  -> Processed Filename: in|CHR_Thalia|LOC_forest|[|hat|William|CHR_William|!Thalia.CHR_Thalia|$Medita|%_100%|(c)26.0811-1446.00010_wm.jpg
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-21 13:58:28.346548
+  -> Clicked table ID: 140532328590976
+  -> Filename: cocktails`Lx`lightning`[watching`Tx`(c)26.0811-1458.00014_wm.jpg
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/test3/cocktails`Lx`lightning`[watching`Tx`(c)26.0811-1458.00014_wm.jpg
+  -> Clearing highlights in proc_table (ID: 140532328589056) and unproc_table (ID: 140532328590976)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28c1f250) at 0x7fd03b866700> (ID: 140532328589056)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x28abc820) at 0x7fd03b866e80> (ID: 140532328590976)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+  -> Processed Filename: cocktails|Lx|lightning|[watching|Tx|(c)26.0811-1458.00014_wm.jpg
+  -> Successfully loaded file into TV
+
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv exists=True
+load_taglist: 15 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+Main layout identified as: QVBoxLayout
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x33c48d90) at 0x7fcd2b3c41c0> (ID: 140519170392512)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x33a1e220) at 0x7fcd2b37d580> (ID: 140519170102656)
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+refill: 98 labels, rows_fit=25, viewport_h=689, font_color='#fff', bg='#000'
+select_taglist: number=2 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv exists=True
+load_taglist: 290 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv
+select_taglist: number=3 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv exists=True
+load_taglist: 17 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+Main layout identified as: QVBoxLayout
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+refill: 98 labels, rows_fit=25, viewport_h=689, font_color='#fff', bg='#000'
+select_taglist: number=3 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv exists=True
+load_taglist: 17 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+handle_single_click called at 2026-09-22 09:31:41.686925
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190915-37-59DaveLongHouseunderconstruction.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190915-37-59DaveLongHouseunderconstruction.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190915-37-59DaveLongHouseunderconstruction.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:31:43.488507
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190909-27-53riverviewfrom896houseporch.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190909-27-53riverviewfrom896houseporch.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190909-27-53riverviewfrom896houseporch.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:31:46.562711
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190915-46-49WattersonvillewoodsfernsonDam_Rd.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190915-46-49WattersonvillewoodsfernsonDam_Rd.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190915-46-49WattersonvillewoodsfernsonDam_Rd.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:31:49.360912
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190915-59-16+896houseandgaragefromriver.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190915-59-16+896houseandgaragefromriver.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190915-59-16+896houseandgaragefromriver.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:31:53.229194
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190915-46-24WattersonvillewoodsDam_Rdferns.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190915-46-24WattersonvillewoodsDam_Rdferns.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190915-46-24WattersonvillewoodsDam_Rdferns.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:31:55.619124
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190915-38-35DaveLongHouseunderconstruction.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190915-38-35DaveLongHouseunderconstruction.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190915-38-35DaveLongHouseunderconstruction.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:32:01.224850
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190915-57-49896houseviewatAlleghenydownriver.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190915-57-49896houseviewatAlleghenydownriver.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190915-57-49896houseviewatAlleghenydownriver.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:32:04.546722
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190916-02-39896houseornamentalgrassesatdriveway.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190916-02-39896houseornamentalgrassesatdriveway.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190916-02-39896houseornamentalgrassesatdriveway.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:32:07.292435
+  -> Clicked table ID: 140115941282496
+  -> Filename: 190915-57-49896houseviewatAlleghenydownriver.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-09/190915-57-49896houseviewatAlleghenydownriver.JPG
+  -> Clearing highlights in proc_table (ID: 140115941150272) and unproc_table (ID: 140115941282496)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182e0810) at 0x7f6f48e64e40> (ID: 140115941150272)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x182ebf10) at 0x7f6f48e852c0> (ID: 140115941282496)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 190915-57-49896houseviewatAlleghenydownriver.JPG
+  -> Successfully loaded file into TV
+
+select_taglist: number=3 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv exists=True
+load_taglist: 17 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv
+select_taglist: number=2 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv exists=True
+load_taglist: 290 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv
+Main layout identified as: QVBoxLayout
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x25a8e180) at 0x7fec2d8be400> (ID: 140652353152000)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x25a08870) at 0x7fec2d8d54c0> (ID: 140652353246400)
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+refill: 98 labels, rows_fit=25, viewport_h=689, font_color='#fff', bg='#000'
+Main layout identified as: QVBoxLayout
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x2dd04300) at 0x7f58556be2c0> (ID: 140017366983360)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x2dc7ea30) at 0x7f58556d6400> (ID: 140017367081984)
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+refill: 98 labels, rows_fit=25, viewport_h=689, font_color='#fff', bg='#000'
+handle_single_click called at 2026-09-22 09:44:32.268437
+  -> Clicked table ID: 140017367081984
+  -> Filename: 19-10-16-11-00-44woodsfoggy.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-10/19-10-16-11-00-44woodsfoggy.JPG
+  -> Clearing highlights in proc_table (ID: 140017366983360) and unproc_table (ID: 140017367081984)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x2dd04300) at 0x7f58556be2c0> (ID: 140017366983360)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x2dc7ea30) at 0x7f58556d6400> (ID: 140017367081984)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 19-10-16-11-00-44woodsfoggy.JPG
+  -> Successfully loaded file into TV
+
+handle_single_click called at 2026-09-22 09:44:35.076546
+  -> Clicked table ID: 140017367081984
+  -> Filename: 19-10-16-13-07-51PetCat|Trixxie|onfloor.JPG
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/2019/2019-10/19-10-16-13-07-51PetCat|Trixxie|onfloor.JPG
+  -> Clearing highlights in proc_table (ID: 140017366983360) and unproc_table (ID: 140017367081984)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x2dd04300) at 0x7f58556be2c0> (ID: 140017366983360)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x2dc7ea30) at 0x7f58556d6400> (ID: 140017367081984)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+  -> Processed Filename: 19-10-16-13-07-51PetCat|Trixxie|onfloor.JPG
+  -> Successfully loaded file into TV
+
+select_taglist: number=3 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv exists=True
+load_taglist: 17 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv
+load_taglist: 18 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv
+load_taglist: 18 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv
+load_taglist: 18 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv
+load_taglist: 18 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv
+load_taglist: 18 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv
+select_taglist: number=2 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv exists=True
+load_taglist: 290 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+select_taglist: number=3 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv exists=True
+load_taglist: 18 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv
+select_taglist: number=2 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv exists=True
+load_taglist: 290 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
