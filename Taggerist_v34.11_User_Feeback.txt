@@ -1,0 +1,12 @@
+Taggerist_v34.11_User_Feeback.txt
+====
+'Search' in the revised version of v34.11 worked OK.  
+1. the SearchBox should be moved up to line#6, to the left of the search results. Use default font size. 
+2. SearchBox background should be black. (It's green now.)
+3. The thermometer seemed to function but it seemed to remain yellow up to character #150 then it turned red after that. I did not see any green in 1-99.
+4. The pathname in TL line#1 should be default size font. I.e. smaller than FilenameEditBox font. 
+5. Also, in line #1, the first button has no text (taglist name) until it is selected. Buttons #2 and 3 do have labels.  
+6. [PROCESS] and [SKIP] buttons should be BIG buttons. [PROCESS] should be *Bold* white text on blue background and the same font size as in FilenameEditBox.  [SKIP] font should be default.
+size with not-bold  white text on orange background.
+7. [Clear], [Reduce] should be default font size.  Remove [?]. It is redundant to bottom line. 
+8. Text in FilenameEditBox should  be flush-right.
