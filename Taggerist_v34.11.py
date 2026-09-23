@@ -705,6 +705,11 @@ class TaggeristList(QFrame):
         top_grid.setRowStretch(1, 0)
         top_grid.setRowStretch(2, 0)
         layout.addLayout(top_grid, stretch=0)
+        self.search_results = QListWidget(self)
+        self.search_results.setStyleSheet("background-color: #000; color: #fff; border: 1px solid #FFFFCC;")
+        self.search_results.itemClicked.connect(self.search_result_clicked)
+        self.search_results.hide()
+        layout.addWidget(self.search_results, stretch=0)
         self.refresh_taglist_button_labels()
         # Connect buttons to their logic
         self.x_btn.clicked.connect(lambda: self.update_date_prefix(self.parent.get_taglist_id(1)))
@@ -751,11 +756,6 @@ class TaggeristList(QFrame):
         self.help_btn2 = QPushButton("[?]")
         self.help_btn2.clicked.connect(self.open_readme)
         bottom_layout.addWidget(self.help_btn2)
-        self.search_results = QListWidget(self)
-        self.search_results.setWindowFlags(Qt.Window | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
-        self.search_results.setStyleSheet("background-color: #000; color: #fff; border: 1px solid #FFFFCC;")
-        self.search_results.itemClicked.connect(self.search_result_clicked)
-        self.search_results.hide()
         self.help_window = None
         bottom_layout.addStretch()
         layout.addLayout(bottom_layout, stretch=0)
@@ -1034,10 +1034,7 @@ class TaggeristList(QFrame):
             self.search_results.hide()
             return
         self.search_results.setFixedHeight(min(220, 26 * len(matches) + 6))
-        pos = self.search_edit.mapToGlobal(QPoint(0, 0))
-        self.search_results.move(pos.x(), pos.y() - self.search_results.height() - 6)
         self.search_results.show()
-        self.search_results.raise_()
 
     def search_result_clicked(self, item):
         self.toggle_tag(item.data(Qt.UserRole))
