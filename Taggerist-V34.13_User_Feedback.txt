@@ -1,0 +1,9 @@
+Taggerist-V34.13_User_Feedback.txt
+===========
+
+SEARCH still crashes unpredicatably after 3-8 searches.
+
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ python3 Taggerist_v34.13.py
+munmap_chunk(): invalid pointer
+Aborted (core dumped)
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ 
