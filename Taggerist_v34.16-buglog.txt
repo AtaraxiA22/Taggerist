@@ -1,0 +1,185 @@
+--- Taggerist v34.16 startup ---
+PySide6 version: 6.11.2
+Python version: 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+Qt version: 6.11.2
+Main layout identified as: QVBoxLayout
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x11db1ad0) at 0x7f10c7ee7000> (ID: 139710050496512)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x11d4a8d0) at 0x7f10c7ee7800> (ID: 139710050498560)
+load_taglist: 98 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+refill: 98 labels, rows_fit=23, viewport_h=637, font_color='#fff', bg='#000'
+handle_single_click called at 2026-09-23 13:05:18.997349
+  -> Clicked table ID: 139710050498560
+  -> Filename: ©(c)26.0811-1334.00003_wm.jpg
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/test4/©(c)26.0811-1334.00003_wm.jpg
+  -> Clearing highlights in proc_table (ID: 139710050496512) and unproc_table (ID: 139710050498560)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x11db1ad0) at 0x7f10c7ee7000> (ID: 139710050496512)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0x11d4a8d0) at 0x7f10c7ee7800> (ID: 139710050498560)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+  -> Processed Filename: ©(c)26.0811-1334.00003_wm.jpg
+  -> Successfully loaded file into TV
+
+load_taglist: 99 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+--- Taggerist v34.16 startup ---
+PySide6 version: 6.11.2
+Python version: 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+Qt version: 6.11.2
+Main layout identified as: QVBoxLayout
+select_taglist: number=1 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv exists=True
+load_taglist: 99 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0xb734750) at 0x7ff1778ee440> (ID: 140675069699136)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0xb5becf0) at 0x7ff1778eed00> (ID: 140675069701376)
+load_taglist: 99 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv
+refill: 99 labels, rows_fit=23, viewport_h=637, font_color='#fff', bg='#000'
+handle_single_click called at 2026-09-23 13:26:15.619997
+  -> Clicked table ID: 140675069701376
+  -> Filename: lzzzzzzzzzzzzovemyflame`catsuit bytheterrorcat-d5u4ech.png`.jpg
+  -> Filepath: /home/jack/Pictures/TAGGERIST.test_folders/Test-PNG  -28/lzzzzzzzzzzzzovemyflame`catsuit bytheterrorcat-d5u4ech.png`.jpg
+  -> Clearing highlights in proc_table (ID: 140675069699136) and unproc_table (ID: 140675069701376)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0xb734750) at 0x7ff1778ee440> (ID: 140675069699136)
+  -> Clearing highlights in table: <PySide6.QtWidgets.QTableWidget(0xb5becf0) at 0x7ff1778eed00> (ID: 140675069701376)
+    -> Cleared row 0, col 0
+    -> Cleared row 0, col 1
+    -> Cleared row 0, col 2
+    -> Cleared row 0, col 3
+    -> Cleared row 1, col 0
+    -> Cleared row 1, col 1
+    -> Cleared row 1, col 2
+    -> Cleared row 1, col 3
+    -> Cleared row 2, col 0
+    -> Cleared row 2, col 1
+    -> Cleared row 2, col 2
+    -> Cleared row 2, col 3
+    -> Cleared row 3, col 0
+    -> Cleared row 3, col 1
+    -> Cleared row 3, col 2
+    -> Cleared row 3, col 3
+    -> Cleared row 4, col 0
+    -> Cleared row 4, col 1
+    -> Cleared row 4, col 2
+    -> Cleared row 4, col 3
+    -> Cleared row 5, col 0
+    -> Cleared row 5, col 1
+    -> Cleared row 5, col 2
+    -> Cleared row 5, col 3
+    -> Cleared row 6, col 0
+    -> Cleared row 6, col 1
+    -> Cleared row 6, col 2
+    -> Cleared row 6, col 3
+    -> Cleared row 7, col 0
+    -> Cleared row 7, col 1
+    -> Cleared row 7, col 2
+    -> Cleared row 7, col 3
+    -> Cleared row 8, col 0
+    -> Cleared row 8, col 1
+    -> Cleared row 8, col 2
+    -> Cleared row 8, col 3
+    -> Cleared row 9, col 0
+    -> Cleared row 9, col 1
+    -> Cleared row 9, col 2
+    -> Cleared row 9, col 3
+    -> Cleared row 10, col 0
+    -> Cleared row 10, col 1
+    -> Cleared row 10, col 2
+    -> Cleared row 10, col 3
+    -> Cleared row 11, col 0
+    -> Cleared row 11, col 1
+    -> Cleared row 11, col 2
+    -> Cleared row 11, col 3
+    -> Cleared row 12, col 0
+    -> Cleared row 12, col 1
+    -> Cleared row 12, col 2
+    -> Cleared row 12, col 3
+    -> Cleared row 13, col 0
+    -> Cleared row 13, col 1
+    -> Cleared row 13, col 2
+    -> Cleared row 13, col 3
+    -> Cleared row 14, col 0
+    -> Cleared row 14, col 1
+    -> Cleared row 14, col 2
+    -> Cleared row 14, col 3
+    -> Cleared row 15, col 0
+    -> Cleared row 15, col 1
+    -> Cleared row 15, col 2
+    -> Cleared row 15, col 3
+    -> Cleared row 16, col 0
+    -> Cleared row 16, col 1
+    -> Cleared row 16, col 2
+    -> Cleared row 16, col 3
+    -> Cleared row 17, col 0
+    -> Cleared row 17, col 1
+    -> Cleared row 17, col 2
+    -> Cleared row 17, col 3
+    -> Cleared row 18, col 0
+    -> Cleared row 18, col 1
+    -> Cleared row 18, col 2
+    -> Cleared row 18, col 3
+    -> Cleared row 19, col 0
+    -> Cleared row 19, col 1
+    -> Cleared row 19, col 2
+    -> Cleared row 19, col 3
+    -> Cleared row 20, col 0
+    -> Cleared row 20, col 1
+    -> Cleared row 20, col 2
+    -> Cleared row 20, col 3
+    -> Cleared row 21, col 0
+    -> Cleared row 21, col 1
+    -> Cleared row 21, col 2
+    -> Cleared row 21, col 3
+    -> Cleared row 22, col 0
+    -> Cleared row 22, col 1
+    -> Cleared row 22, col 2
+    -> Cleared row 22, col 3
+    -> Cleared row 23, col 0
+    -> Cleared row 23, col 1
+    -> Cleared row 23, col 2
+    -> Cleared row 23, col 3
+    -> Cleared row 24, col 0
+    -> Cleared row 24, col 1
+    -> Cleared row 24, col 2
+    -> Cleared row 24, col 3
+    -> Cleared row 25, col 0
+    -> Cleared row 25, col 1
+    -> Cleared row 25, col 2
+    -> Cleared row 25, col 3
+    -> Cleared row 26, col 0
+    -> Cleared row 26, col 1
+    -> Cleared row 26, col 2
+    -> Cleared row 26, col 3
+  -> Processed Filename: lzzzzzzzzzzzzovemyflame|catsuit bytheterrorcat-d5u4ech.png|.jpg
+  -> Successfully loaded file into TV
+
+select_taglist: number=2 path=/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv exists=True
+load_taglist: 292 tags, 230 conversions from /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv

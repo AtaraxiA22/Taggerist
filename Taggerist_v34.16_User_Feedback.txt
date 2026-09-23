@@ -1,0 +1,73 @@
+Taggeristv34.16_User_Feedback.txt
+===========
+
+Crashed (twice) when I [PROCESS] file. I searched.add 4-5 tags before [PROCCESS] then crash. 
+
+FIRST TIME:
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ python3 Taggerist_v34.16.py
+free(): invalid pointer
+Fatal Python error: Aborted
+
+Current thread 0x00007f10ce8fb780 (most recent call first):
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1408 in refresh_proc_list
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1445 in refresh_lists
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1096 in save_and_next
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1588 in <module>
+
+Extension modules: shiboken6.Shiboken, PySide6.QtCore, PySide6.QtGui, PySide6.QtWidgets, PIL._imaging, PIL._imagingmath (total: 6)
+Aborted (core dumped)
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$
+
+---
+SECOND TIME:
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ python3 Taggerist_v34.16.py
+free(): invalid pointer
+Fatal Python error: Aborted
+
+Current thread 0x00007ff17e34b780 (most recent call first):
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1427 in refresh_unproc_list
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1446 in refresh_lists
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1096 in save_and_next
+  File "/home/jack/MEGA/TAGGERIST/Scripts&buglogs/Taggerist_v34.16.py", line 1588 in <module>
+
+Extension modules: shiboken6.Shiboken, PySide6.QtCore, PySide6.QtGui, PySide6.QtWidgets, PIL._imaging, PIL._imagingmath (total: 6)
+Aborted (core dumped)
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ 
+
+
+-------------------------
+OTHER BUGS:
+
+Bug:
+ - Add new date symbol does not remove previous symbol
+---
+
+----------------------
+FEATURE REQUESTS
+
+
+ - Is it feasible/reasonable to search entire taglist  line in CSV????
+
+e.g.: 
+CLR_grn,green,grn
+
+Search 'green' would return CLR_grn
+Search 'grn' would return CLR_grn 
+
+---
+ - Is feasible/reasonably to dynamically sort tags in FilenameEditBox?
+
+---
+Is it feasible/reasonable to display the filename character count numbers  in the middle of the thermometer? E.g. '22/255'?   (..and not destablizing it?)
+
+---
+ - change taglist filename displayed at bottom to include full path.
+
+---
+Change TagSearch to case INsensitive.
+
+---
+increase height of (entire) bottom row by 50%
+
+---
+
