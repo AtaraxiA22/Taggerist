@@ -1,0 +1,29 @@
+Taggerist_v34.17_User_Feedback.txt
+=============
+
+
+BUGS:
+--------
+
+ - Search seems stable. No crashes. Yay!!
+
+ - Date Symbol buttons:
+Button 1 &2 function appropriatedly, but button #3 does not replace other symbols and will inject more than one copy of itself if it is pressed repeatedly.
+
+- In TF: When I PROCESS a file, the PROC list does not refresh itself. 
+
+ - The 1st button has no text label when not selected. The other buttons do.
+
+
+FEATURE REQUESTS
+------------
+
+ - In TF, ADD [Default Sort All] button which sorts both PROC and UNPROC  by Oldest Modified date First.
+Position it (right-justified) on the empty line directly above the 'UNPROCESSED' line. Use small-ish font with default background and border colors 
+ 
+This brings the 'next' file to process to the top of the UNPROC list and the file I just processed to the bottom of the PROC list. I.e. The next file I should process AND the file I just finished processing are in the center of TF where I can see both.
+
+ - When searching, pressing <ENTER> accepts 1st item in list and injects it into filename.  
+
+ - Cursor position should default to SearchBox.  I.e. when I click on any button, the cursor moves to the SearchBox. 
+
