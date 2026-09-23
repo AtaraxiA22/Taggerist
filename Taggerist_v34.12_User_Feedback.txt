@@ -1,0 +1,45 @@
+Taggerist_v34.12_User_Feedback.txt
+
+BUGS
+====
+0.) (BUG) TagSearchBox worked well 2-3 times then script crashed:
+
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ python3 Taggerist_v34.12.py
+free(): invalid pointer
+Aborted (core dumped)
+jack@TE01:~/MEGA/TAGGERIST/Scripts&buglogs$ 
+
+
+Cosmetic Changes
+==============
+(I'm going to try to cluster elements having the most mouse activity together for higher production efficiency.
+
+---
+In TV: 
+
+a. MOVE   [External viewer] and [<--], [-->] buttons (in that order) to top of frame, right-justified.
+b. Make them twice as high and with button width = 1/6th of frame width (this will cluster them to the right, closer to most of the mouse activity in TL) 
+b. Give them colorful backgrounds.
+
+---
+In TL:
+
+ - Text in FilenameEditBox should be right-justified.
+
+ - Move TagSearchBox to left of FilenameEditBox with same height.
+
+ - Position TagSearchResultsDropdown directly under TagSearchBox and with same width. 
+
+ - Move [Clear],  [Reduce], [SKIP] and [PROCESS]] buttons under FilenmameLengthThermometer. The first three buttons should be default font height. [PROCESS] should be larger.   Give them all distinctive background colors.  BOLD the label names.
+
+ - Move the 3 date prefix buttons in vertical orintenation to right of Pathname & FilenameEditBox.  
+
+ - Remove [ and ] brackets from all button labels
+
+
+---
+In TF:
+
+- Give entire line containing 'PROCESSD' a red backround with white font
+
+- Give entire line containing 'UNPROCESSD' a green backround with white font
