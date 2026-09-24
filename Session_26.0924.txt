@@ -58,3 +58,19 @@ vibe branch.
 
 Next session: read AGENTS.md (automatic), then this file. TASKS.md is authoritative
 for status.
+
+## Checkpoint 2 (session end, 26.0924)
+
+- TASKS.md reverse-sorted Z→A (w-band first), all agent-looked-at x's cleared;
+  format line updated to document the new sort order (708c44d).
+- v34.20 download hiccup: Jack accidentally saved the GitHub web page instead of
+  the script (SyntaxError on HTML title line). Resolution: agent verified the raw
+  script compiles clean; gave raw.githubusercontent.com link. RULE ADDED to
+  AGENTS.md (95d5830): always give RAW download links, never web-page links.
+- Raw link for v34.20:
+  https://raw.githubusercontent.com/AtaraxiA22/Taggerist/vibe/v34.19-csv-search-sort-tagbuttons-d310e7/Taggerist_v34.20.py
+- Still awaiting Jack's test on: #w.19 (Clear/Reduce highlights), #0.18 (taglist
+  button colors), #0.13 (Sort Tags), #4.12 (thermometer count visibility),
+  #0.11 (alias search). #0.10 needs a repro example if case-sensitivity bites.
+- Session closed on friendly terms; martinis were declined (agent runs on
+  electricity). 
