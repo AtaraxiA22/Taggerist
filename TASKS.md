@@ -1,21 +1,21 @@
 # Taggerist Joint Task List
 
-Last updated: v34.19 (by agent)
+Last updated: v34.20 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 0.##; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| x | #w.19 | After search-adding 5-6 tags and [Sort Tags], pressing [Clear] emptied the FilenameEditBox but the tagnames stayed highlighted in the taglist | FIXED // v34.19 root cause: `clear_filename_edit()` and `reduce_filename_edit()` emptied the edit box but never reset `selected_tags`, so `update_tag_highlights()` kept painting them as selected; both now clear and re-extract `selected_tags` from the new text — awaiting user test |
-| x | #0.18 | Unselected TAGLIST_NAME button (first of three) doesn't show list name in FULLWINDOW_FONT_COLOR on FULLWINDOW_BG_COLOR (selected state OK) | FIXED // v34.19 root cause: `strip_comment()` ate unquoted hex colors (`#F0E0D0` → empty) so config fell back to white/black; bare `#RGB`/`#RRGGBB` now pass through — awaiting user test |
-| x | #0.13 | [Sort Tags] button sorts \|tags\| in FilenameEditBox alphabetically | FIXED // Implemented v34.19 (third row, beside [Clear]/[Reduce]); preserves leading text, datestamp, `_wm`, extension — awaiting user test |
-| x | #4.12 | Char count ('22/255') centered inside the thermometer bar | #12 is displaying a count. However, when in NC mode with background = yellow, I could barely see the count in white font. (Hint: the date prefix button for NC (also yellow background) properly used black font.) // Implemented v34.19; side label removed — awaiting user test |
-| x | #0.11 | Search matches aliases anywhere in the CSV line ('grn' finds `CLR_grn`) | FIXED // Implemented v34.19 — awaiting user test |
-| x | #0.10 | Search case-sensitivity | FIXED //Code looks case-insensitive; awaiting example tag + search string |
-| ☐ | #2.14 | Full path in taglist status line | Trivial |
+| ☐ | #w.19 | After search-adding 5-6 tags and [Sort Tags], pressing [Clear] emptied the FilenameEditBox but the tagnames stayed highlighted in the taglist | FIXED // v34.20 root cause: the [Clear] and [Reduce] buttons emptied the edit box but never reset the internal "selected tags" memory, so the taglist kept painting them as selected; both buttons now reset that memory from whatever text remains — awaiting user test |
+| ☐ | #4.12 | Char count ('22/255') centered inside the thermometer bar | #12 is displaying a count. However, when in NC mode with background = yellow, I could barely see the count in white font. (Hint: the date prefix button for NC (also yellow background) properly used black font.) // Implemented v34.19; side label removed — awaiting user test |
 | ☐ | #2.15 | Bottom row +50% height | Trivial |
-| ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
+| ☐ | #2.14 | Full path in taglist status line | Trivial |
 | ☐ | #1.17 | Cosmetic batch: TV nav buttons top-right; FilenameEditBox right-justified; SearchBox beside edit box w/ same-width dropdown; action buttons under thermometer (bold, distinct colors); CI buttons vertical right of edit boxes; strip `[]` from labels; red/green PROC-UNPROC headers, white text | Deferred until crash confirmed dead |
+| ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
+| ☐ | #0.18 | Unselected TAGLIST_NAME button (first of three) doesn't show list name in FULLWINDOW_FONT_COLOR on FULLWINDOW_BG_COLOR (selected state OK) | FIXED // v34.19 root cause: a comment-stripping helper was eating unquoted color values from the config file, so the app silently fell back to white/black; such values now pass through — awaiting user test |
+| ☐ | #0.13 | [Sort Tags] button sorts \|tags\| in FilenameEditBox alphabetically | FIXED // Implemented v34.19 (third row, beside [Clear]/[Reduce]); preserves leading text, datestamp, `_wm`, extension — awaiting user test |
+| ☐ | #0.11 | Search matches aliases anywhere in the CSV line ('grn' finds `CLR_grn`) | FIXED // Implemented v34.19 — awaiting user test |
+| ☐ | #0.10 | Search case-sensitivity | FIXED // Code looks case-insensitive; awaiting example tag + search string |
 | ☐ | #0.09 | [Default Sort All] button | User-tested v34.18 — works |
 | ☐ | #0.08 | Cursor defaults to SearchBox after any button | User-tested v34.18 — works |
 | ☐ | #0.07 | ENTER accepts first search result | User-tested v34.18 — works |
