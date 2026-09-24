@@ -9,7 +9,7 @@ Last updated: v34.19 (by agent)
 | x | #0.18 | Unselected TAGLIST_NAME button (first of three) doesn't show list name in FULLWINDOW_FONT_COLOR on FULLWINDOW_BG_COLOR (selected state OK) | FIXED // v34.19 root cause: `strip_comment()` ate unquoted hex colors (`#F0E0D0` → empty) so config fell back to white/black; bare `#RGB`/`#RRGGBB` now pass through — awaiting user test |
 | x | #0-.13 | [Sort Tags] button sorts \|tags\| in FilenameEditBox alphabetically | FIXED // Implemented v34.19 (third row, beside [Clear]/[Reduce]); preserves leading text, datestamp, `_wm`, extension — awaiting user test |
 | x | #4.12 | Char count ('22/255') centered inside the thermometer bar | #12 is displaying a count. However, when in NC mode with background = yellow, I could barely see the count in white font. (Hint: the date prefix button for NC (also yellow background) properly used black font.) // Implemented v34.19; side label removed — awaiting user test |
-| x | #w.11 | Search matches aliases anywhere in the CSV line ('grn' finds `CLR_grn`) | Implemented v34.19 — awaiting user test |
+| x | #0.11 | Search matches aliases anywhere in the CSV line ('grn' finds `CLR_grn`) | FIXED // Implemented v34.19 — awaiting user test |
 | x | #0.10 | Search case-sensitivity | FIXED //Code looks case-insensitive; awaiting example tag + search string |
 | ☐ | #2.14 | Full path in taglist status line | Trivial |
 | ☐ | #2.15 | Bottom row +50% height | Trivial |
