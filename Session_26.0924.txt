@@ -1,0 +1,60 @@
+# Session Transcript — 26.0924 (v34.19 → v34.20, AGENTS.md created)
+
+Working relationship: AtaraxiA22 (user, tests on real Linux box) + Vibe agent.
+Note: this file was reconstructed from the conversation; the session began with the
+repo detached at main's TASKS.md, so the v34.19 code had to be re-fetched from its
+vibe branch.
+
+## What transpired
+
+1. **#w.19 — stale taglist highlights after [Clear]** (user-reported bug, new this session)
+   - Repro: search-add 5-6 tags → [Sort Tags] → [Clear]. FilenameEditBox emptied,
+     but the tag names stayed highlighted in the taglist.
+   - Root cause: `update_tag_highlights()` paints by membership in `selected_tags`,
+     not by parsing the edit-box text. `clear_filename_edit()` and
+     `reduce_filename_edit()` emptied the box but never reset `selected_tags`.
+   - Fix: both methods now `selected_tags.clear()` + re-extract from kept text
+     (datestamp, `_wm`, extension), then repaint. 4 lines. First pushed as a fix to
+     `Taggerist_v34.19.py` on PR #10's branch (8827c77), then delivered properly as
+     **`Taggerist_v34.20.py`** (30e25bf) at user request ("link for v34.20?").
+   - TASKS.md: new entry #w.19 added at top of w-band (cadd279), awaiting user test.
+
+2. **Session-expiry discussion**
+   - User asked whether the agent has knowledge of expired sessions: it does not.
+     Only committed repo artifacts carry over.
+   - User asked how to preserve session context in the repo → agreed on two layers:
+     - `AGENTS.md` (read every session; durable conventions/relationship notes)
+     - `Session_*.txt` transcript files (per-session history, read on demand)
+   - **`AGENTS.md` created and pushed to main (0d34e37)** — conventions, TASKS.md
+     workflow, testing reality (no GUI in sandbox), filename/tag formats,
+     `selected_tags` invariant, version-file header rules, reference-file index.
+     User to edit it with relationship nuances only they know.
+
+3. **Transcript-file capability** (this item)
+   - Confirmed: agent can write/post session summaries to the repo during a session,
+     on request. Not automatic; not possible after expiry. User should say
+     "checkpoint the session" (or similar) to trigger a commit of this file.
+
+## Working-relationship notes observed this session
+
+- User wants things asked-before-doing on default-branch (main) writes — approved
+  TASKS.md direct pushes when asked.
+- User's requests arrive short and referential ("link for v34.20?") — expects the
+  agent to know repo state; check branches/PRs before answering.
+- User values root-cause explanations ("root cause: strip_comment() ate unquoted
+  hex colors" style from TASKS.md comments is the house style).
+
+## Open items at checkpoint time
+
+- #w.19 awaiting user test ([Clear]/[Reduce] highlights)
+- v34.19 w-band items awaiting user test: #0.18 (hex config / unselected taglist
+  button colors), #0.13 ([Sort Tags]), #4.12 (count in thermometer bar),
+  #0.11 (alias search)
+- #0.10 case-sensitivity still needs a repro example from the user
+- PR #10 open (v34.19 → v34.20 content), user to download
+  `Taggerist_v34.20.py` from its branch and test
+
+## Pointer
+
+Next session: read AGENTS.md (automatic), then this file. TASKS.md is authoritative
+for status.
