@@ -10,7 +10,7 @@ Last updated: v34.18 (by agent) — edit freely, commit after changes.
 
 ## ✅ Fixed — awaiting your confirmation (tick ✅ after testing)
 
-- [x] **CI symbol buttons invisible on yellow** — fixed in v34.18 (contrast-aware text; chips too)
+- [ ] **CI symbol buttons invisible on yellow** — fixed in v34.18 (contrast-aware text; chips too)
 - [ ] **[RW] symbol not replacing others / duplicating on repeat** — fixed in v34.18 (symbols now read from config, not hard-coded)
 - [ ] **PROC list not refreshing after PROCESS** — fixed in v34.18 (refresh always runs; processed file scrolled to center)
 
