@@ -1235,7 +1235,9 @@ class TaggeristList(QFrame):
             kept = (m.group('ci') or '') + m.group('ds')
         if '_wm' in root and '_wm' not in kept:
             kept += '_wm'
+        self.selected_tags.clear()
         self.filename_edit.setText(kept + ext)
+        self.extract_tags_from_filename(kept + ext)
         self.update_tag_highlights()
         self.update_length_monitor()
         if hasattr(self, 'search_edit') and self.search_edit:
@@ -1262,7 +1264,9 @@ class TaggeristList(QFrame):
         result += kept
         if '_wm' in filename and '_wm' not in result:
             result += '_wm'
+        self.selected_tags.clear()
         self.filename_edit.setText(result + ext)
+        self.extract_tags_from_filename(result + ext)
         self.update_tag_highlights()
         self.update_length_monitor()
         if hasattr(self, 'search_edit') and self.search_edit:
