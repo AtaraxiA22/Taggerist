@@ -14,9 +14,9 @@ Last updated: v34.18 (by agent)
 | ☐ | #2.15 | Bottom row +50% height | Trivial |
 | ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
 | ☐ | #1.17 | Cosmetic batch: TV nav buttons top-right; FilenameEditBox right-justified; SearchBox beside edit box w/ same-width dropdown; action buttons under thermometer (bold, distinct colors); CI buttons vertical right of edit boxes; strip `[]` from labels; red/green PROC-UNPROC headers, white text | Deferred until crash confirmed dead |
-| ☐ | #0.09 | [Default Sort All] button | Done in v34.18; awaiting user test |
-| ☐ | #0.08 | Cursor defaults to SearchBox after any button | Done in v34.18; awaiting user test |
-| ☐ | #0.07 | ENTER accepts first search result | Done in v34.18; awaiting user test |
+| x | #0.09 | [Default Sort All] button | FIXED // Done in v34.18; awaiting user test |
+| x | #0.08 | Cursor defaults to SearchBox after any button | FIXED //  Done in v34.18; awaiting user test |
+| x | #0.07 | ENTER accepts first search result | FIXED //Done in v34.18; awaiting user test |
 | x | #0.06 | PROC list not refreshing after PROCESS | USER TEST OK //Fixed v34.18; awaiting user test |
 | x | #0.05 | [RW] symbol not replacing others / duplicating on repeat |USER TEST OK // Fixed v34.18; awaiting user test |
 | x | #0.04 | CI symbol buttons invisible on yellow | Label still not visible. NOT FIXED //Fixed v34.18; awaiting user test |
