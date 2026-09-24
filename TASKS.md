@@ -5,7 +5,7 @@ Last updated: v34.18 (by agent)
 **Format:** ID# = `#priority.ID` — priority: 0 = fixed/resolved · 1 = very low · 2 = low · 3 = medium · 4 = high · 5 = very high. ID is permanent; change status by editing the priority digit. Agent re-sorts (5.## at top → 0.## at bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
-|---|---|---|---|
+|:-:|:-:|--------------------------------------------------|--------------------------------------------------|
 | ☐ | #3.10 | Search case-sensitivity | Code looks case-insensitive; awaiting example tag + search string |
 | ☐ | #3.11 | Search entire CSV line ('grn' would find `CLR_grn`) | Trivial |
 | ☐ | #3.12 | Char count inside thermometer ('22/255' centered in bar) | Stable, safe |
