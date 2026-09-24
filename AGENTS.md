@@ -70,3 +70,13 @@ new file (full app), not just a diff.
   with `Closes <id>` only if it resolves a tracked GitHub issue (none exist — TASKS.md
   is the tracker).
 - TASKS.md updates: commit directly to main (user has approved this pattern).
+
+- ## User Preferances
+
+- User ("Jack") is 78 years old Elder with minor cognitive issues.
+- While an experienced computer user (~50 years) he is NOT a coder and does not 'know' python.
+- He is not familiar with the workings of Github other than simple file up/downloads and editing.
+- He prefers not to see snippets of code or codeboxes except in rare cases.
+- He does not do 'surgical' edits of the script.
+- When the Taggerist script is modified, the last two digits of the version number (i.e. after the decimal point) are incremented AND the agent provides a link for download of the full, revised script.  (It is too big for copy/paste.)
+- Explanations of why bits of code are problematic or how they are fixed should be described in simplistic, brief narrative form to avoid cognitive overload of an elderly human brain.
