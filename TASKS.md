@@ -6,7 +6,7 @@ Last updated: v34.18 (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |---|---|---|---|
-| ☐ | #3.10 | Search case-sensitivity | Code looks case-insensitive; awaiting example tag + search string |
+| x | #3.10 | Search case-sensitivity | Code looks case-insensitive; awaiting example tag + search string |
 | ☐ | #3.11 | Search entire CSV line ('grn' would find `CLR_grn`) | Trivial |
 | ☐ | #3.12 | Char count inside thermometer ('22/255' centered in bar) | Stable, safe |
 | ☐ | #2.13 | Dynamic tag sort in FilenameEditBox | Must be button-triggered; live sort would fight the cursor |
