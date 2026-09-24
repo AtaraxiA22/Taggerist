@@ -6,6 +6,7 @@ Last updated: v34.19 (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
+| x | #w.19 | After search-adding 5-6 tags and [Sort Tags], pressing [Clear] emptied the FilenameEditBox but the tagnames stayed highlighted in the taglist | FIXED // v34.19 root cause: `clear_filename_edit()` and `reduce_filename_edit()` emptied the edit box but never reset `selected_tags`, so `update_tag_highlights()` kept painting them as selected; both now clear and re-extract `selected_tags` from the new text — awaiting user test |
 | x | #0.18 | Unselected TAGLIST_NAME button (first of three) doesn't show list name in FULLWINDOW_FONT_COLOR on FULLWINDOW_BG_COLOR (selected state OK) | FIXED // v34.19 root cause: `strip_comment()` ate unquoted hex colors (`#F0E0D0` → empty) so config fell back to white/black; bare `#RGB`/`#RRGGBB` now pass through — awaiting user test |
 | x | #0.13 | [Sort Tags] button sorts \|tags\| in FilenameEditBox alphabetically | FIXED // Implemented v34.19 (third row, beside [Clear]/[Reduce]); preserves leading text, datestamp, `_wm`, extension — awaiting user test |
 | x | #4.12 | Char count ('22/255') centered inside the thermometer bar | #12 is displaying a count. However, when in NC mode with background = yellow, I could barely see the count in white font. (Hint: the date prefix button for NC (also yellow background) properly used black font.) // Implemented v34.19; side label removed — awaiting user test |
