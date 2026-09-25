@@ -1,0 +1,31 @@
+Taggerist_v35.04_User_Feedback.txt
+=========
+ - #12 RESOLVED
+---
+ - #27 RESOLVED.  Wrapping worked!
+
+---
+ - NEW:  Increase height of SearchBox to match height of boxes above. 
+--
+ - #17 TWEAKS NEEDED (cosmetic)
+ --  Reduce width of CI buttons to the CI name size with only one space berfore & after. I.e. [______@_____] --> [ @ ]
+ -- Reduce width of [CLEAR] and [REDUCE] to match width of [SORT TAGS] button
+ -- All buttons in cluster should be of same height (except [PROCESS])
+ -- [PROCESS] button should be same height as FilenameEdit box
+ -- [SKIP] should be directly under [PROCESS]  and of same width.
+ -- Try to align the buttons vertically and horizontally as much as possible.
+
+Here is the revised map. (Underscores in map represent (approximate) spaces.)
+
+[ __NC_ ]_[ _Xpix_ ]_[ _RW_]__|__...(pathname line  -->
+[  CI1  ]_[___CLEAR__] __[_PROCESS_]_|_...(FilenameEditbox) -->
+[  CI2 ]_[__REDUCE]_] __[_ PROCESS_] _|_..(FilenameEditbox) -->
+[   CI3 ]_[ SORT TAGS ]__[____SKIP___]  |... (thermometer) -->
+
+---
+ - NEW in TV: 
+ --  Change order *and names* of  [<--], [-->] and [External Viewer] to [External viewer], [Previous] and [Next]
+ -- Align them vertically, right-justified to  the TF/TV border line and aligned with the three CI buttons in the TF cluster.  I.e with rows 2,3 and 4.
+  -- Match their heights to that of the CI buttons to their right
+  -- Make arrow text labels larger and bold face them.  
+  -- 
