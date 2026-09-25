@@ -1,15 +1,16 @@
 # Taggerist Joint Task List
 
-Last updated: v35.04 (by agent)
+Last updated: v35.05 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #w.27 | Long filename in FilenameEditBox should wrap onto the 2nd line (box is 2 lines tall, large font) | NEW // Implemented v35.04 — text now wraps at box width instead of scrolling sideways — awaiting user test |
+| ☐ | #0.27 | Long filename in FilenameEditBox should wrap onto the 2nd line | RESOLVED v35.04 — USER TEST OK ("Wrapping worked!") |
+| ☐ | #w.28 | SearchBox height should match the boxes above | NEW // Implemented v35.05 (larger font + padding) — awaiting user test |
 | ☐ | #w.26 | [Reduce] does not remove non-tag text sandwiched between pipe-delimited tags (e.g. 'this is not a tagname' survived) | NEW // v35.02 fix: [Reduce] now checks every pipe-delimited word against ALL taglists and drops anything unknown, keeping only legitimate tags + CI/datestamp/_wm/extension. Verified against the user's example: reduces to |CLR_red|©2026.0718-2103.458_wm.jpg — awaiting user test |
-| ☐ | #w.17 | Button cluster: all primary buttons left of the edit box | v35.02 rebuilt per user map: CI column rows 1-3; Clear (row 1) / Reduce (row 2) / Sort Tags + SKIP (row 3) column; PROCESS 2 rows tall (rev map v35.03); edit box 2 rows tall stretching to right margin; thermometer under edit box; Search full-width below. [Sort Tags] stays in the cluster (user corrected earlier plan) — awaiting user test |
-| ☐ | #w.12 | Char count numerals in the thermometer bar | v35.01 numerals were centered — at low counts they sat on the unfilled black part of the bar (black on black). v35.02: numerals left-justified so they always ride the colored fill; colors now traffic-light: green (go) → yellow (caution) → red (stop) — awaiting user test |
+| ☐ | #w.17 | Button cluster: all primary buttons left of the edit box | v35.05 rev4 tweaks per user: CI buttons sized to label + 1 space; Clear/Reduce widths matched to Sort Tags; uniform heights; PROCESS = edit-box height (2 rows); SKIP directly under PROCESS, same width; SearchBox height matches boxes above; TV nav renamed/reordered [External viewer]/[← Previous]/[Next →] vertical, bold, right-justified at TF/TV border — awaiting user test |
+| ☐ | #0.12 | Char count numerals in the thermometer bar | RESOLVED v35.04 — USER TEST OK (left-justified numerals, traffic-light colors) |
 | ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
 | ☐ | #0.25 | Feature: mouseover on a filename in PROC or UNPROC shows a small popup with the full filename+ext, wrapping at the right-hand window margin | FIXED — USER TEST OK v35.01 ("a big help with long-filename files") |
 | ☐ | #0.24 | Feature: IF date prefix = '(c)' THEN replace it with '©' | CANCELLED BY USER // He will batch-rename existing files instead; CI symbol handling stays generic for other potential users |
