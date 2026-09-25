@@ -74,6 +74,7 @@ new file (full app), not just a diff.
 - ## User Preferances
 
 - User ("Jack") is 78 years old Elder with minor cognitive issues.
+- User is slightly color-tone blind. Issues involving colors may be impacted by this. 
 - While an experienced computer user (~50 years) he is NOT a coder and does not 'know' python.
 - He is not familiar with the workings of Github other than simple file up/downloads and editing.
 - He prefers not to see snippets of code or codeboxes except in rare cases.
