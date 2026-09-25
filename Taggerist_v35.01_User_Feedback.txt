@@ -1,0 +1,33 @@
+Taggerist_v35.01_User_Feedback.txt
+=========
+#25 FIXED/TESTED  (this is a big help with long-filename files!)
+
+---
+#24:  NOT FIXED. I see what the problem is:  the numbers are centered. When count is low, the center is black background with black font.  Only when count is over 127 does the yellow extends close  enough to the center do I see the numbers.  SOLUTION: left-justify the numbers to the left margin.(which countermands #12)
+NOTE.a: the yellow extends to ~150. When over 150, it turns to red.  There is no green for mid-range.
+NOTE.b: colors should be green-->yellow-->red (like the colors of a traffic light. Universally understood. Green means 'Go', yellow means 'Caution' and red means 'Stop' (or 'Critical')
+
+---
+#17 NOT FIXED. Here are modifications:  
+
+NEW CONCEPT:  I'd like to cluster all of the buttons to the left of the FilenameEditBox as shown in the map below. Once a file has been selected, this clustering puts all mouse activity in one place with all of the primary buttons in close proximity. The [PROCESS] button is huge.  Focus goes to the SearchBox. (All tagname editing functions are similarly clustered in bottom row.)
+
+ (ignore the underscores - they represent (approximate) empty space.)
+
+[ __NC_ ]_[ _Xpix_ ]_[ _RW_]__|__...(pathname line  -->
+[  ©  ]_[[CLEAR]_ _[PROCESS]_|_...(FilenameEditbox) -->
+[  @ ]_[REDUCE] _[PROCESS] _|_..(FilenameEditbox) -->
+[  !.l  ]_[SKIP]_____ [PROCESS]_|... (thermometer) -->
+[__(search box__] ___... (search results)  --->   
+
+ - [PROCESS] button is three lines high.  FilenameEditBox are is two lines high
+ - '-->' indicates extend box to right margin of TL pane
+ - Use same color schema as before.
+ - MOVE [SORT TAGS] to bottom line to left of [EDIT TAGS]
+
+------
+NEW BUG:  the [Reduce] button is not finding non-pipe-delimited text properly.  E.g., when I try to [Reduce] this filename to eliminate the non-tagnames:   '|CLR_red|%_60%|this is not a tagname|%_80%|©2026.0718-2103.458_wm.jpg', the result no change. If extraneous text is sandwiched between two |pipe-delimited tags, it 'looks' like a legitimate tag.  
+
+Would it be *reasonable*/feasible to have the [Reduce] button search the filename for correlations to the taglists (all taglists) to extract legitimate tags then delete the rest (except for the date type,date, and '_wm'????  In this example, it would find '|CLR_red|%_60%|%_80%|©2026.0718-2103.458_wm.jpg' and delete anything else.
+========
+ - Questions??
