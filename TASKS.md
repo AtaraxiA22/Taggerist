@@ -6,7 +6,7 @@ Last updated: v34.20 (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #w.19 | After search-adding 5-6 tags and [Sort Tags], pressing [Clear] emptied the FilenameEditBox but the tagnames stayed highlighted in the taglist | FIXED // v34.20 root cause: the [Clear] and [Reduce] buttons emptied the edit box but never reset the internal "selected tags" memory, so the taglist kept painting them as selected; both buttons now reset that memory from whatever text remains — awaiting user test |
+| x | #0.19 |FIXED // After search-adding 5-6 tags and [Sort Tags], pressing [Clear] emptied the FilenameEditBox but the tagnames stayed highlighted in the taglist | FIXED // v34.20 root cause: the [Clear] and [Reduce] buttons emptied the edit box but never reset the internal "selected tags" memory, so the taglist kept painting them as selected; both buttons now reset that memory from whatever text remains — awaiting user test |
 | ☐ | #4.12 | Char count ('22/255') centered inside the thermometer bar | #12 is displaying a count. However, when in NC mode with background = yellow, I could barely see the count in white font. (Hint: the date prefix button for NC (also yellow background) properly used black font.) // Implemented v34.19; side label removed — awaiting user test |
 | ☐ | #2.15 | Bottom row +50% height | Trivial |
 | ☐ | #2.14 | Full path in taglist status line | Trivial |
