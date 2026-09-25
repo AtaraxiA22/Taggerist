@@ -1,0 +1,17 @@
+Taggerist_v34.22_User_Feedback.txt
+=========
+ - #22 - FIXED
+ - #23 - FIXED
+ - #24 - NOT FIXED: script does not *automatically* change '(c)' --> ©.  It should do this immediately when a file is loaded into FilenameEditBox.
+ - #12 filename character count under 100 (is yellow) is not apparent in the thermometer.  Numerals should be black for <100.  (green and red levels should black font.  NOTE: I am slightly color-tone blind.)
+
+ - ***CHANGE  Version # to v35.01 ***, then:
+
+ - ADD level 2 feature request: mouseover on a filename in PROC or UNPROC creates small popup window displaying full filename+ext which wraps at right-hand window margin.
+
+ - CHANGE:  #1.17, 2.15 and 2.14 --> level 4. Implement them in v35.01 in if reasonable 
+
+**ALL* of above #'s should be prefixed with 'w' to indicate you are 'waiting' for me to test them. 
+
+========
+ - Don't forget to update these in TASKS.md AND THEN sort the Item# col. as  Z-->A.    Any 0-prefixed items should move to bottom of list.
