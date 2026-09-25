@@ -1,13 +1,13 @@
 # Taggerist Joint Task List
 
-Last updated: v35.02 (by agent)
+Last updated: v35.03 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
 | ☐ | #w.26 | [Reduce] does not remove non-tag text sandwiched between pipe-delimited tags (e.g. 'this is not a tagname' survived) | NEW // v35.02 fix: [Reduce] now checks every pipe-delimited word against ALL taglists and drops anything unknown, keeping only legitimate tags + CI/datestamp/_wm/extension. Verified against the user's example: reduces to |CLR_red|©2026.0718-2103.458_wm.jpg — awaiting user test |
-| ☐ | #w.17 | Button cluster: all primary buttons left of the edit box | v35.02 rebuilt per user map: CI column rows 1-3; Clear (row 1) / Reduce (row 2) / Sort Tags + SKIP (row 3) column; PROCESS 3 rows tall; edit box 2 rows tall stretching to right margin; thermometer under edit box; Search full-width below. [Sort Tags] stays in the cluster (user corrected earlier plan) — awaiting user test |
+| ☐ | #w.17 | Button cluster: all primary buttons left of the edit box | v35.02 rebuilt per user map: CI column rows 1-3; Clear (row 1) / Reduce (row 2) / Sort Tags + SKIP (row 3) column; PROCESS 2 rows tall (rev map v35.03); edit box 2 rows tall stretching to right margin; thermometer under edit box; Search full-width below. [Sort Tags] stays in the cluster (user corrected earlier plan) — awaiting user test |
 | ☐ | #w.12 | Char count numerals in the thermometer bar | v35.01 numerals were centered — at low counts they sat on the unfilled black part of the bar (black on black). v35.02: numerals left-justified so they always ride the colored fill; colors now traffic-light: green (go) → yellow (caution) → red (stop) — awaiting user test |
 | ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
 | ☐ | #0.25 | Feature: mouseover on a filename in PROC or UNPROC shows a small popup with the full filename+ext, wrapping at the right-hand window margin | FIXED — USER TEST OK v35.01 ("a big help with long-filename files") |
