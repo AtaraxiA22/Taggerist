@@ -6,12 +6,11 @@ Last updated: v35.05 (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #0.27 | Long filename in FilenameEditBox should wrap onto the 2nd line | RESOLVED v35.04 — USER TEST OK ("Wrapping worked!") |
 | ☐ | #w.28 | SearchBox height should match the boxes above | NEW // Implemented v35.05 (larger font + padding) — awaiting user test |
 | ☐ | #w.26 | [Reduce] does not remove non-tag text sandwiched between pipe-delimited tags (e.g. 'this is not a tagname' survived) | NEW // v35.02 fix: [Reduce] now checks every pipe-delimited word against ALL taglists and drops anything unknown, keeping only legitimate tags + CI/datestamp/_wm/extension. Verified against the user's example: reduces to |CLR_red|©2026.0718-2103.458_wm.jpg — awaiting user test |
 | ☐ | #w.17 | Button cluster: all primary buttons left of the edit box | v35.05 rev4 tweaks per user: CI buttons sized to label + 1 space; Clear/Reduce widths matched to Sort Tags; uniform heights; PROCESS = edit-box height (2 rows); SKIP directly under PROCESS, same width; SearchBox height matches boxes above; TV nav renamed/reordered [External viewer]/[← Previous]/[Next →] vertical, bold, right-justified at TF/TV border — awaiting user test |
-| ☐ | #0.12 | Char count numerals in the thermometer bar | RESOLVED v35.04 — USER TEST OK (left-justified numerals, traffic-light colors) |
 | ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
+| ☐ | #0.27 | Long filename in FilenameEditBox should wrap onto the 2nd line | RESOLVED v35.04 — USER TEST OK ("Wrapping worked!") |
 | ☐ | #0.25 | Feature: mouseover on a filename in PROC or UNPROC shows a small popup with the full filename+ext, wrapping at the right-hand window margin | FIXED — USER TEST OK v35.01 ("a big help with long-filename files") |
 | ☐ | #0.24 | Feature: IF date prefix = '(c)' THEN replace it with '©' | CANCELLED BY USER // He will batch-rename existing files instead; CI symbol handling stays generic for other potential users |
 | ☐ | #0.23 | In TF, the PROC and UNPROC directory full paths show in the same line as the [OPEN] buttons, but the directory listings below don't load them — the app seems to 'remember' the paths but doesn't use them | NEW // v34.22 fix: the app stored the chosen directories in memory but never wrote them to the config file on disk, so a restart always fell back to the default paths; it now saves them to disk, and the listings load the remembered directories at startup — USER TEST OK v34.22 |
@@ -21,6 +20,7 @@ Last updated: v35.05 (by agent)
 | ☐ | #0.15 | Bottom row +50% height | Implemented v35.01 (36px row) — kept in v35.02 |
 | ☐ | #0.14 | Full path in taglist status line | Implemented v35.01 — kept in v35.02 |
 | ☐ | #0.13 | [Sort Tags] button sorts \|tags\| in FilenameEditBox alphabetically | FIXED // Implemented v34.19 (third row, beside [Clear]/[Reduce]); preserves leading text, datestamp, `_wm`, extension — awaiting user test |
+| ☐ | #0.12 | Char count numerals in the thermometer bar | RESOLVED v35.04 — USER TEST OK (left-justified numerals, traffic-light colors) |
 | ☐ | #0.11 | Search matches aliases anywhere in the CSV line ('grn' finds `CLR_grn`) | FIXED // Implemented v34.19 — awaiting user test |
 | ☐ | #0.10 | Search case-sensitivity | FIXED // Code looks case-insensitive; awaiting example tag + search string |
 | ☐ | #0.09 | [Default Sort All] button | User-tested v34.18 — works |
