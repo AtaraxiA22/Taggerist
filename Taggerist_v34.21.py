@@ -1,4 +1,4 @@
-# Taggerist v34.20
+# Taggerist v34.21
 
 # Personal Configurations (fallback defaults; overridden by Taggerist.config.txt)
 TAGLIST_1 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv,©,white,red'
@@ -13,6 +13,7 @@ DELIMITERS = ['|', '`']
 
 HELP_FILE_PATH = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md'
 # P.D. Reviewed @26.0909-0700.00
+# Taggerist v34.21: #4.12 fix — the char count inside the thermometer bar is now always bold black text in all four places that style the bar; previously the text color was only set on one of them, so after switching taglists the count fell back to white and vanished on the yellow (100+ chars) warning bar
 # Taggerist v34.20: #w.19 fix — [Clear] and [Reduce] now reset selected_tags and re-extract them from the kept text (datestamp, _wm, extension) before repainting the taglist; previously tag names stayed highlighted after the FilenameEditBox was emptied
 # Taggerist v34.19: #4.18 fix — unselected taglist buttons now use FULLWINDOW_FONT_COLOR on FULLWINDOW_BG_COLOR (was hard-coded #000); unquoted hex colors in Taggerist.config.txt were being swallowed as comments — bare #RGB/#RRGGBB values now pass through unchanged; #3.12 — char count '22/255' now shown centered inside the thermometer bar (side label removed); #3.11 — search now matches aliases from every taglist CSV line (typing 'grn' finds CLR_grn); #2.13 — NEW [Sort Tags] button (third row, beside [Clear]/[Reduce]) sorts the |tags| in FilenameEditBox alphabetically, preserving leading text, datestamp, _wm, and extension
 # (c) @26.0830-2150.00 by AtaraxiA under Creative Commons CC BY-SA license
