@@ -1,13 +1,13 @@
 # Taggerist Joint Task List
 
-Last updated: v34.20 (by agent)
+Last updated: v34.21 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 0.##; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| x | #0.19 |FIXED // After search-adding 5-6 tags and [Sort Tags], pressing [Clear] emptied the FilenameEditBox but the tagnames stayed highlighted in the taglist | FIXED // v34.20 root cause: the [Clear] and [Reduce] buttons emptied the edit box but never reset the internal "selected tags" memory, so the taglist kept painting them as selected; both buttons now reset that memory from whatever text remains — awaiting user test |
-| ☐ | #4.12 | Char count ('22/255') centered inside the thermometer bar | #12 is displaying a count. However, when in NC mode with background = yellow, I could barely see the count in white font. (Hint: the date prefix button for NC (also yellow background) properly used black font.) // Implemented v34.19; side label removed — awaiting user test |
+| ☐ | #0.19 | After search-adding 5-6 tags and [Sort Tags], pressing [Clear] emptied the FilenameEditBox but the tagnames stayed highlighted in the taglist | FIXED // v34.20 root cause: the [Clear] and [Reduce] buttons emptied the edit box but never reset the internal "selected tags" memory, so the taglist kept painting them as selected; both buttons now reset that memory from whatever text remains — USER TEST OK v34.20 |
+| ☐ | #4.12 | Char count ('22/255') centered inside the thermometer bar | Colors are length-driven, not taglist-driven: green under 100 chars, yellow 100–150, red over 150. The count was invisible on the yellow bar because the text fell back to white after switching taglists. // v34.21 fix: the count is now always bold black text on the bar, matching the date-prefix button — awaiting user test |
 | ☐ | #2.15 | Bottom row +50% height | Trivial |
 | ☐ | #2.14 | Full path in taglist status line | Trivial |
 | ☐ | #1.17 | Cosmetic batch: TV nav buttons top-right; FilenameEditBox right-justified; SearchBox beside edit box w/ same-width dropdown; action buttons under thermometer (bold, distinct colors); CI buttons vertical right of edit boxes; strip `[]` from labels; red/green PROC-UNPROC headers, white text | Deferred until crash confirmed dead |
