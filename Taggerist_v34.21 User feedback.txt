@@ -1,0 +1,15 @@
+Taggerist_v34.21_User_Feedback.txt
+=========
+( no BugLog.txt was genereated)
+
+ADD  - Level 5 BUG:  When I load v34.21, I see 'v34.21' in the very top line of the window. That's OK.  BUT, when click on a filename in UNPROC, that top line changes to 'v34.19'.  
+
+---
+ ADD - Level 3 BUG: In TF, I see the last dir full path in same line as [OPEN] button (in PROC and in UNPROC) so, apparently, the script is already set to 'remember' them, but it is not loading them into the dir listing window below.  
+(Please assign ID# and enter into TASKS.md)
+
+---
+ADD - Level 4 Feature Request: IF date prefix = '(c)' THEN replace it with '©'.
+
+---
+ - Don't forget to sort the Item# col. in TASKS.md as Z-->A
