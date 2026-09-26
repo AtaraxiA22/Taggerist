@@ -100,3 +100,34 @@ for status.
 - Open: awaiting Jack's test on #w.28, #w.17 rev4, #w.26. #1.16 on hold.
   Flagged but unactioned: Reduce drops %_60%/%_80% tokens (not in any
   taglist) — needs Jack's call if percentage notation should be kept.
+
+## Checkpoint 4 (v35.05 feedback → v35.06)
+- Jack's v35.05 feedback: #28 RESOLVED (Search box); #26 NOT RESOLVED —
+  [Reduce] dropped ALL tags (behaved like Clear); #17 rev5 tweak batch a–h.
+- #26 investigation: extracted the verbatim reduce_filename_edit + taglist
+  loading code into a stub harness with Jack's exact test filename
+  (|PTY_coat|not a tag|ACT_dance|(c)2026.0718-2103.476_wm.jpg) — logic tests
+  CORRECT (keeps PTY_coat/ACT_dance, drops 'not a tag'). Buglog shows one
+  continuous session, all three taglists loaded (99/298/21 tags, 232
+  conversions), no load errors. Conclusion: runtime memory state diverges
+  from expectations; can't repro in sandbox.
+- v35.06 (49628fd on PR branch): (1) Reduce known-pool now also includes
+  all_tags (active list) as belt-and-braces; (2) Reduce logs every
+  keep/drop decision + pool size to Taggerist_v35.06-buglog.txt
+  ('reduce: kept/dropped ...') so the next buglog shows the memory state
+  in black and white. Also: dropped segments[1:-1] slicing — all non-empty
+  segments now checked (first/last segments no longer skipped).
+- #17 rev5: CI buttons 3-char width (MMM metric), bracket-free, bold,
+  placed directly in grid rows 1–3 (fixes the 2–4px drift — was a nested
+  QVBoxLayout with its own spacing); TV nav right-justified (RTL layout
+  direction), 2px white borders, shifted down one line (top spacer),
+  white-on-black styling; Clear/Reduce/Sort Tagline restyled to default
+  window colors + white borders; [Sort Tags] → [Sort Tagline];
+  thermometer 'NN/255 chars.'.
+- Verified: py_compile OK; stub harness Reduce tests 5/5 PASS against
+  Jack's filenames; 17/17 structural checks PASS.
+- TASKS.md (b8906ec): #0.28 user-confirmed; #w.26 NOT RESOLVED + v35.06
+  rev details; #w.17 rev5 details; bands correctly ordered.
+- Open: awaiting Jack's test on #w.26 (Reduce + buglog diagnostics) and
+  #w.17 rev5. If Reduce still misbehaves, read 'reduce:' lines in his
+  next buglog — pool size will reveal whether taglists are in memory.
