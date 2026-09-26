@@ -131,3 +131,37 @@ for status.
 - Open: awaiting Jack's test on #w.26 (Reduce + buglog diagnostics) and
   #w.17 rev5. If Reduce still misbehaves, read 'reduce:' lines in his
   next buglog — pool size will reveal whether taglists are in memory.
+
+## Checkpoint 5 (v35.06 feedback → v35.07)
+- v35.06 diagnostics CRACKED #26: 'reduce:' buglog lines showed a healthy
+  tag pool (788 known: list_tags 418 = 99+298+21, conversions 232,
+  all_tags 99) and Reduce dropping every word in Jack's test file incl.
+  'BDY_babe' — none of those words exist in any of his taglist CSVs.
+  The test file is all junk words; Reduce behaved correctly (identical
+  result to Clear is expected for an all-junk filename). Marked #0.26
+  resolved-by-evidence; told Jack to test on a real-tag file and that
+  words he considers real must exist in a taglist CSV to be kept.
+- v35.07 (5bb9c37 on PR branch), built from v35.06 feedback:
+  - #w.29 focus: TV prev/next/external buttons return focus to Search box.
+  - #w.30 (NEW.3): ENTER=PROCESS — FilenameEditBox keyPressEvent emits
+    process_requested signal; Search box ENTER accepts first result if
+    showing, else processes.
+  - #w.31 (NEW.4): save_and_next auto-sorts tagline first; new config
+    PROCESS_AUTO_SORT (True/False, default True) in DISPLAY section.
+  - #w.17 rev6 (NEW.1/2/6/7 + 17c/e): taglist buttons vertical col 2
+    (3x3 grid: CI col 0, taglist col 2, tagline col 4, PROCESS col 6,
+    edit col 7; separator vline cols 1/3/5); pathname flush-left spans
+    all 8 cols; hline row 1 over button rows spans to TF/TV border;
+    Default Sort All bordered; TF title block 'The TAGGERIST' bold 14px
+    + 'by AtaraxiA and Vibe' italic right-justified + separator line;
+    TV labels right-justified (stylesheet text-align retry — RTL alone
+    didn't render right in v35.06); TV spacer doubled (one more line down).
+  - NEW.5 resizable frames: NOT implemented (comment only per user).
+  Grid layout now: row 0 pathname, row 1 hline, rows 2-4 buttons,
+  row 5 search. All row/col stretches 0 except col 7.
+- Verified: py_compile OK; 18/18 structural checks; Signal import present;
+  strip_comment None-safe for PROCESS_AUTO_SORT fallback.
+- TASKS.md (37261c0): #0.26 resolved-by-evidence; new #w.29/#w.30/#w.31
+  (w-band top: w.31, w.30, w.29, w.17); #w.17 rev6 details.
+- Open: awaiting Jack's test on #w.29/#w.30/#w.31, #w.17 rev6, and a
+  Reduce re-test on a real-tag file. NEW.5 parked until requested.
