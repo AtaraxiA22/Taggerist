@@ -1,14 +1,15 @@
 # Taggerist Joint Task List
-Last updated: v35.07 (by agent)
+Last updated: v35.08 (by agent)
 Last updated: v35.05 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
+| ☐ | #w.32 | Clicking a file doubles/mangles tags in the FilenameEditBox (LOC_LOC_forest, PTY_fernshat, wha%_100%ver; © shows as (c)) | NEW // v35.08 fix: tag-alias conversion previously replaced aliases wherever they appeared inside a word; it now converts only when the alias is the whole tag between the pipes — awaiting user test |
 | ☐ | #w.31 | [PROCESS] should auto-sort the tagline before saving | NEW // v35.07: implemented with config line PROCESS_AUTO_SORT (True/False, default True) in the DISPLAY section — awaiting user test |
 | ☐ | #w.30 | ENTER should PROCESS the file | NEW // v35.07: ENTER in the FilenameEditBox triggers PROCESS; ENTER in the Search box accepts the first result if any are showing, otherwise processes — awaiting user test |
-| ☐ | #w.29 | After any TL or TV button press (incl. Previous/Next/External viewer and CI buttons), focus should return to the Search box (TF excluded) | NEW // v35.07: TV prev/next/external buttons now return focus to the Search box — awaiting user test |
+| ☐ | #w.29 | After any TL or TV button press (incl. Previous/Next/External viewer and CI buttons), focus should return to the Search box (TF excluded) | v35.07: TV prev/next/external buttons; v35.08: also TF file click, [SKIP], taglist buttons, [Edit tags]/[Refresh]/[Help] — awaiting user test |
 | ☐ | #w.17 | Button cluster: all primary buttons left of the edit box | v35.07 rev6 per user feedback: NEW.1 taglist buttons now vertical between CI and Tagline columns (3×3 button grid); pathname line flush-left; NEW.2 vertical border lines between the CI/Taglist/Tagline columns + horizontal border over the edit box extended to the TF/TV border; NEW.6 border around [Default Sort All]; NEW.7 'The TAGGERIST / by AtaraxiA and Vibe' title block atop TF with separator line; (c) TV labels right-justified via stylesheet; (e) TV buttons one more line down — awaiting user test |
 | ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
 | ☐ | #0.28 | SearchBox height should match the boxes above | RESOLVED v35.05 — USER TEST OK ("Search box looks good!") |
