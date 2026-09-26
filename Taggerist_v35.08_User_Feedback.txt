@@ -1,0 +1,55 @@
+Taggerist_v35.08_User_Feedback.txt
+
+#17 cosmetics look great!  Button alignments and border boxes are right-on.  
+
+#26 Testing filename copy integrity:
+
+Original name (system file manager):
+|LOC_laundryroom|PHTO_detail|PHTO_composite|PHTO_comment|PHTO_b&w|PHTO_MP4|PHTO_-___PHOTO____|LOC_Gibs|PET_Trixxie|PTY_apron|AGE_65|CLR_red|(c)2026.0718-2103.454_wm.jpg
+
+Filename in FilenameEditBox:
+|LOC_laundryroom|PHTO_detail|PHTO_composite|PHTO_comment|PHTO_b&w|PHTO_MP4|PHTO_-___PHOTO____|LOC_Gibs|PET_Trixxie|PTY_apron|AGE_65|CLR_red|(c)2026.0718-2103.454_wm.jpg
+
+Yay! they match! (this was a challenging filename, too!)
+
+Here is Reduced filename:
+|LOC_laundryroom|PHTO_detail|PHTO_composite|PHTO_comment|PHTO_b&w|PHTO_MP4|PHTO_-___PHOTO____|LOC_Gibs|PET_Trixxie|PTY_apron|AGE_65|CLR_red|(c)2026.0718-2103.454_wm.jpg
+--
+
+Here is another test:
+Original:
+|LOC_forest|ACT_Tai'Chi|PTY_hat|whatever is this|LOC_rain|©2026.0907-0324.1604_wm.jpg
+
+In FilenameEditBox:
+|LOC_forest|ACT_Tai'Chi|PTY_hat|whatever is this|LOC_rain|(c)2026.0907-0324.1604_wm.jpg
+
+Reduced:
+|LOC_forest|ACT_Tai'Chi|PTY_hat|LOC_rain|(c)2026.0907-0324.1604_wm.jpg
+--
+
+Original:
+|STRZ_&&&&|STR_&&&|STRZ_&|STRZ_&&|26.0818-1606.59.jpg
+
+FilenameEditBox:
+|STRZ_&&&&|STR_&&&|STRZ_&|STRZ_&&|26.0818-1606.59.jpg
+
+REDUCED:
+|STRZ_&&&&|STRZ_&|STRZ_&&|26.0818-1606.59.jpg
+--
+
+That's 3 tests -- all OK.
+
+*Tag conversion works, too.*
+Original:  |Gx|windowsill|_wm.jpg
+
+FilenameEditBox:
+|CHR_Gus|windowsill|_wm.jpg
+(it converted the |Gx| to }CHR_Gus|
+
+Reduced to:
+|CHR_Gus|_wm.jpg
+
+Returning focus to search seems to work for all buttons except those which call up an external file such as [?], [External Viewer], etc. When I return to the main window, the focus is gone.  (That's OK - not actionable )
+
+
+
