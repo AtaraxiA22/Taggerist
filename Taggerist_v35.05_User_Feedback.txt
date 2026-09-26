@@ -1,0 +1,14 @@
+Taggerist_v35.05_User_Feedback.txt
+=========
+#26.  NOT RESOLVED.  [Reduce] simply clears the filename in FilenameEditBox (except CI, date, '_wm, and ext.)   It is functionally identical to [Clear].
+
+#28 - RESOLVED.  Search box looks good!
+
+#17.  a.) The CI buttons are still too wide.   Remove the [brackets].   Each button should have room for 3 characters and no more. If symbol is only 1-2 characters, pad with spaces to make 3 total. If feasible, make Boldface. (i.e. is it possible to boldface the '©' symbol??)
+	b.) There is a slight vertical alignment problem.  The top CI1 button and the [Clear] button are on the same horizontal plane, but the [Reduce] and [Sort Tags[ buttons  are 2-4 pixels b;elow the horizontal plane of their corresponding CI2 and CI3 buttons. Please adjust so that all of the right-hand buttons  are vertically aligned with their left hand (CI) button counterparts.
+ 	c.) In TV, right-justify the labels in the [External Viewer], [<--Previous] and [Next-->] buttons. We should see them almost touching the border line between TF and TV.  This puts all of the operating buttons in the same general cluster. (I.e. less mouse movement required)
+	d.)  ADD thicker white borders to these TV buttons.
+	e. ) Shift these TV buttons down one line to make the horizontally align with the CI buttons.
+	f.) Change  colors of [Clear], [Reduce] and [Sort Tags] to default window colors. (i.e. white on black) and add white borders. Their appearance should be the same as the TV buttons.
+	g.) CHANGE label  [Sort Tags]  --> [Sort Tagline] 
+ 	h.) ADD: suffix the filename character count digits with 'chars.'. E.g. '40/255 chars.' (if feasible/reasonable)
