@@ -1,0 +1,34 @@
+Taggerist_v35.06_User_Feedback.txt
+=========
+
+#26 NOT RESOLVED. No change in behavior. It still clears the filenameEditBox (except for CI symbol, date, '_wm' and .ext.)
+
+ NOT RESOLVED:  When a file is selected, the focus is not going to the Search box as it should. Also same with TV buttons. (It is working with some but not all. General Rule: after any TL or TV [button] is pressed, focus goes to SearchBox. (TF excluded)
+
+#17 Overall the buttons look good. There is a lot of white spae (black space) between the CI buttons and the Tagline Buttons (i,e, [Clear], [Reduce] and [Sort Tagline]). 
+
+	a.) CI buttons look good.
+	b.) The drift is still there, see NEW.1 below.
+	c.) The TV button labels should be right-justified. 
+	d.) Good. OK.
+	e.) Almost, but they  need shift down one more line.
+	f.)  Good. OK
+	g.) Good. OK
+	h.) Good. OK
+
+NEW.1: place the taglist buttons _vertically_ in this space between the IC bbuttons and Tagline buttons. The Taglist buttons should correspond with the CI button to their left.
+
+So, now we have a grid of 3 columns of buttons with 3 rows of buttons per each.  (the 4th column contains [PROCESS] and [SKIP]. The pathname line is now flush-left to the frame border line. 
+
+NEW.2: Add vertical border lines between the CI, Taglist andTagline columns. Extend the horizontal border line that is over the FilenameEditBox left-ward to meet the TF/TV vertical border.   
+
+NEW.3:  - <ENTER> does not PROCESS the file.
+
+NEW.4:  When [PROCESS] is triggered, automatically sort tagline before saving.  (??Make this a Y/N config line in script??)
+
+NEW.5: Is it feasible/reasonable to make the TV, TL, TF-PROC and TF-UNPROC frames resizeable? (Comment only - do not implement yet)
+
+NEW.6: put a border around the 'Default Sort All' button in TF.
+
+
+NEW.7: At top of TF frame, print a 'The TAGGERIST' label in bold font. (Use 2 lines for height)  Under that, using one line, print, in italics,  'by AtaraxiA and Vibe'. *Right-justify* this. Use white font on black background for all. Put a border line under it to seperate it from the PROC list.  Deduct 1-2 lines from PROC and UNPROC to make space.  This is not a button, it is simply the title of the program. 
