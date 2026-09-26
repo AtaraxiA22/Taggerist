@@ -1,0 +1,30 @@
+Taggerist_v35.07_User_Feedback.txt
+=========
+
+#26: INteresting bug here:
+
+TEST.1) 
+I clicked on this file:
+|LOC_forest|ACT_Tai'Chi|PTY_hat|whatever is this|LOC_rain|©2026.0907-0324.1604_wm.jpg 
+(This spelling taken directly from my system File Manager (Nemo))
+ 
+This is what showed up in the FilenameEditBox:
+|LOC_LOC_forest|ACT_Tai'Chi|PTY_fernshat|wha%_100%ver is this|LOC_rain|(c)2026.0907-0324.1604_wm.jpg
+
+TEST.2) 
+Here's another test: 
+Original:  
+|LOC_laundryroom|PHTO_detail|PHTO_composite|PHTO_comment|PHTO_b&w|PHTO_MP4|PHTO_-___PHOTO____|LOC_Gibs|PET_Trixxie|PTY_apron|AGE_65|CLR_red|(c)2026.0718-2103.454_wm.jpg
+
+Here it is in FilenameEditorBox:
+|LOC_laundryroom|PHTO_PHTO_detail|PHTO_PHTO_composite|PHTO_PHTO_comment|PHTO_PHTO_b&w|PHTO_PHTO_MP4|PHTO_-___PHOTO____|LOC_Gibs|PET_Trixxie|PTY_fernsPTY_apron|AGE_65|CLR_CLR_red|(c)2026.0718-2103.454_wm.jpg
+
+This time I closed the script and then reloaded it.  Same file as in TEST.1:
+result: 
+|LOC_LOC_forest|ACT_Tai'Chi|PTY_fernshat|wha%_100%ver is this|LOC_rain|(c)2026.0907-0324.1604_wm.jpg
+
+(When I mouseover this in UNPROC, it is the same spelling as the original.)
+
+
+(All the buttons and cosmetics look great. 
+I noticed that when I clicked on a file in TF, the focus did not go to Search. Some of the buttons in the grid do not do it, as well.  Will test more in next version,)
