@@ -1,0 +1,148 @@
+# Session Transcript — 26.0927 (v35.08 confirmed, config corrected, taglist consolidation spec, v36.01 planned)
+
+Working relationship: AtaraxiA22 (user, tests on real Linux box) + Vibe agent.
+Reconstructed from the session conversation. Read together with TASKS.md and
+Taggerist_v35.08_User_Feedback.txt.
+
+## What transpired
+
+1. **v35.08 test results (all passed)** (uploaded as Taggerist_v35.08-buglog.txt,
+   -User_Feedback.txt, -Session_Log.txt)
+   - #32 tag-doubling: "Yay! they match!" — 3 filename-integrity tests passed
+     unchanged, incl. the challenging laundryroom file. Alias conversion works
+     (|Gx| → |CHR_Gus|). Reduce drops non-tag words correctly.
+   - #17 cosmetics: "look great! Button alignments and border boxes are right-on."
+   - #29 Search focus: works for all buttons; user accepts that external-window
+     buttons ([?], [External viewer]) don't refocus on return — "not actionable."
+   - Later user-confirmed: #31 (PROCESS auto-sort) and #30 (ENTER=PROCESS) also
+     resolved. All moved to 0-band in TASKS.md. **w-band was completely empty
+     for a while** — every tracked item resolved/on-hold.
+
+2. **Config file investigation and correction**
+   - User noticed config looked "wildly incorrect" but buttons worked. Analysis:
+     config file had a stale [DEFAULT] block at top (old [Other]/[NC]/[Xpix] +
+     (all) symbols) plus a [DIRECTORIES] block with the real settings. Script
+     reads [DIRECTORIES] keys first; [DEFAULT] is fallback only — hence
+     everything worked despite the mess.
+   - The script IS using the local copy at
+     /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.config.txt (note:
+     filename has a dot, not underscore). Proof: !.! and [RW] exist nowhere in
+     script fallbacks, yet the buttons showed them.
+   - **Taglist ID field explained**: the 2nd field of taglist_name_N is the CI
+     (collection) symbol stamped before the datestamp. (all) was the old symbol
+     for list 3, long obsolete.
+   - **Corrected config written and pushed** (88f7a4f): stale [DEFAULT] block
+     removed; 4-part taglist lines (path,symbol,fg,bg): [NC]=© white/red,
+     [Xpix]=@ white/yellow, [RW]= white/green. User chose '=' over '!.' and '#'
+     ('#' is the config comment char — a bare # would be eaten by strip_comment;
+     verified by test. '=' verified end-to-end: survives strip_comment, swaps
+     datestamp prefix, recognized as CI).
+   - Color values must stay QUOTED ('#fff') — unquoted # gets read as comment
+     start (the old #0.18 trap). Reminder comments added in the file.
+   - User confirmed: knows where/how to edit taglist lines for future changes.
+
+3. **#w.33 added (low priority, cosmetic)**: taglist buttons display list names
+   with square brackets ([NC], [Xpix], [RW]); strip brackets in next build.
+   Fix location: refresh_taglist_button_labels() (Taggerist_v35.08.py:895-896).
+
+4. **Taglist display overhaul — long design conversation (the big one)**
+   User wants: short display names, section headers, all lists on one screen.
+   Key decisions and facts established:
+   - **Short names**: display only the root (after first underscore) in taglist
+     and filenames. Sort key (full tag w/ prefix) stays hidden — prefixes keep
+     doing their grouping job invisibly. Saves ~4 chars/tag (measured avg 3.97);
+     a 10-tag tagline sheds ~40 chars.
+   - **CSV format stays identical**: col1 = full tag (hidden grouping key),
+     col2 = display name (new role), col3+ = aliases/conversion targets.
+     When col2 absent, strip-rule derives display name (zzAGE_20-30 → "20-30").
+     When col2 present, it wins. Header rows: col2 = section title text.
+   - **Collision analysis (measured on the real CSVs)**: 368 distinct roots;
+     27 roots under 2+ prefixes, nearly all benign PHT_/PHTO_ and FRN_/FURN_
+     spelling dupes; only genuine semantic overlaps: housekeeping (ACT_/MOD_),
+     locked (MOD_/PTY_). 6 roots are also aliases elsewhere (mailbox→ACT_mail).
+   - **Headers**: ___ rows (CHR_-___CHARACTER___ etc.) render as bold
+     non-clickable section titles; title text from col2 (e.g. "CHARACTERS",
+     "AGES"). They are tags too — move with their prefix if user re-parks
+     a category.
+   - **Prefix = layout lever (user's insight)**: renaming AGE_ → zzAGE_ parks
+     the category at bottom of sort = far right columns = hidden in the
+     horizontally-scrolled margin. No code needed; also sorts to bottom of the
+     CSV for editing convenience. Grid fills column-by-column (down then right),
+     so list order = screen position.
+   - **Delimiter stays underscore**: '$' unused in data (would work) but buys
+     nothing; '!' already taken ([RW] uses leading-! rows like !CHR_JCC).
+     Underscore: all 433 tags use it, roots never contain it.
+   - **One screen**: 3 lists ≈ 420 tags + headers fit in ~600 capacity
+     (8pt font, 16 columns, big monitor). Search already spans all 3 lists
+     (verified in code) — consolidation is purely a display change.
+   - **Taglist buttons retire** → replaced by font-size and column-count
+     spin-controls. Live repaint (no [Refresh] needed); values write-through
+     to config file for persistence across restarts (same mechanism as #0.23).
+   - **Horizontal scrolling** on the grid: scroll area exists (setup_taglist_
+     window, line 916) but currently squeezes; needs policy change + natural
+     grid width.
+   - **[Edit tags] → [Edit Tags]** capitalization fix (match [Refresh Tags]).
+
+5. **Consolidation to ONE CSV — decided**
+   - Duplicate analysis (measured): 31 exact dupes — 16 = whole %_ coverage
+     block in both [NC]+[Xpix]; 15 = MDL_ model rows twice within [Xpix]
+     (user has since fixed these in his copies).
+   - **Duplicate worklist delivered** (sections A–G): A: %_ block (keep 1);
+     B: 26 PHTO_/PHT_ + FURN_/FRN_ pairs (pick spelling used in real
+     filenames); C: housekeeping + locked (judgment call); D: alias conflicts
+     (&-family → ST&_ vs STRZ_, te/totalenclosure → %_100% vs
+     MOD_TotalEnclosure, woods → !LOC_woods vs LOC_forest); E: [Xpix] in-file
+     dup aliases incl. the PTY_ oddball (recommend delete — caused the v35.07
+     doubling bug); F: oddballs (backticked `NOT Thalia` alias, 'CLR_ blk'
+     space-in-tag, mailbox root+alias).
+   - User works directory-by-directory (NC/Xpix/RW pics in separate dirs);
+     3 CID buttons (©/@/=) remain sufficient. Color-coding loss accepted.
+   - **Draft merged CSV generated and posted** (Taggerist.taglist.[MERGED].csv
+     on Main): [NC]+[Xpix]+[RW] verbatim, duplicates KEPT for user review,
+     # marker lines at list boundaries (app will ignore #-lines).
+   - **Row-width normalization per Tablecruncher**: originals internally
+     consistent but different widths ([NC]=4, [Xpix]=52 incl. trailing commas,
+     [RW]=2). Regenerated: every row exactly 52 columns, uniform (d95f36f).
+     Width 52 forced by PTY_ferns row (PTY_ aliases in cols 50–51 — flagged for
+     deletion in the review; natural width drops to ~4–5 after user's edits).
+   - User's reviewed CSV will get a verification pass (re-run of the duplicate
+     analysis) before the build.
+
+## Next version: v36.01 — agreed scope (from the design conversation)
+
+User chose to increment the version to v36.01. Full scope:
+
+1. **Short display names**: taglist + FilenameEditBox show root names
+   (strip through first underscore; col2 of CSV overrides when present).
+   Sort/grouping still by full tag. Full-tag equivalence so old prefixed
+   files still load/highlight/reduce correctly. PROCESS saves short form.
+2. **Section headers**: ___ rows render bold, non-clickable; title from col2.
+3. **All lists on one screen** (or the single merged CSV — depends on user's
+   consolidation review): one grid, blocks under headers, horizontal scroll.
+4. **Taglist buttons → spin-controls**: font size + column count; live
+   repaint; write-through to config for persistence.
+5. **Horizontal scrolling** enabled on the taglist grid.
+6. **#w.33**: strip square brackets from taglist button labels (or the
+   buttons are gone entirely per item 4 — if so, #w.33 closes itself).
+7. **[Edit tags] → [Edit Tags]** label fix.
+8. Prerequisite (user-side): user finishes duplicate review of the merged
+   CSV (or of the three originals) and uploads the result; agent runs the
+   verification pass before building.
+
+Notes carried forward:
+- Config: taglist lines are 4-part (path,symbol,fg,bg); '=' is list-3 symbol;
+  colors quoted; [DEFAULT] block deleted. Symbols: ©, @, =.
+- TASKS.md state at session end: w-band has only #w.33; 0-band everything
+  else; #1.16 (per-list colors) on hold — likely closed by consolidation.
+- The agent should re-verify the merged CSV row width after user's edits.
+
+## Working-relationship notes observed
+
+- User's workflow: lives in SEARCH mostly; the taglist grid is a reference
+  wall, not a hunting ground. Design for search-first.
+- User maintains CSVs in Tablecruncher (strict about uniform row widths).
+- User prefers asking "how reasonable is X?" design questions before
+  committing — spec conversations are the norm; keep giving measured data
+  (tag counts, collision counts, char savings) — it lands well.
+- Version numbering: next version is v36.01 (major bump chosen by user at
+  the consolidation milestone).
