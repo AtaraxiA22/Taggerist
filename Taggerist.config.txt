@@ -1,54 +1,40 @@
-[DEFAULT]
-taglist_columns = 8
-taglist_rows = 0
-taglist_column_width = 160
-taglist_font_size = 12
-taglist_spacing = 0
-taglist_vertical_spacing = 1
-taglist_font_color = #fff
-taglist_bg_color = #000
-fullwindow_font_color = #fff
-fullwindow_bg_color = #000
-start_display = 2
-start_maximized = True
-ci_symbol = (c)
-process_auto_sort = True
-taglist_dir = /home/jack/Pictures/TAGLISTS/
-proc_dir = /home/jack/Pictures/TAGGERIST/test3
-unproc_dir = /home/jack/Pictures/TAGGERIST/Test2
-configs_dir = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs
-taglist_name_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Other].csv,©,white,red
-taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,@,white,yellow
-taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv,(all),white,green
-taglist_id_1 = ©
-taglist_id_2 = @
-taglist_id_3 = (all)
-help_file_path = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md
+# Taggerist configuration
+# Lines and values are reread at every start. Delete this file to regenerate it.
+#
+# The three taglist lines below are the ones to edit when you want to use a
+# different taglist, symbol, or colors. Each line has four parts, separated
+# by commas:
+#     taglist_name_N = /full/path/to/taglist.csv,SYMBOL,text-color,background-color
+# The SYMBOL is the copyright-button label and the mark inserted before the
+# datestamp when you press that button. The taglist_id_N lines are only a
+# fallback for the symbol; if the symbol is present in the taglist_name line,
+# the taglist_id line is ignored.
 
 [DIRECTORIES]
-taglist_name_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,black,yellow   ; Taglist 1: path,identifying-symbol,font-color,background-color
-taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv,white,red   ; Taglist 2: path,identifying-symbol,font-color,background-color
-taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv,white,green   ; Taglist 3: path,identifying-symbol,font-color,background-color
-proc_dir = /home/jack/Pictures/TAGGERIST.test_folders/PROC
-unproc_dir = /home/jack/Pictures/TAGGERIST.test_folders/Test2 - flujkes
+taglist_name_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,©,white,red   ; Taglist 1: path,identifying-symbol,font-color,background-color
+taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv,@,white,yellow   ; Taglist 2: path,identifying-symbol,font-color,background-color
+taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv,=,white,green   ; Taglist 3: path,identifying-symbol,font-color,background-color
+proc_dir = /home/jack/Pictures/TAGGERIST.test_folders/PROC   ; Directory where PROCESS copies files
+unproc_dir = /home/jack/Pictures/TAGGERIST.test_folders/Test2 - flujkes   ; Directory of files waiting to be processed
 configs_dir = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs   ; Directory holding this config and the .csv taglists
 help_file_path = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md   ; Path of the help file shown by [?]
 taglist_id_1 = ©   ; Date identifier for taglist 1 (used only if not given in TAGLIST_NAME_1)
 taglist_id_2 = @   ; Date identifier for taglist 2 (used only if not given in TAGLIST_NAME_2)
-taglist_id_3 = !.!   ; Date identifier for taglist 3 (used only if not given in TAGLIST_NAME_3)
+taglist_id_3 = =   ; Date identifier for taglist 3 (used only if not given in TAGLIST_NAME_3)
 
 [DISPLAY]
-taglist_columns = 16; 8   ; Max columns of tagnames (list wraps to a new column at screen bottom)
+taglist_columns = 16   ; Max columns of tagnames (list wraps to a new column at screen bottom)
 taglist_rows = 0   ; Max rows per column; 0 = fit to screen height
 taglist_column_width = 160   ; Pixel width of each tagname column
-taglist_font_size = 8 ;12   ;  Font size of tagnames in TL
+taglist_font_size = 8   ; Font size of tagnames in TL
 taglist_vertical_spacing = 0.5   ; Blank lines between tagnames (1 = one full line; 0.5 = half a line; 0 = no gap)
 start_display = 2   ; Display number to open on
 start_maximized = True   ; True or False
+ci_symbol = (c)   ; Date-prefix symbol: '(c)' = keep (c) as typed; '©' = auto-convert (c) to ©
+process_auto_sort = True   ; True = [PROCESS] sorts the tagline before saving; False = saves as shown
 
 [COLORS]
-taglist_font_color = '#fff'   ; Tagname font color
-taglist_bg_color = '#000'   ; Taglist background color
-fullwindow_font_color = '#fff'   ; Window font color
-fullwindow_bg_color = '#000'   ; Window background color
-
+taglist_font_color = '#fff'   ; Tagname font color (keep the quotes — the # would otherwise read as a note)
+taglist_bg_color = '#000'   ; Taglist background color (keep the quotes)
+fullwindow_font_color = '#fff'   ; Window font color (keep the quotes)
+fullwindow_bg_color = '#000'   ; Window background color (keep the quotes)
