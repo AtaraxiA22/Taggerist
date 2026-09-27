@@ -6,10 +6,10 @@ Last updated: v35.05 (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #w.31 | [PROCESS] should auto-sort the tagline before saving | NEW // v35.07: implemented with config line PROCESS_AUTO_SORT (True/False, default True) in the DISPLAY section — awaiting user test |
-| ☐ | #w.30 | ENTER should PROCESS the file | NEW // v35.07: ENTER in the FilenameEditBox triggers PROCESS; ENTER in the Search box accepts the first result if any are showing, otherwise processes — awaiting user test |
 | ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
 | ☐ | #0.32 | Clicking a file doubles/mangles tags in the FilenameEditBox (LOC_LOC_forest, PTY_fernshat, wha%_100%ver; © shows as (c)) | RESOLVED v35.08 — USER TEST OK ("Yay! they match!" — 3 filename-integrity tests passed unchanged, incl. the challenging laundryroom file; alias conversion also works: |Gx| → |CHR_Gus|; Reduce drops non-tag words correctly) |
+| ☐ | #0.31 | [PROCESS] should auto-sort the tagline before saving | RESOLVED v35.07 — USER TEST OK v35.08 (confirmed by user) |
+| ☐ | #0.30 | ENTER should PROCESS the file | RESOLVED v35.07 — USER TEST OK v35.08 (confirmed by user) |
 | ☐ | #0.29 | After any TL or TV button press (incl. Previous/Next/External viewer and CI buttons), focus should return to the Search box (TF excluded) | RESOLVED v35.08 — USER TEST OK (focus returns for all buttons; user accepts that buttons launching external windows ([?], [External viewer]) don't refocus on return — "That's OK - not actionable") |
 | ☐ | #0.28 | SearchBox height should match the boxes above | RESOLVED v35.05 — USER TEST OK ("Search box looks good!") |
 | ☐ | #0.27 | Long filename in FilenameEditBox should wrap onto the 2nd line | RESOLVED v35.04 — USER TEST OK ("Wrapping worked!") |
