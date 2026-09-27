@@ -6,6 +6,7 @@ Last updated: v35.05 (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
+| ☐ | #w.33 | Taglist buttons show the list names with square brackets ([NC], [Xpix], [RW]) — remove the brackets in the next build | NEW // cosmetic, low priority per user; labels come from the last '[..]' part of the CSV filename in refresh_taglist_button_labels() (Taggerist_v35.08.py:895-896) |
 | ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
 | ☐ | #0.32 | Clicking a file doubles/mangles tags in the FilenameEditBox (LOC_LOC_forest, PTY_fernshat, wha%_100%ver; © shows as (c)) | RESOLVED v35.08 — USER TEST OK ("Yay! they match!" — 3 filename-integrity tests passed unchanged, incl. the challenging laundryroom file; alias conversion also works: |Gx| → |CHR_Gus|; Reduce drops non-tag words correctly) |
 | ☐ | #0.31 | [PROCESS] should auto-sort the tagline before saving | RESOLVED v35.07 — USER TEST OK v35.08 (confirmed by user) |
