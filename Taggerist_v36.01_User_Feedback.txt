@@ -1,0 +1,10 @@
+Taggerist_v36.01_User_Feedback.txt
+-------------------
+The tags in the taglist are nicely catergorized into groups.  The absence of their prefixes -- ACTS, AGE, etc. -- declutters the words, making them much more readable, both in the list and in the filenames. GOOD, OK!
+
+Some problems: 
+=  The 'Cols' slider is flaky. Sometimes allows only 8 cols. Sometimes more.   
+
+= [OPEN] button in UNPROC and PROC displays proper pathname but no file listing. 
+
+= Can you make the sorting of main taglist case INsensitive?
