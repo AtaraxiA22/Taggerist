@@ -1,0 +1,27 @@
+Taggerist_v36.03_User_Feedback.txt
+=============
+
+((bug#39-41 fixed. OK. Updated TASKS.md)
+
+## NEW BUG: 
+ 	In FilenameEditBox I was adding tags. Pressed [ @ ] to change date prefix from '(c)' to '@'.  It added partial html code for button color.  Same problem with [ © ].   However, the [ = ] button worked fine. Here is sample:
+
+="color:white; background-color:red;">="color:white; background-color:yellow;">=2026.0907-0324.1374_wm.jpg
+
+---
+## 'BlueSky' question: (more questions)  
+
+		q1.) In PTY_b&HAT, Is the '&' a good 'special formatting' flag?  (There are some flags which already use & such as PHTO_head&shoulders) The '^'  symbol is not likely to be used in a tagname. e.g. PTY_b^HAT.  What do you recommend?
+
+Suggest 'b' for bold, 'i' for italics and numbers for fonts as specified in configs.
+
+		q2.) Is there a way to put comments in the CSV? (such as a key for these settings?  Could it function as the config" (i.e. put configs in CSV rather than in Taggerist.configs.txt??)
+
+		q3.) If no special formatting do other tags need some sort of 'no change' or null code?
+
+## Housekeeping in Github:  I suggest delete all .py, and .txt files for versions prior to the last version.  I.e.  We are working on v36 now.  Delete all versioned files prior to v35.  Applies only to .py scripts, buglogs and UserFeedback.  Does that sound reasonable and prudent?
+
+## NEW FEATURE REQUEST:
+	Automatically convert any occurence of '(c)' in filenames to '©'.   
+
+

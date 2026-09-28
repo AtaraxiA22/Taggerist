@@ -191,6 +191,33 @@ User's v36.02 test (Taggerist_v36.02_User_Feedback.txt, d93a3a9):
   can be done via git (filter old v09–v34 files from Main). Awaiting user's go —
   suggest keeping the last few versions (v35.x, v36.x) plus TASKS/session history.
 
+## v36.04 BUILT (agent, same session)
+
+User's v36.03 test (Taggerist_v36.03_User_Feedback.txt, b94b618; TASKS.md touched
+by user: #w.39-41 -> 0-band, confirmed):
+- NEW BUG #w.42: CI buttons [ @ ]/[ © ] injected button-color HTML into the
+  filename ('="color:white; background-color:red;">...'). ROOT CAUSE (reproduced
+  exactly): FilenameEdit.setText colored each CI symbol sequentially with
+  str.replace; the new '=' symbol then matched the '=' characters INSIDE the
+  span markup of already-colored symbols, shredding the HTML which QTextEdit
+  then displayed as text. [ = ] worked because it was processed last. FIX:
+  single-pass re.sub wrapping all symbols at once — inserted markup is never
+  re-scanned. Verified: old code reproduces user's exact garbage; new code
+  round-trips cleanly with all 3 symbols present.
+- NEW FEATURE #w.43: '(c)' auto-converts to '©' on load and on save, unconditionally
+  (ci_symbol config line now ignored for this; user asked for it as default).
+- Blue-sky formatting spec questions (agent answers given, NOT built):
+  q1: '&' is a poor flag (already used by real tags like PHTO_head&shoulders);
+  '^' is safe and readable — recommend '^' e.g. LOC_b^kitchen (bold kitchen),
+  LOC_i^rain (italic rain), LOC_2^foo (font #2 from config). b/i/0-9 codes.
+  q2: CSV comments: lines starting with '#' are ALREADY skipped by the loader —
+  so a '# key: ...' legend can sit at the top of the CSV today. Moving all
+  configs into the CSV is possible but NOT recommended (config file is the
+  established home for app settings; CSV is the vocabulary).
+  q3: no — tags without a marker need nothing; absence = normal rendering.
+- GitHub housekeeping: user proposes deleting all versioned .py/.txt prior to
+  v35 (agreed reasonable). NOT YET DONE — awaiting explicit go (destructive).
+
 ## Next version: v36.01 — agreed scope (from the design conversation)
 
 User chose to increment the version to v36.01. Full scope:
