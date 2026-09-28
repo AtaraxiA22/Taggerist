@@ -256,3 +256,29 @@ Notes carried forward:
   (tag counts, collision counts, char savings) — it lands well.
 - Version numbering: next version is v36.01 (major bump chosen by user at
   the consolidation milestone).
+
+## v36.05 BUILT (agent, follow-up session)
+
+User's v36.04 test (Taggerist_v36.04_User_Feedback.txt, aea9a6e):
+- GOOD: #42 CI buttons OK, #43 (c)->© auto-convert OK, #41 label pad OK
+  (all three moved to 0-band, user-confirmed).
+- Housekeeping GO given (affirmation): deleted from git — Purposed
+  restructuring, map of top portion, all pre-v35 scripts/buglogs/feedback,
+  and the [NC]/[RW]/[Xpix] CSVs (superseded by MERGED). Commit 6fbca96.
+- #w.44 NEW: vertical gap between tag rows halved — default
+  TAGLIST_VERTICAL_SPACING now 0.5 line (user's config value still wins).
+- #w.45 NEW: '^' style flags in CSV tag names — b^/i^/fd^/fc^/fl^/fm^ =
+  bold / italic / default font / Ubuntu Condensed / Ubuntu Light / Ubuntu
+  Mono. Flag is stripped from the display name, never shown, never saved
+  into filenames; applies in the taglist grid (and header titles parse it
+  too, defensively). Config comment legend added to Taggerist.config.txt.
+- Config color change per user: taglist_name_2 symbol color white->black.
+- #w.46 NEW: shortcut keys built (user asked "feasible/reasonable?"):
+  Alt+P=PROCESS, Alt+S=SKIP, Alt+R=Reduce, Alt+C=Clear, Alt+T=Sort
+  Tagline, Alt+1/2/3=the three CI buttons. (Alt+S chosen over a bare
+  Skip key to avoid clashing with typing; single-key shortcuts are risky
+  while the Search box has focus.)
+Verification: py_compile OK; flag-parser unit tests + full simulated load
+of the real MERGED CSV (358 unique tags, 1 known FRN_bed dupe skipped)
+pass; flags never leak into display names or filenames.
+TASKS.md: #w.44/#w.45/#w.46 new, 0.41-43 confirmed (fbac871).

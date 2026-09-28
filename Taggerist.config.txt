@@ -10,10 +10,21 @@
 #     taglist_name_N = /full/path/to/taglist.csv,SYMBOL,text-color,background-color
 # The taglist_id_N lines are only a fallback for the symbol; if the symbol is
 # present in the taglist_name line, the taglist_id line is ignored.
+#
+# Per-tag style flags (since v36.05) — put one of these markers anywhere in a
+# tag name (column 1) of the CSV to restyle that tag in the taglist. The marker
+# is never shown and never saved into filenames:
+#     b^  = bold            (e.g. LOC_b^kitchen  shows a bold 'kitchen')
+#     i^  = italic          (e.g. LOC_i^rain    shows an italic 'rain')
+#     fd^ = default font     (e.g. PTY_fd^hat    shows 'hat' in the normal Ubuntu font)
+#     fc^ = Ubuntu Condensed
+#     fl^ = Ubuntu Light
+#     fm^ = Ubuntu Mono
+# Markers can be combined (e.g. LOC_b^fc^name = bold, condensed).
 
 [DIRECTORIES]
 taglist_name_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,©,white,red   ; Taglist 1: path,identifying-symbol,font-color,background-color
-taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,@,white,yellow   ; Taglist 2: path,identifying-symbol,font-color,background-color
+taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,@,black,yellow   ; Taglist 2: path,identifying-symbol,font-color,background-color
 taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,=,white,green   ; Taglist 3: path,identifying-symbol,font-color,background-color
 proc_dir = /home/jack/Pictures/TAGGERIST.test_folders/PROC   ; Directory where PROCESS copies files
 unproc_dir = /home/jack/Pictures/TAGGERIST.test_folders/Test2 - flujkes   ; Directory of files waiting to be processed
