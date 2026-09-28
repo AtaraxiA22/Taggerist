@@ -108,6 +108,50 @@ Taggerist_v35.08_User_Feedback.txt.
    - User's reviewed CSV will get a verification pass (re-run of the duplicate
      analysis) before the build.
 
+## v36.01 BUILT (agent, this session)
+
+User uploaded the reviewed merged CSV (06c9a7d); verification pass run before the build:
+- Row widths uniform (431 rows x 53 cols — Tablecruncher will report one row length).
+- 356 distinct tags, 13 header rows, 74 blank filler rows (user blanked dupes instead of
+  deleting — loader skips them cleanly).
+- Verification findings for the user (small, non-blocking):
+  * 1 exact dupe left: FRN_bed appears twice (lines 104-105). Harmless — the loader
+    keeps one; the two rows have the same display name and alias 'bed'.
+  * Alias 'bed' now points at both FRN_bed rows (same tag) — fine.
+  * 'house' resolves to LOC_house and 'House' to LOC_House — both kept, user's call.
+  * 'locked'/'mailbox' dual mappings kept (user reviewed worklist sections C/D/F).
+  * PTY_ row (line ~341) still carries the 'PTY_' self-alias in col3 — the v35.07
+    doubling bug came from that row; with the v35.08 whole-word fix + v36.01's
+    whole-segment normalize, 'PTY_' inside a word is no longer replaced, but the
+    alias row is still worth deleting when convenient.
+
+Build scope delivered (all 8 items):
+1. Short display names — grid shows the root (after first underscore); col2 of the
+   CSV overrides when present (%_50% shows '50.00%'; zzAGE_20-30 shows '20-30').
+2. Section headers — ___ rows render bold, non-clickable, title derived from the
+   tag (FRN_-___FURNITURE_____ → 'FURNITURE'; zzAGE header → 'zzAGE' — user can
+   put a nicer title in col2 of the header row anytime).
+3. All three lists load together on one screen (union of TAGLIST_NAME_1/2/3; if
+   all three point at the MERGED CSV, it loads once and displays once).
+4. Taglist buttons replaced by two spin-controls: font size (6–24) and columns
+   (1–40). Live repaint; values write to the config file (comment-preserving line
+   edit — the config's explanatory notes survive).
+5. Horizontal scrolling enabled (vertical scrollbar off; grid width natural).
+6. #w.33 closed itself (bracket labels gone with the buttons).
+7. [Edit tags] → [Edit Tags].
+8. PROCESS/Sort/Clear/Reduce full-tag equivalence: old prefixed files load,
+   highlight and reduce correctly; PROCESS normalizes any full tags to short form
+   before saving. Search matches full tags, display names AND col3 aliases, shows
+   the short name on the chip.
+
+Verification done: py_compile OK; stub-based logic tests against the real merged
+CSV all pass (toggle short/long, old-file load, mixed forms, sort, reduce, search,
+PROCESS normalize, config write-through).
+
+TASKS.md updated: #w.34/#w.35/#w.36 new (awaiting user test); #0.33 closed itself;
+#1.16 noted as likely closed by consolidation. Session log = this file (kept
+current per user request after the rude 'Session ended' incidents).
+
 ## Next version: v36.01 — agreed scope (from the design conversation)
 
 User chose to increment the version to v36.01. Full scope:

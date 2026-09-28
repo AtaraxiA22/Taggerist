@@ -1,14 +1,17 @@
 # Taggerist Joint Task List
+Last updated: v36.01 (by agent)
 Last updated: v35.08 (by agent)
-Last updated: v35.05 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #w.33 | Taglist buttons show the list names with square brackets ([NC], [Xpix], [RW]) — remove the brackets in the next build | NEW // cosmetic, low priority per user; labels come from the last '[..]' part of the CSV filename in refresh_taglist_button_labels() (Taggerist_v35.08.py:895-896) |
-| ☐ | #1.16 | Persistent per-list tag colors | On hold per user call |
-| ☐ | #0.32 | Clicking a file doubles/mangles tags in the FilenameEditBox (LOC_LOC_forest, PTY_fernshat, wha%_100%ver; © shows as (c)) | RESOLVED v35.08 — USER TEST OK ("Yay! they match!" — 3 filename-integrity tests passed unchanged, incl. the challenging laundryroom file; alias conversion also works: |Gx| → |CHR_Gus|; Reduce drops non-tag words correctly) |
+| ☐ | #w.36 | v36.01: one-screen taglist — short display names (root after first underscore; col2 of the CSV overrides), bold non-clickable section headers, all lists load together, grid scrolls horizontally | NEW // awaiting user test; based on the consolidated taglist (MERGED CSV or all three CSVs loaded at once); sort/grouping still by full hidden tag |
+| ☐ | #w.35 | v36.01: font-size and column-count spin-controls (live repaint; values write to config for next startup) | NEW // awaiting user test; replaced the three taglist buttons |
+| ☐ | #w.34 | v36.01: PROCESS saves short names (\|Gus\| not \|CHR_Gus\|); old prefixed filenames still load, highlight and reduce correctly | NEW // awaiting user test; full-tag equivalence kept |
+| ☐ | #1.16 | Persistent per-list tag colors | On hold per user call — likely closed by the v36.01 consolidation (all lists on one screen) |
+| ☐ | #0.33 | Taglist buttons show the list names with square brackets ([NC], [Xpix], [RW]) — remove the brackets in the next build | CLOSED ITSELF in v36.01 — the three taglist buttons were replaced by the font/columns spin-controls (see #w.35), so there are no bracket labels left |
+| ☐ | #0.32 | Clicking a file doubles/mangles tags in the FilenameEditBox (LOC_LOC_forest, PTY_fernshat, wha%_100%ver; © shows as (c)) | RESOLVED v35.08 — USER TEST OK ("Yay! they match!" — 3 filename-integrity tests passed unchanged, incl. the challenging laundryroom file; alias conversion also works: \|Gx\| → \|CHR_Gus\|; Reduce drops non-tag words correctly) |
 | ☐ | #0.31 | [PROCESS] should auto-sort the tagline before saving | RESOLVED v35.07 — USER TEST OK v35.08 (confirmed by user) |
 | ☐ | #0.30 | ENTER should PROCESS the file | RESOLVED v35.07 — USER TEST OK v35.08 (confirmed by user) |
 | ☐ | #0.29 | After any TL or TV button press (incl. Previous/Next/External viewer and CI buttons), focus should return to the Search box (TF excluded) | RESOLVED v35.08 — USER TEST OK (focus returns for all buttons; user accepts that buttons launching external windows ([?], [External viewer]) don't refocus on return — "That's OK - not actionable") |
