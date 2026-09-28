@@ -256,3 +256,40 @@ Notes carried forward:
   (tag counts, collision counts, char savings) — it lands well.
 - Version numbering: next version is v36.01 (major bump chosen by user at
   the consolidation milestone).
+
+## v36.06 BUILT (agent, follow-up session)
+
+User's v36.05 test (Taggerist_v36.05_User_Feedback.txt, 1c581e9; updated
+MERGED CSV uploaded 09ac6bf):
+- CONFIRMED FIXED: #34, #35, #36, #38, #40, #41 (plus 42/43 again), all
+  moved to 0-band. #41 got a follow-up: one more space of label padding,
+  done in v36.06.
+- #w.44 REV — gap still a full line. ROOT CAUSE: the v36.03 fill-to-bottom
+  rule (added stretch = (viewport - rows*line_h)/rows) re-inflated the
+  spacing after the 0.5 halving — his refill diag proves it (rows_fit 24-47,
+  viewport 682px always exactly consumed). FIX: stretch removed; the
+  configured 0.5 line gap is now exact. Trade-off accepted: with few
+  columns the list may end short of the bottom margin (that stretch WAS
+  #w.40's feature; the two requests conflict — #0.40 stays confirmed at
+  its 16-col setting where rows fill naturally).
+- #w.45 REV — flags did nothing. ROOT CAUSE: user put flags in COLUMN 1
+  (CHR_i^James) but col2 ('James') is present and overrides col1 for the
+  display name, and v36.05 only parsed col2. Also his buglog shows
+  'reduce: kept CHR_b^Thalia' — the flagged form leaked into filenames via
+  list_tags/conversion values. FIX in v36.06: flags parsed from BOTH
+  columns, stripped from the tag identity at load (tag = CHR_Thalia,
+  style = bold), styles merged across duplicate rows (plain row + flagged
+  row both present in his CSV), and aliases inherit/contribute styles.
+  Verified by simulating his exact flagged rows over his uploaded CSV:
+  James/Lorraine italic, Mike/William light, Thalia bold, MIZFIT/Polly
+  plain; no '^' anywhere in tags or display names; Tx/Jx aliases resolve
+  to clean tags.
+- #w.46 REV — Alt+P/S/R/1/2/3 OK per user; Alt+C does nothing on his
+  desktop (WM reserve, likely). Alt+L added as second Clear key.
+- #w.47 NEW — spinner arrows enlarged (22px buttons, 12px arrows).
+- Also fixed: startup buglog banner said 'v35.08' (stale hard-coded string
+  from the #0.22 family — now uses the true version).
+- Config note: user's uploaded config reverted taglist_2 color to white
+  (his call — kept as-is; the ^ legend comments also vanished from his
+  copy; v36.06 reads flags regardless).
+TASKS.md updated (fbac871 → this commit). v36.06 PR: see PR list.
