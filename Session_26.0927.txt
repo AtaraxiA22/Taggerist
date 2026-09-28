@@ -152,6 +152,45 @@ TASKS.md updated: #w.34/#w.35/#w.36 new (awaiting user test); #0.33 closed itsel
 #1.16 noted as likely closed by consolidation. Session log = this file (kept
 current per user request after the rude 'Session ended' incidents).
 
+## v36.02 BUILT (agent, follow-up session)
+
+User's v36.01 test (Taggerist_v36.01_User_Feedback.txt, 19344d0):
+- GOOD: one-screen taglist with short names — "nicely categorized... declutters
+  the words, much more readable, both in the list and in the filenames. GOOD, OK!"
+- Report 1: 'Cols' spinner flaky (sometimes 8, sometimes more). ROOT CAUSE FOUND in
+  the buglog: _refill_taglist derived rows from viewport height and capped columns
+  accordingly, silently overriding the spinner (refill lines show rows_fit 37 vs 32
+  across identical sessions). FIX in v36.02: spinner is now authoritative —
+  rows = ceil(tags / cols); vertical scrollbar returns only if the column overflows.
+- Report 2: [OPEN] showed path but no listing — FALSE ALARM, resolved by user:
+  target dirs were empty; images were in a subfolder. No bug.
+- Request 3: case-insensitive main-taglist sort -> #w.38, done in v36.02
+  (sorted with str.casefold; search results likewise).
+- Subdirectory rows in PROC/UNPROC (file-manager style, folders sort as newest,
+  1-level depth): designed via question tab, then DROPPED by user ('not a big deal').
+  Revisit only if he asks again.
+
+v36.02 = the two fixes above. TASKS.md: #w.35 REV (awaiting re-test), #w.38 NEW.
+
+## v36.03 BUILT (agent, same follow-up session)
+
+User's v36.02 test (Taggerist_v36.02_User_Feedback.txt, d93a3a9):
+- GOOD: case-insensitive sorting confirmed ("GOOD. OK") -> #0.38 user-confirmed.
+- Cols spinner: works now (obeyed), but column heights vary with col count (9 =
+  full height, 12 = ~75%, 17 = half screen empty) -> #w.40: v36.03 stretches
+  vertical spacing so columns always reach the bottom margin.
+- 'Font'/'Cols' labels need a leading space pad -> #w.41, done.
+- IMPORTANT BUG: [Refresh Tags] wiped unsaved tags typed in the FilenameEditBox
+  (even without editing the taglist). Root cause: refresh_taglist() re-loaded the
+  file's ORIGINAL name from disk via load_image(), discarding box edits -> #w.39:
+  v36.03 keeps the box text, only re-derives selected_tags + highlights.
+- Blue-sky question: per-tag bold/italic/font via a 'key' in the CSV (e.g. LOC_b&kitchen).
+  Agent comment: feasible — col-4 (or a marker in col2) as a style column; grid cell
+  styles are already per-label. Not built; parked for a future version if user wants.
+- GitHub housekeeping question: mass-delete old scripts/buglogs. Agent answer: yes,
+  can be done via git (filter old v09–v34 files from Main). Awaiting user's go —
+  suggest keeping the last few versions (v35.x, v36.x) plus TASKS/session history.
+
 ## Next version: v36.01 — agreed scope (from the design conversation)
 
 User chose to increment the version to v36.01. Full scope:

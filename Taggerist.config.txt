@@ -1,19 +1,20 @@
 # Taggerist configuration
 # Lines and values are reread at every start. Delete this file to regenerate it.
 #
-# The three taglist lines below are the ones to edit when you want to use a
-# different taglist, symbol, or colors. Each line has four parts, separated
-# by commas:
+# Since v36.01 all tags live in ONE taglist (Taggerist.taglist.[MERGED].csv)
+# and the whole list shows on one screen. The three taglist lines below can
+# all point at that same file — the app loads it once. What stays different
+# per line is the SYMBOL: it is the copyright-button label and the mark
+# inserted before the datestamp when you press that button. Each line has
+# four parts, separated by commas:
 #     taglist_name_N = /full/path/to/taglist.csv,SYMBOL,text-color,background-color
-# The SYMBOL is the copyright-button label and the mark inserted before the
-# datestamp when you press that button. The taglist_id_N lines are only a
-# fallback for the symbol; if the symbol is present in the taglist_name line,
-# the taglist_id line is ignored.
+# The taglist_id_N lines are only a fallback for the symbol; if the symbol is
+# present in the taglist_name line, the taglist_id line is ignored.
 
 [DIRECTORIES]
-taglist_name_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,©,white,red   ; Taglist 1: path,identifying-symbol,font-color,background-color
-taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv,@,white,yellow   ; Taglist 2: path,identifying-symbol,font-color,background-color
-taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv,=,white,green   ; Taglist 3: path,identifying-symbol,font-color,background-color
+taglist_name_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,©,white,red   ; Taglist 1: path,identifying-symbol,font-color,background-color
+taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,@,white,yellow   ; Taglist 2: path,identifying-symbol,font-color,background-color
+taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,=,white,green   ; Taglist 3: path,identifying-symbol,font-color,background-color
 proc_dir = /home/jack/Pictures/TAGGERIST.test_folders/PROC   ; Directory where PROCESS copies files
 unproc_dir = /home/jack/Pictures/TAGGERIST.test_folders/Test2 - flujkes   ; Directory of files waiting to be processed
 configs_dir = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs   ; Directory holding this config and the .csv taglists
