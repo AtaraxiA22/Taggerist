@@ -152,6 +152,26 @@ TASKS.md updated: #w.34/#w.35/#w.36 new (awaiting user test); #0.33 closed itsel
 #1.16 noted as likely closed by consolidation. Session log = this file (kept
 current per user request after the rude 'Session ended' incidents).
 
+## v36.02 BUILT (agent, follow-up session)
+
+User's v36.01 test (Taggerist_v36.01_User_Feedback.txt, 19344d0):
+- GOOD: one-screen taglist with short names — "nicely categorized... declutters
+  the words, much more readable, both in the list and in the filenames. GOOD, OK!"
+- Report 1: 'Cols' spinner flaky (sometimes 8, sometimes more). ROOT CAUSE FOUND in
+  the buglog: _refill_taglist derived rows from viewport height and capped columns
+  accordingly, silently overriding the spinner (refill lines show rows_fit 37 vs 32
+  across identical sessions). FIX in v36.02: spinner is now authoritative —
+  rows = ceil(tags / cols); vertical scrollbar returns only if the column overflows.
+- Report 2: [OPEN] showed path but no listing — FALSE ALARM, resolved by user:
+  target dirs were empty; images were in a subfolder. No bug.
+- Request 3: case-insensitive main-taglist sort -> #w.38, done in v36.02
+  (sorted with str.casefold; search results likewise).
+- Subdirectory rows in PROC/UNPROC (file-manager style, folders sort as newest,
+  1-level depth): designed via question tab, then DROPPED by user ('not a big deal').
+  Revisit only if he asks again.
+
+v36.02 = the two fixes above. TASKS.md: #w.35 REV (awaiting re-test), #w.38 NEW.
+
 ## Next version: v36.01 — agreed scope (from the design conversation)
 
 User chose to increment the version to v36.01. Full scope:
