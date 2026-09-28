@@ -172,6 +172,25 @@ User's v36.01 test (Taggerist_v36.01_User_Feedback.txt, 19344d0):
 
 v36.02 = the two fixes above. TASKS.md: #w.35 REV (awaiting re-test), #w.38 NEW.
 
+## v36.03 BUILT (agent, same follow-up session)
+
+User's v36.02 test (Taggerist_v36.02_User_Feedback.txt, d93a3a9):
+- GOOD: case-insensitive sorting confirmed ("GOOD. OK") -> #0.38 user-confirmed.
+- Cols spinner: works now (obeyed), but column heights vary with col count (9 =
+  full height, 12 = ~75%, 17 = half screen empty) -> #w.40: v36.03 stretches
+  vertical spacing so columns always reach the bottom margin.
+- 'Font'/'Cols' labels need a leading space pad -> #w.41, done.
+- IMPORTANT BUG: [Refresh Tags] wiped unsaved tags typed in the FilenameEditBox
+  (even without editing the taglist). Root cause: refresh_taglist() re-loaded the
+  file's ORIGINAL name from disk via load_image(), discarding box edits -> #w.39:
+  v36.03 keeps the box text, only re-derives selected_tags + highlights.
+- Blue-sky question: per-tag bold/italic/font via a 'key' in the CSV (e.g. LOC_b&kitchen).
+  Agent comment: feasible — col-4 (or a marker in col2) as a style column; grid cell
+  styles are already per-label. Not built; parked for a future version if user wants.
+- GitHub housekeeping question: mass-delete old scripts/buglogs. Agent answer: yes,
+  can be done via git (filter old v09–v34 files from Main). Awaiting user's go —
+  suggest keeping the last few versions (v35.x, v36.x) plus TASKS/session history.
+
 ## Next version: v36.01 — agreed scope (from the design conversation)
 
 User chose to increment the version to v36.01. Full scope:

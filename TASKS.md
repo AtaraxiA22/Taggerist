@@ -1,12 +1,16 @@
 # Taggerist Joint Task List
+Last updated: v36.03 (by agent)
 Last updated: v36.02 (by agent)
-Last updated: v36.01 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #w.38 | v36.02: case-insensitive sort of the main taglist (LOC_House / LOC_house now sit together) and search results | NEW // awaiting user test |
+| ☐ | #w.41 | v36.03: ' Font' / ' Cols' labels padded with a leading space so they don't hug the border line | NEW // awaiting user test |
+| ☐ | #w.40 | v36.03: taglist columns always fill the TL area down to the bottom margin (vertical spacing stretches when the grid would end mid-screen) | NEW // awaiting user test |
+| ☐ | #w.39 | v36.03: [Refresh Tags] no longer wipes the FilenameEditBox (previously re-loaded the file's original name from disk, discarding unsaved typed tags) | NEW // awaiting user test |
+| ☐ | #w.35 | v36.01: font-size and column-count spin-controls (live repaint; values write to config for next startup) | REV v36.02 — user confirmed spinner now works (Cols obeys); residual cosmetic: column heights varying with col count → now #w.40 |
+| ☐ | #0.38 | v36.02: case-insensitive sort of the main taglist (LOC_House / LOC_house now sit together) and search results | RESOLVED v36.02 — USER TEST OK ("confirm sorting in main Taglist is case insensitive now. GOOD. OK.") |
 | ☐ | #w.36 | v36.01: one-screen taglist — short display names (root after first underscore; col2 of the CSV overrides), bold non-clickable section headers, all lists load together, grid scrolls horizontally | NEW // awaiting user test; based on the consolidated taglist (MERGED CSV or all three CSVs loaded at once); sort/grouping still by full hidden tag |
 | ☐ | #w.35 | v36.01: font-size and column-count spin-controls (live repaint; values write to config for next startup) | REV v36.02 — user reported the Cols value 'flaky'; root cause: the grid silently derived columns from screen height, overriding the spinner; now the spinner truly controls the column count — awaiting re-test |
 | ☐ | #w.34 | v36.01: PROCESS saves short names (\|Gus\| not \|CHR_Gus\|); old prefixed filenames still load, highlight and reduce correctly | NEW // awaiting user test; full-tag equivalence kept |
