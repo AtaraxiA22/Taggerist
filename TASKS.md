@@ -6,9 +6,9 @@ Last updated: v36.03 (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #w.43 | v36.04: every '(c)' in a filename auto-converts to '©' on load and on save (config ci_symbol line no longer needed for this) | NEW // awaiting user test |
-| ☐ | #w.42 | v36.04: CI buttons [ @ ]/[ © ] injected button-color HTML into the filename (root cause: '=' symbol matching the '=' inside the color markup of already-colored symbols; rendering now single-pass) | NEW // awaiting user test |
-| ☐ | #0.41 | v36.03: ' Font' / ' Cols' labels padded with a leading space so they don't hug the border line | FIXED, OK — user-confirmed v36.03 |
+| ☐ | #0.43 | v36.04: (FIXED) every '(c)' in a filename auto-converts to '©' on load and on save (config ci_symbol line no longer needed for this) | NEW // awaiting user test |
+| ☐ | #0.42 | v36.04: (FIXED) CI buttons [ @ ]/[ © ] injected button-color HTML into the filename (root cause: '=' symbol matching the '=' inside the color markup of already-colored symbols; rendering now single-pass) | NEW // awaiting user test |
+| ☐ | #0.41 | v36.03: (FIXED) ' Font' / ' Cols' labels padded with a leading space so they don't hug the border line | FIXED, OK — user-confirmed v36.03 |
 | ☐ | #0.40 | v36.03: taglist columns always fill the TL area down to the bottom margin (vertical spacing stretches when the grid would end mid-screen) | FIXED, OK |
 | ☐ | #0.39 | v36.03: [Refresh Tags] no longer wipes the FilenameEditBox (previously re-loaded the file's original name from disk, discarding unsaved typed tags) | FIXED, OK |
 | ☐ | #w.35 | v36.01: font-size and column-count spin-controls (live repaint; values write to config for next startup) | REV v36.02 — user confirmed spinner now works (Cols obeys); residual cosmetic: column heights varying with col count → now #w.40 |
