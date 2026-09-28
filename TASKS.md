@@ -1,13 +1,15 @@
 # Taggerist Joint Task List
-Last updated: v36.04 (by agent)
-Last updated: v36.03 (by agent)
+Last updated: v36.05 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #0.43 | v36.04: (FIXED) every '(c)' in a filename auto-converts to '©' on load and on save (config ci_symbol line no longer needed for this) | NEW // awaiting user test |
-| ☐ | #0.42 | v36.04: (FIXED) CI buttons [ @ ]/[ © ] injected button-color HTML into the filename (root cause: '=' symbol matching the '=' inside the color markup of already-colored symbols; rendering now single-pass) | NEW // awaiting user test |
+| ☐ | #w.46 | v36.05: NEW — shortcut keys Alt+P=PROCESS, Alt+S=SKIP, Alt+R=Reduce, Alt+C=Clear, Alt+T=Sort Tagline, Alt+1/2/3=the three CI buttons (asked for as 'feasible/reasonable?'; built for test) | NEW // awaiting user test |
+| ☐ | #w.45 | v36.05: NEW — per-tag style flags in the taglist CSV: a '^' marker in the tag name switches style — b^=bold, i^=italic, fd^=default font, fc^=Ubuntu Condensed, fl^=Ubuntu Light, fm^=Ubuntu Mono (e.g. PTY_fd^hat shows 'hat' in the default font) | NEW // awaiting user test |
+| ☐ | #w.44 | v36.05: (FIXED) empty vertical gap between tag rows cut by ~50% (default TAGLIST_VERTICAL_SPACING now 0.5 line; a user's config value still wins) | NEW // awaiting user test |
+| ☐ | #0.43 | v36.04: (FIXED) every '(c)' in a filename auto-converts to '©' on load and on save (config ci_symbol line no longer needed for this) | FIXED, OK — user-confirmed v36.04 |
+| ☐ | #0.42 | v36.04: (FIXED) CI buttons [ @ ]/[ © ] injected button-color HTML into the filename (root cause: '=' symbol matching the '=' inside the color markup of already-colored symbols; rendering now single-pass) | FIXED, OK — user-confirmed v36.04 |
 | ☐ | #0.41 | v36.03: (FIXED) ' Font' / ' Cols' labels padded with a leading space so they don't hug the border line | FIXED, OK — user-confirmed v36.03 |
 | ☐ | #0.40 | v36.03: taglist columns always fill the TL area down to the bottom margin (vertical spacing stretches when the grid would end mid-screen) | FIXED, OK |
 | ☐ | #0.39 | v36.03: [Refresh Tags] no longer wipes the FilenameEditBox (previously re-loaded the file's original name from disk, discarding unsaved typed tags) | FIXED, OK |
