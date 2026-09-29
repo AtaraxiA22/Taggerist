@@ -325,3 +325,20 @@ User's v36.06 test (Taggerist_v36.06_User_Feedback.txt, 9e7a4c9):
 Verification: py_compile OK; Reduce stub tests over his buglog's exact
 filenames pass (camera dates kept, CI kept, junk dropped, brackets
 retained, standard datestamps unchanged).
+
+## v36.08 BUILT (agent, follow-up session)
+
+User note: third CI symbol changed from '=' to '!!' (no space between
+bangs); his config copy already updated. Analysis: the symbol is fully
+config-driven (button label, datestamp prefix swap, FilenameEdit
+coloring, ci_alt regex) — all read from taglist_name_3/taglist_id_3, so
+'!!' flows through with zero code changes. TWO code-side touches made:
+- '=' kept as a BUILT-IN legacy symbol in _ci_alt: old files already
+  named with '=' still load, highlight, and a CI-button press converts
+  an old '=' prefix to the new symbol (same treatment '(c)' always had).
+- Fallback defaults (hard-coded TAGLIST_3/TAGLIST_ID_3) updated to '!!'.
+- Repo's reference Taggerist.config.txt updated to '!!' to match his.
+Verified by regex tests: '!!' recognized as CI (two chars, exact), legacy
+'=' converted to '!!' or '©' on button press, Reduce keeps both forms.
+No new PR for v36.08 yet — v36.07 PR #15 still awaiting his test; v36.08
+branch builds on it (user asked mid-test).

@@ -1,10 +1,11 @@
 # Taggerist Joint Task List
-Last updated: v36.07 (by agent)
+Last updated: v36.08 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
+| ☐ | #w.51 | v36.08: user changed the third CI symbol from '=' to '!!' (his config already carries it; the change is pure config). Code side: '=' kept as a built-in legacy symbol so old files named with '=' still load/highlight/convert; fallback defaults updated to '!!' | NEW // awaiting user test |
 | ☐ | #w.48 | v36.07: NEW BUG — Alt+R/[Reduce] removes CI symbol and date (root cause: test files carry camera-style dates like '2024-09-20 00-52-28-081', which Reduce did not recognize as dates, so it dropped them like junk words) | FIXED in v36.07 — Reduce now recognizes any year-led date-like segment (with or without CI) and keeps it // awaiting user test |
 | ☐ | #w.49 | v36.07: NEW BUG — tag rows extend below the bottom margin of the TL frame, requiring vertical scrolling; should wrap into more columns instead | FIXED in v36.07 — rows per column capped to what fits the frame height; overflow wraps into extra columns (horizontal scroll) // awaiting user test |
 | ☐ | #w.50 | v36.07: NEW — non-tag data in [square brackets] survives [Reduce] and [PROCESS], and each bracketed item is appended to TagCandidates.txt in the config directory (file created if missing) | NEW // awaiting user test |

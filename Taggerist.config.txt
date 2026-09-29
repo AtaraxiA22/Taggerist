@@ -14,14 +14,14 @@
 [DIRECTORIES]
 taglist_name_1 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,©,white,red   ; Taglist 1: path,identifying-symbol,font-color,background-color
 taglist_name_2 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,@,white,yellow   ; Taglist 2: path,identifying-symbol,font-color,background-color
-taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,=,white,green   ; Taglist 3: path,identifying-symbol,font-color,background-color
+taglist_name_3 = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[MERGED].csv,!!,white,green   ; Taglist 3: path,identifying-symbol,font-color,background-color
 proc_dir = /home/jack/Pictures/TAGGERIST.test_folders/PROC   ; Directory where PROCESS copies files
 unproc_dir = /home/jack/Pictures/TAGGERIST.test_folders/Test2 - flujkes   ; Directory of files waiting to be processed
 configs_dir = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs   ; Directory holding this config and the .csv taglists
 help_file_path = /home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md   ; Path of the help file shown by [?]
 taglist_id_1 = ©   ; Date identifier for taglist 1 (used only if not given in TAGLIST_NAME_1)
 taglist_id_2 = @   ; Date identifier for taglist 2 (used only if not given in TAGLIST_NAME_2)
-taglist_id_3 = =   ; Date identifier for taglist 3 (used only if not given in TAGLIST_NAME_3)
+taglist_id_3 = !!   ; Date identifier for taglist 3 (used only if not given in TAGLIST_NAME_3)
 
 [DISPLAY]
 taglist_columns = 16   ; Max columns of tagnames (list wraps to a new column at screen bottom)
