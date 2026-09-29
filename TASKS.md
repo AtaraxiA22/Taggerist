@@ -21,7 +21,7 @@ Last updated: v36.08 (by agent; user-reported FIXED items re-stamped 0 and list 
 | ☐ | #0.38 | v36.02: case-insensitive sort of the main taglist (LOC_House / LOC_house now sit together) and search results | RESOLVED — USER TEST OK v36.05 |
 | ☐ | #0.36 | v36.01: one-screen taglist — short display names (root after first underscore; col2 of the CSV overrides), bold non-clickable section headers, all lists load together, grid scrolls horizontally | FIXED, OK — user-confirmed v36.06 |
 | ☐ | #0.35 | v36.01: font-size and column-count spin-controls (live repaint; values write to config for next startup) | FIXED, OK — user-confirmed v36.06 |
-| ☐ | #0.34 | v36.01: PROCESS saves short names (\ | FIXED, OK — user-confirmed v36.06 |
+| ☐ | #0.34 | v36.01: PROCESS saves short names (\|Gus\| not \|CHR_Gus\|); old prefixed filenames still load, highlight and reduce correctly | FIXED, OK — user-confirmed v36.06 (full-tag equivalence kept) |
 | ☐ | #0.33 | Taglist buttons show the list names with square brackets ([NC], [Xpix], [RW]) — remove the brackets in the next build | CLOSED ITSELF in v36.01 — the three taglist buttons were replaced by the font/columns spin-controls (see #w.35), so there are no bracket labels left |
 | ☐ | #0.32 | Clicking a file doubles/mangles tags in the FilenameEditBox (LOC_LOC_forest, PTY_fernshat, wha%_100%ver; © shows as (c)) | RESOLVED v35.08 — USER TEST OK ("Yay! they match!" — 3 filename-integrity tests passed unchanged, incl. the challenging laundryroom file; alias conversion also works: \|Gx\| → \|CHR_Gus\|; Reduce drops non-tag words correctly) |
 | ☐ | #0.31 | [PROCESS] should auto-sort the tagline before saving | RESOLVED v35.07 — USER TEST OK v35.08 (confirmed by user) |
