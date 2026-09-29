@@ -342,3 +342,25 @@ Verified by regex tests: '!!' recognized as CI (two chars, exact), legacy
 '=' converted to '!!' or '©' on button press, Reduce keeps both forms.
 No new PR for v36.08 yet — v36.07 PR #15 still awaiting his test; v36.08
 branch builds on it (user asked mid-test).
+
+## v36.09 BUILT (agent, follow-up session)
+
+User's v36.07 test (Taggerist_v36.07_User_feedback.txt, 88bf214):
+- CONFIRMED FIXED: #48, #49, #50, #51 (all 0-band now).
+- #48.2 ADD (built): CI buttons now also prefix a recognized camera-style
+  date with the chosen CI symbol when no Taggerist datestamp exists.
+- Alt+D date-conversion question (ANSWERED + BUILT as #w.52): feasible
+  and reasonable IF optional and explicit. [Fix Date] button (row under
+  Font/Cols spins) + Alt+D convert camera dates like
+  '2024-08-20 01-25-25-024' to '24.0820-0125.25024'. Accuracy note given:
+  it converts what the camera wrote; it cannot verify the camera's clock.
+  Guards: refuses files already carrying a Taggerist datestamp; missing
+  time parts become zeros. Verified on 8 shapes incl. his buglog files.
+- ESC / Ctrl+ENTER focus keys (feasibility answered: yes, trivial; built
+  as #w.54).
+- #w.53 NEW BUG (found myself in his v36.07 buglog): 'dropped
+  [gym workout]Veronica' — brackets glued to other text inside one pipe
+  segment were dropped by Reduce. Fixed: bracketed part kept + logged to
+  TagCandidates.txt, remainder reduces normally.
+Verification: py_compile OK; date-converter tests 8/8 (his exact buglog
+filenames), CI-prefix and bracket tests pass.
