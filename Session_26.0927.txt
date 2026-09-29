@@ -293,3 +293,35 @@ MERGED CSV uploaded 09ac6bf):
   (his call — kept as-is; the ^ legend comments also vanished from his
   copy; v36.06 reads flags regardless).
 TASKS.md updated (fbac871 → this commit). v36.06 PR: see PR list.
+
+## v36.07 BUILT (agent, follow-up session)
+
+User's v36.06 test (Taggerist_v36.06_User_Feedback.txt, 9e7a4c9):
+- ALL CONFIRMED FIXED: #44/#45/#46/#47 + #34/#35/#36 again. 0-band.
+- NEW BUG #w.48: Alt+R/[Reduce] removes CI and date. ROOT CAUSE: his test
+  files carry camera-style dates ('2024-09-20 00-52-28-081'); Reduce only
+  recognized Taggerist datestamps (©yy.mmdd-hhmm.ss), so the camera date
+  was treated as a junk word and dropped (buglog: "reduce: dropped
+  '2024-08-20 01-25-25-024'"). FIX: Reduce now keeps any year-led
+  date-like segment (19xx/20xx + separators), with or without CI in
+  front. Junk words still dropped as designed.
+- NEW BUG #w.49: tag rows ran below the TL frame bottom (needed vertical
+  scrolling). ROOT CAUSE: rows_fit = ceil(tags/columns) ignores the
+  frame height; his growing list (391 tags) exceeded it. FIX: rows per
+  column now capped at what fits the viewport height; overflow wraps
+  into extra columns (horizontal scroll, as he asked: "extends into
+  right margin, instead").
+- NEW #w.50: [bracketed] non-tag data survives Reduce and PROCESS and is
+  appended to TagCandidates.txt in the config dir (created if missing;
+  no duplicate lines). His example: [MarcusT-].
+- Blue-sky answers (NOT built, #1.18/#1.19 in TASKS.md):
+  * SearchBox hot-tag navigation (←/→ move the 'hot' chip): feasible —
+    chips are a fixed pool with per-chip styling already; needs an index
+    keeper, a key handler on the search box, and a highlight style.
+    Awaiting his go.
+  * Shift+©/@/= prepends a possible date ('20??-' prefix): feasible, but
+    one decision needed — convert the found date to Taggerist datestamp
+    format, or just insert the CI in front as-is? Asked.
+Verification: py_compile OK; Reduce stub tests over his buglog's exact
+filenames pass (camera dates kept, CI kept, junk dropped, brackets
+retained, standard datestamps unchanged).
