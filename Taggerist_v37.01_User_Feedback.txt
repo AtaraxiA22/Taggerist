@@ -1,0 +1,57 @@
+Taggerist_v37.01_User_Feedback.txt
+===
+#59 PARITALLY REOLVED
+Spatial design OK
+ - Change wording:
+ - - '3 taglists loaded' --> '3 lists' (3 is a variable) 
+ - - Alt-T Sort  --> Alt-T Sort Filename
+ - - Alt 1/2/3 CI -->Alt-1/©, 2©, 3/!!
+ - The legend is just a bit too small. Increase font size by 2 pts.
+---
+
+#58 RESOLVED  (looks good!)
+---
+
+#57 RESOLVED
+---
+
+#55, #56 & #57 PARTIALLY RESOLVED
+
+They appear to be functional but there are spatial cosmetic issues. 
+
+Experiment: I asked the Vibe Chat AI to 'look' at a screenshot and provide instructions:
+--
+I've looked at your screenshot carefully — I can see the four clusters: the **© / @ / !!** button group, the **Font/Cols** control box, the **PROCESS** box, and the **[bed]** text area, plus the bottom row with **[brackets]**, **Search**, **[Edit]**, and **[Refresh tags]**. Here is a ready-to-paste prompt for Vibe Code:
+
+---
+
+Hello, I'm AtaraxiA, and this prompt was written with the help of Vibe's vision AI, which examined my UI screenshot and described the layout to me. I cannot share the image with you directly, so please rely on the description below and my instructions.
+
+**Current layout (top three rows, left to right, four clusters):**
+1. A group of three vertical buttons stacked: **©**, **@**, and **!!**
+2. A control box with **Font** and **Cols** dropdowns and **Clear**, **Reduce**, **Fix Date**, **Sort Tagline** buttons
+3. A blue **PROCESS** box (with an orange **SKIP** box nearby)
+4. A text-entry box containing **[bed][bed][ferns][loggers...]** with a character counter ("88/255 chars")
+
+**Bottom row:** a **[brackets]** box on the left, a **Search** box, and **[Edit]** and **[Refresh tags]** buttons.
+
+**Problems and requested fixes:**
+
+*Top three rows:*
+- There is wasted empty space to the right of the © / @ / !! button group. Close it by moving that group's right margin leftward so it sits flush (contiguous) against the three vertical ©, @, !! buttons.
+- Do **not** change the size of the **Font** box or the **PROCESS** box.
+- Expand the **[bed]** text box leftward to fill the space freed up by the above change.
+
+*Bottom row:*
+- Shrink the **[brackets]** box to a width of **25 characters**.
+- Move the **[Edit]** and **[Refresh tags]** buttons flush to the far right edge.
+- Expand the **Search** box leftward to fill the remaining available space.
+
+Please make these changes, and show me the full updated file rather than small snippets.
+
+---
+
+Please update TASKS.md 
+
+
+
