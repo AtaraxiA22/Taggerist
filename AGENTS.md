@@ -18,6 +18,7 @@ new file (full app), not just a diff.
 - **Session continuity:** Sessions expire without warning. Everything the next agent
   must know must be *committed to the repo*. Reconstruct context from TASKS.md,
   buglogs, git history, PR descriptions, and version-file headers.
+- **Standing rule (user-set @ v36.09):** when the user reports items as FIXED, the agent immediately re-stamps those IDs w->0 in TASKS.md and re-sorts the list by ID z->a. No prompting needed.
 - **TASKS.md is the joint task list.** ID# = `#status.ID`: **w** = waiting for user
   test; 5 (very high) → 0 (fixed/resolved, user-confirmed). IDs are permanent; the
   agent re-sorts (w.## first, then 5.## → 0.##, newest first within a band). The

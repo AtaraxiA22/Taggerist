@@ -293,3 +293,105 @@ MERGED CSV uploaded 09ac6bf):
   (his call — kept as-is; the ^ legend comments also vanished from his
   copy; v36.06 reads flags regardless).
 TASKS.md updated (fbac871 → this commit). v36.06 PR: see PR list.
+
+## v36.07 BUILT (agent, follow-up session)
+
+User's v36.06 test (Taggerist_v36.06_User_Feedback.txt, 9e7a4c9):
+- ALL CONFIRMED FIXED: #44/#45/#46/#47 + #34/#35/#36 again. 0-band.
+- NEW BUG #w.48: Alt+R/[Reduce] removes CI and date. ROOT CAUSE: his test
+  files carry camera-style dates ('2024-09-20 00-52-28-081'); Reduce only
+  recognized Taggerist datestamps (©yy.mmdd-hhmm.ss), so the camera date
+  was treated as a junk word and dropped (buglog: "reduce: dropped
+  '2024-08-20 01-25-25-024'"). FIX: Reduce now keeps any year-led
+  date-like segment (19xx/20xx + separators), with or without CI in
+  front. Junk words still dropped as designed.
+- NEW BUG #w.49: tag rows ran below the TL frame bottom (needed vertical
+  scrolling). ROOT CAUSE: rows_fit = ceil(tags/columns) ignores the
+  frame height; his growing list (391 tags) exceeded it. FIX: rows per
+  column now capped at what fits the viewport height; overflow wraps
+  into extra columns (horizontal scroll, as he asked: "extends into
+  right margin, instead").
+- NEW #w.50: [bracketed] non-tag data survives Reduce and PROCESS and is
+  appended to TagCandidates.txt in the config dir (created if missing;
+  no duplicate lines). His example: [MarcusT-].
+- Blue-sky answers (NOT built, #1.18/#1.19 in TASKS.md):
+  * SearchBox hot-tag navigation (←/→ move the 'hot' chip): feasible —
+    chips are a fixed pool with per-chip styling already; needs an index
+    keeper, a key handler on the search box, and a highlight style.
+    Awaiting his go.
+  * Shift+©/@/= prepends a possible date ('20??-' prefix): feasible, but
+    one decision needed — convert the found date to Taggerist datestamp
+    format, or just insert the CI in front as-is? Asked.
+Verification: py_compile OK; Reduce stub tests over his buglog's exact
+filenames pass (camera dates kept, CI kept, junk dropped, brackets
+retained, standard datestamps unchanged).
+
+## v36.08 BUILT (agent, follow-up session)
+
+User note: third CI symbol changed from '=' to '!!' (no space between
+bangs); his config copy already updated. Analysis: the symbol is fully
+config-driven (button label, datestamp prefix swap, FilenameEdit
+coloring, ci_alt regex) — all read from taglist_name_3/taglist_id_3, so
+'!!' flows through with zero code changes. TWO code-side touches made:
+- '=' kept as a BUILT-IN legacy symbol in _ci_alt: old files already
+  named with '=' still load, highlight, and a CI-button press converts
+  an old '=' prefix to the new symbol (same treatment '(c)' always had).
+- Fallback defaults (hard-coded TAGLIST_3/TAGLIST_ID_3) updated to '!!'.
+- Repo's reference Taggerist.config.txt updated to '!!' to match his.
+Verified by regex tests: '!!' recognized as CI (two chars, exact), legacy
+'=' converted to '!!' or '©' on button press, Reduce keeps both forms.
+No new PR for v36.08 yet — v36.07 PR #15 still awaiting his test; v36.08
+branch builds on it (user asked mid-test).
+
+## v36.09 BUILT (agent, follow-up session)
+
+User's v36.07 test (Taggerist_v36.07_User_feedback.txt, 88bf214):
+- CONFIRMED FIXED: #48, #49, #50, #51 (all 0-band now).
+- #48.2 ADD (built): CI buttons now also prefix a recognized camera-style
+  date with the chosen CI symbol when no Taggerist datestamp exists.
+- Alt+D date-conversion question (ANSWERED + BUILT as #w.52): feasible
+  and reasonable IF optional and explicit. [Fix Date] button (row under
+  Font/Cols spins) + Alt+D convert camera dates like
+  '2024-08-20 01-25-25-024' to '24.0820-0125.25024'. Accuracy note given:
+  it converts what the camera wrote; it cannot verify the camera's clock.
+  Guards: refuses files already carrying a Taggerist datestamp; missing
+  time parts become zeros. Verified on 8 shapes incl. his buglog files.
+- ESC / Ctrl+ENTER focus keys (feasibility answered: yes, trivial; built
+  as #w.54).
+- #w.53 NEW BUG (found myself in his v36.07 buglog): 'dropped
+  [gym workout]Veronica' — brackets glued to other text inside one pipe
+  segment were dropped by Reduce. Fixed: bracketed part kept + logged to
+  TagCandidates.txt, remainder reduces normally.
+Verification: py_compile OK; date-converter tests 8/8 (his exact buglog
+filenames), CI-prefix and bracket tests pass.
+
+## v36.10 BUILT (agent)
+
+User's v36.09 test (Taggerist_v36.09_User_feedback.txt):
+- RESOLVED: #52, #53, #54 (all 0-band now).
+- #48 NOT RESOLVED (rev2): CI button on '|SWAY|2024-10-10 00-37-34-456.JPG'
+  produced a DOUBLE date — camera date prefixed AND system datestamp
+  appended: '@2024-10-10 00-37-34-456@26.0930-0328.2062'. Root cause:
+  update_date_prefix prefixed the camera date but the system-date
+  append step still ran afterwards. Fix: prefixed_camera_date flag;
+  append step skipped when a camera date was prefixed or a Taggerist
+  datestamp already exists. SWAY case verified: now yields
+  '|SWAY|@2024-10-10 00-37-34-456.JPG' only.
+- NEW FEATURES BUILT (#w.55-59):
+  - #55 Brackets box (left of Search): text wrapped in [ ] and prefixed
+    to the filename; logged to TagCandidates.txt.
+  - #56 hot-tag arrows: arrow keys move a highlighted chip through
+    search results; Enter accepts the hot chip; <- from first chip
+    jumps to the Brackets box; hot resets on new search/click.
+  - #57 blue brackets: [ and ] render blue (#2020c0); mismatched or
+    unbalanced brackets blink yellow (#FFFF00).
+  - #58 focus colors: Brackets box blue, Search orange (#e8752a),
+    Filename yellow borders when focused (color-vision-friendly picks;
+    user to flag any that are hard to see).
+  - #59 bottom row: taglist count flush left, Edit/Refresh buttons
+    moved into the search row, shortcut legend centered, [?] fixed
+    width. #59d: shortcut list added to README.md.
+- TASKS.md on Main: #52-54 -> 0, #0.48 REV comment, #w.55-59 inserted,
+  z->a sort (commit 754d8fd).
+- Branch vibe/v36.10-brackets-hotkeys-aad943; draft PR opened.
+- Pending user decision: #1.19 (Shift+CI prepending: convert vs insert).
