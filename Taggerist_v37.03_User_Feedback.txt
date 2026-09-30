@@ -1,0 +1,25 @@
+Taggerist_v37.03_User_Feedback.txt
+=======
+please assigh 'Item #'s' to these in TASKS.md as needed and prefix them with 'w' .
+=============
+
+#59 RESOLVED. Looks good!
+---
+NOT RESOLVED - NOT FUNCTIONAL  :  Alt-Delete keystroke clears BracketsBox and SearchBox. 
+NOT RESOLVED Update key legend and README.md) ( I do not see it in either)
+---
+NEW: Make background color of [?] yellow.
+---
+BUG: I typed '[xjunk©26.0930-1257]' (with brackets) into FilenameEditBox and then pressed [Process].  It saved the string in the filename but did not prompt me to 'add to taglist?'. Same results with [dogfood] -- no prompt.
+---
+Hmmm. Change navigation '<-- --> hot tag' to 'Alt- <-- --> edit  box'.  Need to reserve the (non-Alt) arrows for navigating between  FilenameEditBox, BracketBox or SearchBox and SearchHitBox.  In SearchHitBox cursor moves left/ right to select a hit tag.(press <enter>
+ADD up/down arrows navigates cursor up/down between Brac
+i.e. Use tab/shift-tab to move between boxes and L/R arrows for editing text in a box. 
+---
+BUG: made fonts smaller and added more columns. The script did that BUT did not add rows to bottom margin. I.e. it displays the same # of tags per column regardless of font size or # og columns.  Needs to adjust dynamically.
+---
+BUG: In TF, when a file is Processed, it it added to the PROC list. As the PROC list is sorted by Modification date as Oldest First, this (newly modified) file goes tot he bottom of the list. We should see it just a few rows above the top of the UNPROC list.  HOWEVER, the PROC list is not being refreshed every time a file is processed. The result is that the newly processed file is hidden under the bottom marging of the list frame. 
+i.e. the PROC list needs to be refreshed *after* a new file is added to it.
+---
+
+
