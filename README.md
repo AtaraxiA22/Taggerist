@@ -53,8 +53,11 @@ Taggerist allows you to **individually tag image files** by embedding metadata *
 - **Alt+Delete** — clear the Search and Brackets boxes
 - **Alt+T** — SORT the tags in the filename alphabetically
 - **Alt+D** — FIX DATE: convert a camera-style date (e.g. `2024-08-20 01-25-25-024`) into a Taggerist datestamp
+- **Alt+Delete** — clear the Search and Brackets boxes
 - **Alt+1 / Alt+2 / Alt+3** — press the 1st / 2nd / 3rd CI button (adds CI symbol + date prefix)
-- **← / →** (arrow keys) — move the highlight (hot tag) through the search-result chips; ← from the first chip jumps to the Brackets box
+- **Alt+← / Alt+→ / Alt+↑ / Alt+↓** — move focus between the Filename edit box, Brackets box and Search box
+- **← / →** (in the Search box) — move the highlight (hot tag) through the search-result chips
+- **↑ / ↓** (in the Search or Brackets box) — jump focus up/down between the Filename edit box, Brackets box and Search box
 - **Enter** (in Search or Brackets box) — accept the first search result / commit the bracket text
 - **Esc** — jump focus to the Search box
 - **Ctrl+Enter** — jump focus to the Filename edit box
