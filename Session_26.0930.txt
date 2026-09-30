@@ -1,0 +1,28 @@
+# Taggerist Session Log — 26.0930
+(Continuation of Session_26.0924.txt / Session_26.0927.txt. Standing context,
+preferences, and history through v37.02 live there; this file carries the
+session forward per user request.)
+
+## v37.02 FEEDBACK (user, commit 1a008e2)
+
+- HOUSEKEEPING: prune v36 (and prior) files from Main — DONE (commit c42e6d6,
+  43 files; v37.01/v37.02 kept as reference; user keeps local copies).
+- #59 'almost' RESOLVED: cosmetic changes excellent. Minor tweak: BracketsBox
+  24 chars (Search +1 char) so SearchBox left edge aligns with [Skip]/[PROCESS].
+- NEW BUG: [Reduce], Alt+R, [Skip] do not clear SearchBox/BracketsBox of
+  residual text.
+- ADD: Alt+Delete keystroke clears BracketsBox and SearchBox (update legend +
+  README.md).
+- Kudos: [Fix Date] correctly refused a file already in Taggerist datestamp
+  format ('©yyyy.mmdd-HHMM.SSnn') — anticipated case worked.
+- ADD?? (feasibility question, answered + built): prompt to add unknown
+  |tags|/[tags] to the current taglist when [PROCESS] is pressed. Answer:
+  feasible and reasonable; built as a confirmation dialog on PROCESS listing
+  all unknown pipe segments (known ones filtered out); user selects via
+  checkboxes; selected names append to the ACTIVE taglist (list 1 by default)
+  followed by re-sort + reload, so Search immediately finds them.
+- NEW BUG: after Alt+R Reduce, highlighted tags changed from black-on-pale-
+  yellow to WHITE-on-pale-yellow (illegible). Root cause: update_tag_highlights
+  uses filename length >150 to pick white-on-highlight text; after Reduce the
+  text got shorter but the >150 branch logic is inverted/wrong for mid-length
+  names — highlight style simplified to always black-on-pale-yellow.
