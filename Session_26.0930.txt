@@ -26,3 +26,30 @@ session forward per user request.)
   uses filename length >150 to pick white-on-highlight text; after Reduce the
   text got shorter but the >150 branch logic is inverted/wrong for mid-length
   names — highlight style simplified to always black-on-pale-yellow.
+
+## v37.03 BUILT (agent)
+
+- #w.59 tweak: Brackets box 24 chars (Search +1 char; left edges align
+  with [SKIP]/[PROCESS]). Config reference updated to 24.
+- #w.60 FIX: [Reduce]/Alt+R, [Clear], [Skip] now clear SearchBox and
+  BracketsBox (new clear_search_and_brackets helper).
+- #w.61 NEW: Alt+Delete clears both boxes any time; legend +
+  README.md updated.
+- #w.62 NEW (his feasibility ask, built): on [PROCESS], unknown pipe
+  segments (not in any taglist; brackets stripped; camera dates and
+  Taggerist datestamps excluded) prompt a checkbox dialog; selected
+  names append to the ACTIVE taglist as 'name,name' rows and the
+  taglist reloads (Search finds them immediately). Answered his 'is
+  there a better way?' — this covers typed and BracketsBox paths both
+  since everything lands in the FilenameEditBox; TagCandidates.txt
+  remains the passive log for [bracketed] items.
+- #w.63 FIX: selected-tag highlight now always black-on-pale-yellow
+  (the old code switched to white text based on filename length,
+  which mis-fired after Reduce shortened the name).
+- Unknown-tag detector stub-tested: 'washing' + '[gym workout]' found
+  in his exact example; known tags, camera dates, and datestamps
+  excluded.
+- Housekeeping done per request: 43 v35/v36 files pruned from Main
+  (c42e6d6); v37.01/v37.02 kept as reference.
+- TASKS.md: #w.59/55 comments updated; new #w.60-63; z->a sort.
+- PR #18 carries v37.03.

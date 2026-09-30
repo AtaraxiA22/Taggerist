@@ -1,15 +1,19 @@
 # Taggerist Joint Task List
-Last updated: v37.02 (by agent)
+Last updated: v37.03 (by agent)
 
 **Format:** ID# = `#status.ID` — status: **w** = waiting for user test · 5 = very high · 4 = high · 3 = medium · 2 = low · 1 = very low · 0 = fixed/resolved (user-confirmed). ID is permanent; change status by editing the status digit/letter. Agent re-sorts (w.## first, then 5.## → 1.## descending; 0.## (user-confirmed) at the bottom; newest ID first within a band). Checkbox = "look at this / status changed" signal from user; agent reconciles and re-sorts.
 
 | ☐ | ID# | Item description | Comment |
+| ☐ | #w.60 | v37.02: NEW BUG — [Reduce]/Alt+R and [Skip] left residual text in the SearchBox and BracketsBox | FIXED in v37.03 — Reduce, Clear and Skip now clear both boxes // awaiting user test |
+| ☐ | #w.61 | v37.02: NEW — Alt+Delete keystroke clears BracketsBox and SearchBox; legend + README.md updated | BUILT in v37.03 // awaiting user test |
+| ☐ | #w.62 | v37.02: NEW FEATURE — on [PROCESS], unknown words in the filename (pipe segments not in any taglist, brackets stripped, dates/datestamps excluded) prompt a checkbox dialog; selected names append to the active taglist and the taglist reloads so Search finds them immediately | BUILT in v37.03 // awaiting user test |
+| ☐ | #w.63 | v37.02: NEW BUG — after Alt+R Reduce, selected-tag highlight turned white-on-pale-yellow (illegible); should stay black-on-pale-yellow | FIXED in v37.03 — highlight style no longer switches on filename length // awaiting user test |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
-| ☐ | #w.59 | v36.10: NEW — bottom row restyle: (a) drop '# of taglists loaded', keep total tag count flush left; (b) [Edit Tags]/[Refresh Tags] move up beside the Search box; (c) center-justified keystroke legend between tag count and a narrower right-justified [?]; (d) shortcut list added to README.md | PARTIALLY RESOLVED v37.01 — spatial design OK; v37.02 fixes: '3 lists' wording, legend reworded (Alt+T Sort Filename, Alt+1/© · Alt+2/@ · Alt+3/!!), legend +2pt; Brackets box 25 chars; Search expands; Edit/Refresh flush right // awaiting re-test |
+| ☐ | #w.59 | v36.10: NEW — bottom row restyle: (a) drop '# of taglists loaded', keep total tag count flush left; (b) [Edit Tags]/[Refresh Tags] move up beside the Search box; (c) center-justified keystroke legend between tag count and a narrower right-justified [?]; (d) shortcut list added to README.md | 'almost' RESOLVED v37.02 (cosmetics excellent); v37.03: Brackets box 24 chars so Search aligns with [Skip]/[PROCESS] // awaiting re-test |
+| ☐ | #w.56 | v36.10: NEW — ←/→ arrows move the 'hot' highlight across search result tags (default 1st); ← from the 1st tag jumps to the Brackets box; → from Brackets returns to the 1st tag; ENTER adds the hot tag/bracketed string to the filename and refocuses the cleared Search box | FUNCTIONAL v37.01 — cosmetic issues noted; the v37.02 layout pass (CI group width, bottom row) addresses the spacing around the search row // awaiting re-test |
+| ☐ | #w.55 | v36.10: NEW — [Brackets] text entry box left of the Search box (default width now 24 chars, config BRACKETS_BOX_WIDTH); ENTER wraps the text in [ ], prefixes it to the FilenameEditBox, logs it to TagCandidates.txt, clears and refocuses Search | FUNCTIONAL; v37.03 width tweak to 24 // awaiting re-test |
 | ☐ | #0.58 | v36.10: NEW — focus-colored thick borders: Brackets box BLUE, Search box ORANGE, FilenameEditBox YELLOW | RESOLVED, OK — user-confirmed v37.01 (looks good) |
 | ☐ | #0.57 | v36.10: NEW — '[' and ']' render blue in the FilenameEditBox; a mismatched/odd bracket is highlighted instead | RESOLVED, OK — user-confirmed v37.01 |
-| ☐ | #w.56 | v36.10: NEW — ←/→ arrows move the 'hot' highlight across search result tags (default 1st); ← from the 1st tag jumps to the Brackets box; → from Brackets returns to the 1st tag; ENTER adds the hot tag/bracketed string to the filename and refocuses the cleared Search box | FUNCTIONAL v37.01 — cosmetic issues noted; the v37.02 layout pass (CI group width, bottom row) addresses the spacing around the search row // awaiting re-test |
-| ☐ | #w.55 | v36.10: NEW — [Brackets] text entry box left of the Search box (default width now 25 chars, config BRACKETS_BOX_WIDTH); ENTER wraps the text in [ ], prefixes it to the FilenameEditBox, logs it to TagCandidates.txt, clears and refocuses Search | FUNCTIONAL v37.01 — cosmetic issues noted; v37.02 shrinks the box to 25 chars // awaiting re-test |
 | ☐ | #0.54 | v36.09: NEW — ESC puts the cursor in the Search box; Ctrl+ENTER puts it in the Filename edit box | FIXED, OK — user-confirmed v36.09 |
 | ☐ | #0.53 | v36.09: NEW BUG FIX (found in v36.07 buglog) — [bracketed] data was dropped by Reduce when glued to other text in the same pipe segment (buglog: 'dropped [gym workout]Veronica'); now the bracketed part is kept + logged to TagCandidates.txt and the remainder still reduces normally | FIXED in v36.09 // user-confirmed v36.09 |
 | ☐ | #0.52 | v36.09: NEW — Alt+D / [Fix Date] button converts a recognized camera-style date (e.g. '2024-08-20 01-25-25-024') into the Taggerist datestamp shape yy.mmdd-HHMM.ssnn; explicit action only (never automatic); refuses to touch files that already have a Taggerist datestamp | FIXED, OK — user-confirmed v36.09 |
@@ -63,5 +67,6 @@ Last updated: v37.02 (by agent)
 | ☐ | #0.03 | Crash saga history: v34.15 faulthandler traces; v34.16 sorting + v34.15 processEvents were misdiagnoses | Kept for reference |
 | ☐ | #0.02 | Date symbol not removed when adding new | Fixed v34.17 |
 | ☐ | #0.01 | Search crash `free(): invalid pointer` — PySide6 6.11 stale-wrapper bug in tag-label teardown | Fixed v34.17; **confirmed stable by user** |
+
 
 **Old ID mapping** (continuity with earlier conversations): B01→10, B02→04, B03→05, B04→06, F01→11, F02→12, F03→13, F04→14, F05→15, F06→07, F07→08, F08→09, C01→16, C02→17, R01→01, R02→02, R03→03
