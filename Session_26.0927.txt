@@ -364,3 +364,34 @@ User's v36.07 test (Taggerist_v36.07_User_feedback.txt, 88bf214):
   TagCandidates.txt, remainder reduces normally.
 Verification: py_compile OK; date-converter tests 8/8 (his exact buglog
 filenames), CI-prefix and bracket tests pass.
+
+## v36.10 BUILT (agent)
+
+User's v36.09 test (Taggerist_v36.09_User_feedback.txt):
+- RESOLVED: #52, #53, #54 (all 0-band now).
+- #48 NOT RESOLVED (rev2): CI button on '|SWAY|2024-10-10 00-37-34-456.JPG'
+  produced a DOUBLE date — camera date prefixed AND system datestamp
+  appended: '@2024-10-10 00-37-34-456@26.0930-0328.2062'. Root cause:
+  update_date_prefix prefixed the camera date but the system-date
+  append step still ran afterwards. Fix: prefixed_camera_date flag;
+  append step skipped when a camera date was prefixed or a Taggerist
+  datestamp already exists. SWAY case verified: now yields
+  '|SWAY|@2024-10-10 00-37-34-456.JPG' only.
+- NEW FEATURES BUILT (#w.55-59):
+  - #55 Brackets box (left of Search): text wrapped in [ ] and prefixed
+    to the filename; logged to TagCandidates.txt.
+  - #56 hot-tag arrows: arrow keys move a highlighted chip through
+    search results; Enter accepts the hot chip; <- from first chip
+    jumps to the Brackets box; hot resets on new search/click.
+  - #57 blue brackets: [ and ] render blue (#2020c0); mismatched or
+    unbalanced brackets blink yellow (#FFFF00).
+  - #58 focus colors: Brackets box blue, Search orange (#e8752a),
+    Filename yellow borders when focused (color-vision-friendly picks;
+    user to flag any that are hard to see).
+  - #59 bottom row: taglist count flush left, Edit/Refresh buttons
+    moved into the search row, shortcut legend centered, [?] fixed
+    width. #59d: shortcut list added to README.md.
+- TASKS.md on Main: #52-54 -> 0, #0.48 REV comment, #w.55-59 inserted,
+  z->a sort (commit 754d8fd).
+- Branch vibe/v36.10-brackets-hotkeys-aad943; draft PR opened.
+- Pending user decision: #1.19 (Shift+CI prepending: convert vs insert).
