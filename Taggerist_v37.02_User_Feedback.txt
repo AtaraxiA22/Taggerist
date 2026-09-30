@@ -1,6 +1,7 @@
 Taggerist_v37.02_User_Feedback.txt
 =======
-HOUSEKEEPING: prune v35 files from Main.  (Omit a few if you need them for reference. Note that I have all copies on my hard drive if needed.)
+HOUSEKEEPING: prune v36 (and prior)  files from Main.  (Omit a few if you need them for reference. Note that I have all copies on my hard drive if needed.)
+---
 #59 'almost' RESOlVED: Cosmetic changes are excellent. 
   - minor tweak: change BracketsBox to 24 characters. (epxand SearchBox by 1 character) (This should align left end of SearchBox with left ends of [Skip] and [Process]
 ---
