@@ -50,6 +50,7 @@ Taggerist allows you to **individually tag image files** by embedding metadata *
 - **Alt+S** — SKIP the current file
 - **Alt+R** — REDUCE the filename (strip redundant segments, keep tags/brackets/dates)
 - **Alt+L** or **Alt+C** — CLEAR the filename edit box (two keys, since some Linux desktops reserve Alt+C)
+- **Alt+Delete** — clear the Search and Brackets boxes
 - **Alt+T** — SORT the tags in the filename alphabetically
 - **Alt+D** — FIX DATE: convert a camera-style date (e.g. `2024-08-20 01-25-25-024`) into a Taggerist datestamp
 - **Alt+1 / Alt+2 / Alt+3** — press the 1st / 2nd / 3rd CI button (adds CI symbol + date prefix)
