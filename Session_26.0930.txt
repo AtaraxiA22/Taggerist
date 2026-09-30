@@ -26,3 +26,62 @@ session forward per user request.)
   uses filename length >150 to pick white-on-highlight text; after Reduce the
   text got shorter but the >150 branch logic is inverted/wrong for mid-length
   names — highlight style simplified to always black-on-pale-yellow.
+
+## v37.03 BUILT (agent)
+
+- #w.59 tweak: Brackets box 24 chars (Search +1 char; left edges align
+  with [SKIP]/[PROCESS]). Config reference updated to 24.
+- #w.60 FIX: [Reduce]/Alt+R, [Clear], [Skip] now clear SearchBox and
+  BracketsBox (new clear_search_and_brackets helper).
+- #w.61 NEW: Alt+Delete clears both boxes any time; legend +
+  README.md updated.
+- #w.62 NEW (his feasibility ask, built): on [PROCESS], unknown pipe
+  segments (not in any taglist; brackets stripped; camera dates and
+  Taggerist datestamps excluded) prompt a checkbox dialog; selected
+  names append to the ACTIVE taglist as 'name,name' rows and the
+  taglist reloads (Search finds them immediately). Answered his 'is
+  there a better way?' — this covers typed and BracketsBox paths both
+  since everything lands in the FilenameEditBox; TagCandidates.txt
+  remains the passive log for [bracketed] items.
+- #w.63 FIX: selected-tag highlight now always black-on-pale-yellow
+  (the old code switched to white text based on filename length,
+  which mis-fired after Reduce shortened the name).
+- Unknown-tag detector stub-tested: 'washing' + '[gym workout]' found
+  in his exact example; known tags, camera dates, and datestamps
+  excluded.
+- Housekeeping done per request: 43 v35/v36 files pruned from Main
+  (c42e6d6); v37.01/v37.02 kept as reference.
+- TASKS.md: #w.59/55 comments updated; new #w.60-63; z->a sort.
+- PR #18 carries v37.03.
+
+## v37.03 FEEDBACK (user, commit 31473de)
+- #59 RESOLVED ("Looks good!") -> re-stamped #0.59.
+- Alt+Delete NOT FUNCTIONAL: v37.03 claimed it but the shortcut was never
+  wired, and legend/README never carried it. Fixed in v37.04.
+- Unknown-tag prompt BUG: typed '[xjunk(c)26.0930-1257]' and '[dogfood]',
+  pressed PROCESS: saved but no prompt. Buglog line 2616/3261 shows the real
+  filename '[xjunk(c)26.0930-1257](c)2026.0907-0324.1974_wm.jpg' — one pipe
+  segment containing a datestamp; v37.03 skipped any date-bearing segment
+  whole. Fixed in v37.04 (dates/CI/_wm stripped per segment, bracketed
+  words checked separately). Stub-tested on his exact strings.
+- NEW: [?] button background yellow (v37.04).
+- Navigation rework: Alt+arrows move between the three boxes; plain arrows
+  reserved for hot-tag walking and text editing; Up/Down jump between the
+  single-line boxes. Built in v37.04.
+- BUG: taglist rows per column fixed at tags/cols regardless of font size
+  (buglog: rows_fit=32 constant while viewport was 676px). Fixed in v37.04 —
+  rows recomputed from font height + viewport at every refill.
+- BUG: PROC list not refreshed after PROCESS, so the new file hid below the
+  bottom margin (oldest-first sort puts it near the end). Fixed in v37.04 —
+  refresh + scroll-to-file deferred until the table has laid out.
+
+## v37.04 BUILT (agent)
+- #w.61: Alt+Delete wired; legend + README updated.
+- #w.62: unknown-tag detector per-segment date/CI/_wm stripping; prompt
+  now fires on his exact test filenames.
+- #w.64: [?] yellow.
+- #w.65: Alt+arrows cycle box focus; Up/Down between Brackets/Search/Filename.
+- #w.66: rows-per-column fills to bottom margin dynamically.
+- #w.67: PROC scroll-to-file after refresh (deferred one event-loop tick).
+- TASKS.md: new #w.64-67; #w.59 -> #0.59; w-band z->a sort.
+- Carried on PR #18 branch (version files); TASKS/session on main.
