@@ -395,3 +395,22 @@ User's v36.09 test (Taggerist_v36.09_User_feedback.txt):
   z->a sort (commit 754d8fd).
 - Branch vibe/v36.10-brackets-hotkeys-aad943; draft PR opened.
 - Pending user decision: #1.19 (Shift+CI prepending: convert vs insert).
+
+## v37.01 BUILT (agent)
+
+User reported v36.10 CRASHED AT STARTUP:
+  AttributeError: 'TaggeristList' object has no attribute 'brackets_edit'
+Root cause: the Brackets box's keyPressEvent hookup and the focus-color
+event filter were installed BEFORE self.brackets_edit was created (my
+ordering mistake in v36.10's setup_ui). Fix: create the box first, then
+attach key handler + event filter. Same class of bug guarded by an
+assertion in the sandbox test (creation index < hookup index).
+User also asked: change version to v37.01.
+- File renamed Taggerist_v36.10.py -> Taggerist_v37.01.py; window
+  titles, startup banner, buglog filename all bumped to v37.01;
+  v37.01 changelog line inserted above the v36.10 line.
+- #48 SWAY double-date regression re-verified on the renamed file.
+- TASKS.md (Main): #w.55-59 annotated "v36.10 crashed at startup;
+  fixed in v37.01"; #0.52/53/54 comments kept as user-confirmed
+  (accidental overwrite repaired); Last updated: v37.01.
+- PR #18 retitled to v37.01.
