@@ -414,3 +414,32 @@ User also asked: change version to v37.01.
   fixed in v37.01"; #0.52/53/54 comments kept as user-confirmed
   (accidental overwrite repaired); Last updated: v37.01.
 - PR #18 retitled to v37.01.
+
+## v37.02 BUILT (agent)
+
+User's v37.01 test (Taggerist_v37.01_User_feedback.txt, 9458b54):
+- #57 RESOLVED, #58 RESOLVED (looks good!) — both stamped w->0.
+- #59 PARTIALLY RESOLVED: spatial design OK; wording changes requested:
+  '3 taglists loaded' -> '3 lists'; 'Alt-T Sort' -> 'Alt-T Sort Filename';
+  'Alt 1/2/3 CI' -> 'Alt-1/©, Alt-2/@, Alt-3/!!'; legend +2pt (10->12).
+- #55/#56/#57 PARTIALLY RESOLVED (he listed 57 twice; grouped as
+  55/56 cosmetic): functional, but layout fixes requested via a
+  vision-AI description of his screenshot:
+  - close wasted space right of the ©/@/!! button group (group hugs
+    the buttons; FilenameEditBox expands leftward)
+  - do NOT change Font box or PROCESS box sizes
+  - Brackets box width 25 chars (default; config still overrides)
+  - Edit/Refresh buttons flush to the far right; Search expands.
+BUILT (v37.02): all of the above. CI buttons now fixed-width
+(widest symbol + padding, hugging the vline). Search row moved out
+of top_grid into its own QHBoxLayout: brackets(25) + Search(stretch)
++ Edit + Refresh flush right. Legend reworded + 12pt. Status label
+'3 lists'. FilenameEditBox gains the freed width via grid stretch.
+- TASKS.md: #57/#58 -> 0; #w.59 REV comment; #w.55/56 FUNCTIONAL
+  comments; sorted z->a. (Note: a scripted edit mangled the table
+  briefly — rebuilt; lesson re-confirmed: never naive-edit rows with
+  escaped pipes.)
+- PR #18 retitled to v37.02.
+- Note: brackets default now 25 in code; his config line (if he
+  copied the earlier reference with 40) would override to 40 — told
+  him to change it to 25 or remove it.
