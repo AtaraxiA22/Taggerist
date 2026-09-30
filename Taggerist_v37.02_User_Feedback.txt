@@ -1,0 +1,30 @@
+Taggerist_v37.02_User_Feedback.txt
+=======
+HOUSEKEEPING: prune v35 files from Main.  (Omit a few if you need them for reference. Note that I have all copies on my hard drive if needed.)
+#59 'almost' RESOlVED: Cosmetic changes are excellent. 
+  - minor tweak: change BracketsBox to 24 characters. (epxand SearchBox by 1 character) (This should align left end of SearchBox with left ends of [Skip] and [Process]
+---
+#48 - [Reduce] , Alt-R or [Skip] does not clear SeachBox _or_ BracketBox  of residual text.
+---
+ADD:  Alt-Delete keystroke clears BracketsBox and SearchBox. (Update key legend and README.md)
+---
+- OH, KOOL! ;-) The date in the current file was already in '©yyyy.mmdd-HHMM.SSnn' format. I pressed the 'Fix Date' button and received this error message:
+"This filename already carries a Taggerist datestamp (yyy.mmdd...) -- nothing to convert. [Fix Date] only converts camera style dates like 2024-09-20..."
+
+I'm impressed that you anticipated this situation. Kudos!
+---
+ADD???? I'm looking for ways to quickly add new text strings to the taglist.
+
+Suppose I typed '|washing|' (with pipes) into the filename _OR_ inserted it with BracketsBox as '[washing]' into the FilenameEditBox.  (Or manually added || or [] to some existing text there from the original filename??)
+
+'Washing' is not in the taglist. 
+
+How feasible/reasonable would it be to (somehow) prompt me to 'Add 'washing' to current taglist?'.  ??Perhaps display a popup when [Process] has been pressed? If more than one term, it could list them in a selection list??  This would simply append 'washing, washing' to the (current) taglist (then sort it??) . It would be up to me to periodocally add category prefixes, etc.  to these lines if prudent. (And, hereafter, Search would find 'washing' as a legitimate tag,)   
+
+I.e. IF unknown |tags| or [tags] EXIST in FilenameEditBox when [Process] is pressed, prompt user to select those candidates to add to current taglist. 
+
+Can you think of a better way to do this??  Comment, please. 
+---
+
+
+I added a few tags to the Filename. The words were highlighted as black on pale yellow. That's Good/OK.  Then pressed Alt-R to Reduce.  Highlighted tags changed to white on pale  yellow background, which is not legible. 
