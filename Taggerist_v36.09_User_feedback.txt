@@ -1,1 +1,41 @@
-Taggerist_v36.08_User_feedback.txt
+Taggerist_v36.09_User_feedback.txt
+===
+
+#48 NOT RESOLVED
+Original filename (example): |SWAY|2024-10-10 00-37-34-456.JPG
+
+Hit [@] button:
+|SWAY|@2024-10-10 00-37-34-456@26.0930-0328.2062.JPG
+
+It found the photo date but also added the current date.
+---
+#52 RESOLVED
+---
+#53 RESOLVED
+---
+#54 RESO"LVED
+---
+
+#55 NEW:  Put text entry box to left of SearchBox (same row) with room for 40 characters. ('40' is set in config line)  Text entry in this box followed by <ENTER>  sets [brackets] to the string, prefixes it to the FilenameEditBox and the returns focus to SearchBox.   
+
+#56 NEW:  Currently, when multiple tags appear in SearchBox, the first one (left) is highlighted. Pressing <ENTER> puts it in the FilenameEditBox then SearchBox is cleared and focus returns to it.  
+#56 ADD a.): If <ENTER> not pressed yet, --> right arrow moves highlight to next tag in list... etc. <-- left arow moves to highlighed tag to left. 
+ #56 ADD b.) If 1st tag is highlighted and the <-- arrow is pressed, focus moves to the (new) [bracketing] text box (see #55). If focus is in [BracketingTextbox]  and --> arrow is pressed, focus moves to 1st tag in SearchBox and hightlights it. 
+I.e arrows move focus horizonally between [BracketingTextBox] and the tags in the search line.  Pressing <ENTER> prefixes the tag/[string] to the FilenameEdit box then focus returns to emptied Searchbox.
+---
+
+#57 ADD: In FilenameEditBox, highlight '[' and ']' in blue.   Test for  matching [ and ]. If not found, blink blue highlight of the odd one.
+---
+
+#58 ADD: If feasible, 
+ - IF cursor is in BracketsBox(see #55), change color to BLUE and make it thicker.
+ - IF cursor is in SearchBox, change color to ORANGE and make it thicker.
+ - IF cursor is in FilenameEditBox, change color to YELLOW and make it thicker.
+---
+
+#59: In bottom row:
+a.) Remove '# of Taglists loaded'. Retain total # of tags flush left.
+b.) Move [Edit Tags] and  [Refresh Tags] to right side of SearchBox row. (reduce width of SearchBox as needed.)
+c.) between # of Tags and the [?] create a brief, center-justified legend of available keystroke shortcuts.  Reduce width of [?] and right justify.
+d.) Add keystroke shortcut descriptions to README.md  
+
