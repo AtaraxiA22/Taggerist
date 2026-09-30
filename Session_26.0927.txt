@@ -443,3 +443,5 @@ of top_grid into its own QHBoxLayout: brackets(25) + Search(stretch)
 - Note: brackets default now 25 in code; his config line (if he
   copied the earlier reference with 40) would override to 40 — told
   him to change it to 25 or remove it.
+
+== NOTE: session log continues in Session_26.0930.txt (user request, v37.02 cycle) ==
