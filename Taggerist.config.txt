@@ -24,7 +24,7 @@ taglist_id_2 = @   ; Date identifier for taglist 2 (used only if not given in TA
 taglist_id_3 = !!   ; Date identifier for taglist 3 (used only if not given in TAGLIST_NAME_3)
 
 [DISPLAY]
-taglist_columns = 16   ; Max columns of tagnames (list wraps to a new column at screen bottom)
+taglist_columns = 25   ; Max columns of tagnames (list wraps to a new column at screen bottom)
 taglist_rows = 0   ; Max rows per column; 0 = fit to screen height
 taglist_column_width = 160   ; Pixel width of each tagname column
 taglist_font_size = 8   ; Font size of tagnames in TL
