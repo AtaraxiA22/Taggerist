@@ -30,6 +30,7 @@ taglist_column_width = 160   ; Pixel width of each tagname column
 taglist_font_size = 8   ; Font size of tagnames in TL
 taglist_vertical_spacing = 0.5   ; Blank lines between tagnames (1 = one full line; 0.5 = half a line; 0 = no gap)
 start_display = 2   ; Display number to open on
+brackets_box_width = 24   ; Width of the [Brackets] text box, in characters
 start_maximized = True   ; True or False
 ci_symbol = (c)   ; Date-prefix symbol: '(c)' = keep (c) as typed; '©' = auto-convert (c) to ©
 process_auto_sort = True   ; True = [PROCESS] sorts the tagline before saving; False = saves as shown

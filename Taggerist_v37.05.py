@@ -1,4 +1,4 @@
-# Taggerist v37.02
+# Taggerist v37.05
 
 # Personal Configurations (fallback defaults; overridden by Taggerist.config.txt)
 TAGLIST_1 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,©,white,red'
@@ -28,6 +28,7 @@ HELP_FILE_PATH = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md'
 # Taggerist v36.01: #w.33 — taglist buttons removed; replaced by font-size and columns spin-controls (live repaint, values saved to config). One-screen taglist: short display names (root after first underscore; col2 of the CSV overrides, e.g. '50.00' for %_50%), bold non-clickable section headers (___ rows, title from col2), all three lists load together with sort/grouping still by full tag, and the grid scrolls horizontally. FilenameEditBox/PROCESS/Sort/Clear/Reduce keep full-tag equivalence: old prefixed filenames still load, highlight and reduce correctly; new tags insert as short names (a short name matches its full tag when unique; ambiguity falls back to the full tag). [Edit tags] renamed [Edit Tags].
 # Taggerist v36.02: #w.35 fix — the Cols spin-control now truly controls the column count (root cause: the grid silently derived columns from screen height, so the value drifted between repaints); rows per column = tags ÷ columns, vertical scrollbar returns only if needed. #w.37 new — main taglist (and search results) sort case-insensitively, so e.g. LOC_House and LOC_house now sit together. Subdirectory listing in PROC/UNPROC considered and dropped per user ('not a big deal'; the empty-list report was a false alarm — images were in a subfolder).
 # Taggerist v36.03: #w.39 fix — [Refresh Tags] (and [Edit Tags] round-trips) no longer wipe the FilenameEditBox; previously the refresh re-loaded the file's ORIGINAL name from disk, discarding unsaved tags typed in the box; now the box text is kept and only the highlights are re-derived. #w.40 — taglist columns always fill the TL area down to the bottom margin: with few columns the vertical spacing stretches so the list no longer ends mid-screen. #w.41 — ' Font'/' Cols' labels padded with a leading space so they no longer hug the border line.
+# Taggerist v37.03: v37.02 feedback — [Brackets] box 24 chars (Search aligns with [SKIP]/[PROCESS]); [Reduce]/Alt+R, [Clear], [Skip] now also clear the Search and Brackets boxes; NEW Alt+Delete clears both boxes any time; NEW: on [PROCESS], unknown words in the filename prompt a checkbox dialog to append selected names to the current taglist (then reload, so Search finds them immediately); fix: selected-tag highlight is always black-on-pale-yellow (was white-on-yellow after Reduce); legend + README.md updated (Alt+Del).
 # Taggerist v37.02: v37.01 feedback — keystroke legend reworded ('Alt+T Sort Filename', 'Alt+1/© · Alt+2/@ · Alt+3/!!') and enlarged 10→12pt; taglist status says '3 lists' (variable, pluralized) instead of '3 taglists loaded'; CI button group width now hugs the widest symbol (no wasted space; FilenameEditBox expands into the freed room); [Brackets] box default width 25 chars (config BRACKETS_BOX_WIDTH); bottom row: Search box expands, [Edit Tags]/[Refresh Tags] flush to the far right edge.
 # Taggerist v37.01: v36.10 crash fix — the program failed to start ('TaggeristList' object has no attribute 'brackets_edit'): the Brackets box's key handler and focus-color filter were being attached before the box was created; creation order corrected (box first, then hookups). Also renames the file to the v37.01 version line.
 # Taggerist v36.10: #0.48 rev2 — CI button on a camera-dated file no longer appends a second (system) datestamp: after prefixing the camera date with the CI, the append-system-date step is skipped. #w.55 NEW — [Brackets] text box left of the Search box (40 chars, width set by config BRACKETS_BOX_WIDTH): ENTER wraps the typed text in [square brackets], prefixes it to the FilenameEditBox, clears itself, focus returns to Search. #w.56 NEW — ←/→ move the 'hot' highlight across search result tags (default: 1st); ← from the 1st tag moves focus to the Brackets box; → from the Brackets box moves to the 1st tag; ENTER adds the hot tag (or the bracketed string) to the filename and refocuses Search. #w.57 NEW — '[' and ']' render blue in the FilenameEditBox; an unmatched bracket blinks. #w.58 NEW — the focused box gets a colored thick border: Brackets box BLUE, Search box ORANGE, FilenameEditBox YELLOW. #w.59 NEW — bottom row restyled: total tag count flush left; [Edit Tags]/[Refresh Tags] move up beside the Search box; a center-justified keystroke legend sits between the count and [?] (narrower, right-justified).
@@ -37,6 +38,8 @@ HELP_FILE_PATH = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/README.md'
 # Taggerist v36.06: #w.44 fix — the gap between tagnames was still a full line high because the v36.03 'fill to the bottom margin' rule re-stretched the spacing after the halving; the stretch is now removed so the configured gap (0.5 line) is exactly what you get. #w.45 fix — style flags were only read from column 2 of the CSV; when column 2 is present it overrides column 1, so flags written in the tag name (CHR_i^James) were ignored; flags are now read from BOTH columns, stripped from the tag identity at load (so CHR_b^Thalia no longer leaks into filenames), and inherited by the tag's aliases. #w.46 fix — Alt+C did nothing on the user's desktop (window manager reserves it); Alt+L is added as a second Clear key. #w.47 new — spinner up/down arrows enlarged (wider buttons, bigger arrows). #0.41 rev — ' Font'/' Cols' labels get one more space of padding. Startup buglog banner no longer says v35.08.
 # Taggerist v36.05: #w.44 fix — the empty vertical gap between tagnames is halved (default TAGLIST_VERTICAL_SPACING now 0.5 of a line; a value already in the config still wins). #w.45 NEW — per-tag style flags in the taglist CSV: a '^' marker switches that tag's style in the taglist — b^=bold, i^=italic, fd^=default font, fc^=Ubuntu Condensed, fl^=Ubuntu Light, fm^=Ubuntu Mono (e.g. PTY_fd^hat shows 'hat' in the default font; the flag itself is never shown or saved into filenames). #w.46 NEW — shortcut keys: Alt+P=PROCESS, Alt+S=SKIP, Alt+R=Reduce, Alt+C=Clear, Alt+T=Sort Tagline, Alt+1/Alt+2/Alt+3=the three CI buttons.
 # Taggerist v36.04: #w.42 fix — the CI date-prefix buttons [@]/[©] injected fragments of button-color HTML into the filename; root cause: the edit box colored each CI symbol one at a time, and the new '=' symbol then matched the '=' characters inside the color markup of already-processed symbols, shredding it; the box now wraps all symbols in a single pass so inserted markup is never re-scanned. #w.43 — every '(c)' in a filename is now automatically converted to '©' on load and on save, per user request (the ci_symbol config line is no longer needed for this).
+# Taggerist v37.04: v37.03 feedback — Alt+Delete is now actually wired (the v37.03 changelog claimed it but no shortcut existed; legend + README updated); unknown-tag prompt now catches bracketed words glued to a datestamp (root cause: a pipe segment containing a date was skipped whole, so e.g. [xjunk©26.0930-1257]©datestamp never prompted — datestamps/camera dates/_wm/CI are now stripped per segment before the unknown check); [?] button background yellow; navigation rework: Alt+←/→ move between FilenameEditBox/BracketsBox/SearchBox, plain ←/→ in the Search box still walk the hot tag, ↑/↓ move up/down between boxes; taglist rows per column now fill to the bottom margin dynamically (recomputed from font size + viewport instead of tags÷columns); PROC list scrolls to the newly processed file after refresh (scroll deferred until sorting/layout completes).
+# Taggerist v37.05: v37.04 feedback — NEW keystroke popup (toggle: [?] button or Alt+K; contents from an editable Taggerist_Keystrokes.txt in the config directory; draggable, position remembered; replaces the bottom-row legend and the legend-rework items; README trimmed); #w.55 fix: re-processing a PROC file whose name is unchanged is a no-op instead of a "same file" error; #w.56 fix: Down arrow from Filename/Brackets moves focus down the box stack (Up already worked); #w.62 change: unknown words appended to the CSV keep their brackets/pipes ([EastBradyBend], |foggy|); Sort Tagline now reports "no recognized tags to sort" instead of silently doing nothing; manually typed brackets in the FilenameEditBox color blue (re-render on every text change); NEW: text selected in the FilenameEditBox copies to the Search box, ESC clears both; #0.52 add: two-digit-year camera dates (19-10-13-15-05-41) treated as 20+yy when the year digits are 10-30.
 # (c) @26.0830-2150.00 by AtaraxiA under Creative Commons CC BY-SA license
 
 import re
@@ -53,7 +56,7 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QFrame, QVBoxLayout, Q
                                QLabel, QLineEdit, QTextEdit, QPushButton, QFileDialog, QScrollArea,
                                QGridLayout, QRadioButton, QButtonGroup, QMessageBox,
                                QSplitter, QSizePolicy, QTableWidget, QTableWidgetItem, QHeaderView, QDialog, QProgressBar, QLayout,
-                               QSpinBox)
+                               QSpinBox, QCheckBox, QDialogButtonBox)
 from PySide6.QtCore import Qt, QSize, QTimer, QPoint, QRect, Signal, QEvent
 from PySide6.QtGui import QPixmap, QFont, QPalette, QColor, QShortcut, QKeySequence, QFontMetrics, QPainter, QGuiApplication, QScreen, QTextCursor
 from PIL import Image
@@ -201,8 +204,8 @@ class TaggeristMainWindow(QMainWindow):
         super().__init__()
         try:
             import PySide6
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
-                f.write("--- Taggerist v37.02 startup ---\n")
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
+                f.write("--- Taggerist v37.05 startup ---\n")
                 f.write("PySide6 version: " + str(getattr(PySide6, '__version__', 'unknown')) + "\n")
                 f.write("Python version: " + sys.version.replace("\n", " ") + "\n")
                 f.write("Qt version: " + str(getattr(PySide6.QtCore, '__version__', 'unknown')) + "\n")
@@ -401,9 +404,9 @@ class TaggeristMainWindow(QMainWindow):
 
     def update_window_title(self):
         if self.current_file:
-            self.setWindowTitle(f"Taggerist v37.02 - {os.path.basename(self.current_file)}")
+            self.setWindowTitle(f"Taggerist v37.05 - {os.path.basename(self.current_file)}")
         else:
-            self.setWindowTitle("Taggerist v37.02")
+            self.setWindowTitle("Taggerist v37.05")
 
 # ========== TV (Taggerist-Viewer) ==========
 class TaggeristViewer(QFrame):
@@ -534,6 +537,15 @@ class FilenameEdit(QTextEdit):
             self.process_requested.emit()
             return
         super().keyPressEvent(event)
+        if event.key() == Qt.Key_Down and self.parent() is not None and getattr(self.parent(), 'brackets_edit', None):
+            self.parent().brackets_edit.setFocus()
+            return
+        if event.key() in (Qt.Key_BracketLeft, Qt.Key_BracketRight):
+            cursor = self.textCursor()
+            plain = self.toPlainText()
+            self.setText(plain)
+            cursor.movePosition(QTextCursor.End)
+            self.setTextCursor(cursor)
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -731,7 +743,7 @@ class TaggeristList(QFrame):
             except Exception:
                 continue
             if not conv_path or not os.path.exists(conv_path):
-                with open('Taggerist_v37.02-buglog.txt', 'a') as dbg:
+                with open('Taggerist_v37.05-buglog.txt', 'a') as dbg:
                     dbg.write(f"load_taglist (list {n}): file missing or no path set: {conv_path}\n")
                 continue
             try:
@@ -770,11 +782,11 @@ class TaggeristList(QFrame):
                                     if alias_disp != old_tag:
                                         self.conversion_table[alias_disp.lower()] = full_tag
             except Exception as e:
-                with open('Taggerist_v37.02-buglog.txt', 'a') as dbg:
+                with open('Taggerist_v37.05-buglog.txt', 'a') as dbg:
                     dbg.write(f"load_taglist (list {n}) ERROR: {e}\n")
         self.all_tags = sorted(set(self.all_tags))
         self._build_reverse_maps()
-        with open('Taggerist_v37.02-buglog.txt', 'a') as dbg:
+        with open('Taggerist_v37.05-buglog.txt', 'a') as dbg:
             dbg.write(f"load_taglist: {len(self.all_tags)} tags ({len(self.header_tags)} headers), {len(self.display_names)} display names, {len(self.conversion_table)} conversions\n")
         self.populate_taglist()
 
@@ -877,12 +889,12 @@ class TaggeristList(QFrame):
         n = self.grid_layout.count()
         vh = self.scroll_area.viewport().height()
         rows = getattr(self, '_last_rows_fit', 0)
-        with open('Taggerist_v37.02-buglog.txt', 'a') as dbg:
+        with open('Taggerist_v37.05-buglog.txt', 'a') as dbg:
             dbg.write(f"refill: {n} labels, rows_fit={rows}, viewport_h={vh}, font_color={self.taglist_font_color!r}, bg={self.taglist_bg_color!r}\n")
 
     def setup_ui(self):
         layout = QVBoxLayout(self)
-        with open('Taggerist_v37.02-buglog.txt', 'a') as debug_file:
+        with open('Taggerist_v37.05-buglog.txt', 'a') as debug_file:
             debug_file.write(f"Main layout identified as: {type(layout).__name__}\n")
         top_grid = QGridLayout()
         top_grid.setSpacing(6)
@@ -967,6 +979,7 @@ class TaggeristList(QFrame):
         self.filename_edit.setFont(QFont("Ubuntu", 18))
         self.filename_edit.setStyleSheet("background-color: #000; color: #fff; border: 1px solid #FFFFCC;")
         self.filename_edit.textChanged.connect(self.update_tag_highlights)
+        self.filename_edit.selectionChanged.connect(self.on_filename_selection)
         self.filename_edit.textChanged.connect(self.update_length_monitor)
         self.filename_edit.process_requested.connect(self.save_and_next)
         top_grid.addWidget(self.filename_edit, 2, 7, 2, 1)
@@ -1002,7 +1015,7 @@ class TaggeristList(QFrame):
         self.filename_edit.setStyleSheet("background-color: #000; color: #fff; border: 2px solid #FFFFCC;")
         self.brackets_edit = QLineEdit()
         self.brackets_edit.setPlaceholderText("[Brackets]")
-        bw = to_int(strip_comment(self.parent.get_config('DISPLAY', 'BRACKETS_BOX_WIDTH')), 25)
+        bw = to_int(strip_comment(self.parent.get_config('DISPLAY', 'BRACKETS_BOX_WIDTH')), 24)
         fm40 = QFontMetrics(self.brackets_edit.font())
         self.brackets_edit.setFixedWidth(max(60, fm40.horizontalAdvance('M' * bw) + 24))
         self.brackets_edit.setStyleSheet("background-color: #000; color: #fff; border: 2px solid #2020c0; font-size: 14px; padding: 6px 4px;")
@@ -1070,11 +1083,17 @@ class TaggeristList(QFrame):
         QShortcut(QKeySequence('Alt+L'), self, activated=self.clear_filename_edit)
         QShortcut(QKeySequence('Alt+D'), self, activated=self.fix_camera_date)
         QShortcut(QKeySequence('Ctrl+Return'), self, activated=lambda: self.focus_filename_edit())
-        QShortcut(QKeySequence('Escape'), self, activated=lambda: self.search_edit.setFocus() if hasattr(self, 'search_edit') and self.search_edit else None)
+        QShortcut(QKeySequence('Escape'), self, activated=self.escape_key)
         QShortcut(QKeySequence('Alt+T'), self, activated=self.sort_filename_tags)
         QShortcut(QKeySequence('Alt+1'), self, activated=lambda: self.update_date_prefix(self.parent.get_taglist_id(1)))
         QShortcut(QKeySequence('Alt+2'), self, activated=lambda: self.update_date_prefix(self.parent.get_taglist_id(2)))
         QShortcut(QKeySequence('Alt+3'), self, activated=lambda: self.update_date_prefix(self.parent.get_taglist_id(3)))
+        QShortcut(QKeySequence('Alt+Delete'), self, activated=self.clear_search_and_brackets)
+        QShortcut(QKeySequence('Alt+Left'), self, activated=lambda: self._cycle_focus_box(-1))
+        QShortcut(QKeySequence('Alt+Right'), self, activated=lambda: self._cycle_focus_box(1))
+        QShortcut(QKeySequence('Alt+Down'), self, activated=lambda: self._cycle_focus_box(1))
+        QShortcut(QKeySequence('Alt+Up'), self, activated=lambda: self._cycle_focus_box(-1))
+        QShortcut(QKeySequence('Alt+K'), self, activated=self.toggle_keystroke_popup)
         layout.setSpacing(10)
         layout.setContentsMargins(10, 10, 10, 10)
         self.original_filename_label = QLabel()
@@ -1094,13 +1113,14 @@ class TaggeristList(QFrame):
         self.taglist_status_label.setStyleSheet("color: #fff;")
         bottom_layout.addWidget(self.taglist_status_label)
         bottom_layout.addStretch()
-        self.shortcut_legend_label = QLabel("Alt+P Process \u00b7 Alt+S Skip \u00b7 Alt+R Reduce \u00b7 Alt+L/C Clear \u00b7 Alt+T Sort Filename \u00b7 Alt+D Fix Date \u00b7 Alt+1/\u00a9 \u00b7 Alt+2/@ \u00b7 Alt+3/!! \u00b7 \u2190\u2192 hot tag \u00b7 Esc Search \u00b7 Ctrl+Enter Filename")
+        self.shortcut_legend_label = QLabel("Keystrokes = Alt+K or [?]")
         self.shortcut_legend_label.setAlignment(Qt.AlignCenter)
         self.shortcut_legend_label.setStyleSheet("color: #fff; font-size: 12px;")
         bottom_layout.addWidget(self.shortcut_legend_label, stretch=1)
         bottom_layout.addStretch()
         self.help_btn2 = QPushButton("?")
-        self.help_btn2.clicked.connect(self.open_readme)
+        self.help_btn2.clicked.connect(self.toggle_keystroke_popup)
+        self.help_btn2.setStyleSheet("background-color: yellow; color: #000; font-weight: bold;")
         self.help_btn2.setFixedWidth(28)
         self.help_btn2.setMinimumHeight(36)
         bottom_layout.addWidget(self.help_btn2)
@@ -1182,7 +1202,7 @@ class TaggeristList(QFrame):
                 self.parent.config.set('DISPLAY', 'TAGLIST_FONT_SIZE', str(self.taglist_font_size))
                 self.parent.config.set('DISPLAY', 'TAGLIST_COLUMNS', str(self.taglist_columns))
         except Exception as e:
-            with open('Taggerist_v37.02-buglog.txt', 'a') as dbg:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as dbg:
                 dbg.write(f"save_display_settings ERROR: {e}\n")
 
     def setup_taglist_window(self, layout):
@@ -1238,6 +1258,8 @@ class TaggeristList(QFrame):
         line_h = self.tag_height + spacing_px
         if self.taglist_rows > 0:
             rows_fit = int(self.taglist_rows)
+        elif viewport_h > 0 and line_h > 0:
+            rows_fit = max(1, int(viewport_h // line_h))
         else:
             rows_fit = max(1, -(-num_tags // columns))
         self.grid_layout_widget.setSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
@@ -1550,6 +1572,15 @@ class TaggeristList(QFrame):
         self.brackets_edit.clear()
         self.search_edit.setFocus()
 
+    def clear_search_and_brackets(self):
+        if hasattr(self, 'search_edit') and self.search_edit:
+            self.search_edit.clear()
+        if hasattr(self, 'brackets_edit') and self.brackets_edit:
+            self.brackets_edit.clear()
+        if hasattr(self, 'search_results') and self.search_results:
+            self.search_results.hide()
+        self._hot_chip = 0
+
     def _visible_chips(self):
         return [c for c in self.search_chips if c.tag]
 
@@ -1575,12 +1606,44 @@ class TaggeristList(QFrame):
         self._hot_chip = hot
         self._paint_hot_chip()
 
+    def on_filename_selection(self):
+        cursor = self.filename_edit.textCursor()
+        if cursor.hasSelection():
+            sel = cursor.selectedText().replace('\u2028', ' ').strip()
+            if sel and hasattr(self, 'search_edit') and self.search_edit:
+                self.search_edit.setText(sel)
+
+    def escape_key(self):
+        if hasattr(self, 'filename_edit') and self.filename_edit:
+            cursor = self.filename_edit.textCursor()
+            if cursor.hasSelection():
+                cursor.clearSelection()
+                self.filename_edit.setTextCursor(cursor)
+        if hasattr(self, 'search_edit') and self.search_edit:
+            self.search_edit.clear()
+            self.search_edit.setFocus()
+
+    def _cycle_focus_box(self, step):
+        boxes = [w for w in (self.filename_edit, self.brackets_edit, self.search_edit) if w]
+        if not boxes:
+            return
+        focused = self.focusWidget()
+        idx = -1
+        for i, w in enumerate(boxes):
+            if focused is w:
+                idx = i
+                break
+        boxes[(idx + step) % len(boxes)].setFocus()
+
     def search_keyPressEvent(self, event):
         if event.key() == Qt.Key_Right:
             self.move_hot_chip(1)
             return
         if event.key() == Qt.Key_Left:
             self.move_hot_chip(-1)
+            return
+        if event.key() == Qt.Key_Up and self.brackets_edit:
+            self.brackets_edit.setFocus()
             return
         QLineEdit.keyPressEvent(self.search_edit, event)
 
@@ -1589,6 +1652,14 @@ class TaggeristList(QFrame):
             self.search_edit.setFocus()
             self._hot_chip = 0
             self._paint_hot_chip()
+            return
+        if event.key() == Qt.Key_Down and self.search_edit:
+            self.search_edit.setFocus()
+            self._hot_chip = 0
+            self._paint_hot_chip()
+            return
+        if event.key() == Qt.Key_Up and self.filename_edit:
+            self.filename_edit.setFocus()
             return
         QLineEdit.keyPressEvent(self.brackets_edit, event)
 
@@ -1602,6 +1673,84 @@ class TaggeristList(QFrame):
                 parts[i] = self.display_names.get(full, full)
         return '|'.join(parts)
 
+    def _strip_date_parts(self, text):
+        text = re.sub(r'(?:' + self._ci_alt() + r')?\d{2,4}\.\d{4}-\d{4}(?:\.\d+)?', ' ', text)
+        text = re.sub(r'(?:' + self._ci_alt() + r')?(?:19|20)\d{2}(?:[-._ ]+\d{1,4}){1,6}', ' ', text)
+        text = text.replace('_wm', ' ')
+        text = re.sub(r'(?:' + self._ci_alt() + r')+', ' ', text)
+        return ' '.join(text.split())
+
+    def _unknown_tags(self, filename):
+        known = {t for n in (1, 2, 3) for t in self.list_tags.get(n, set())}
+        known |= set(self.conversion_table.values())
+        known |= set(self.all_tags)
+        known |= set(self.display_names.values())
+        known |= {t.lower() for t in known}
+        unknown = []
+        root, _ext = self._split_extension(filename)
+        for seg in root.split('|'):
+            seg = seg.strip()
+            if not seg or seg.lower() in known:
+                continue
+            candidates = []
+            for item in self._bracketed_items(seg):
+                item = self._strip_date_parts(item).strip()
+                if item and item.lower() not in known:
+                    candidates.append(item)
+            bare = self._strip_date_parts(re.sub(r'\[[^\[\]]*\]', ' ', seg)).strip()
+            if bare and bare.lower() not in known:
+                candidates.append(bare)
+            for c in candidates:
+                if c not in unknown:
+                    unknown.append(c)
+        return unknown
+
+    def prompt_unknown_tags(self, filename):
+        self._prompt_filename = filename
+        unknown = self._unknown_tags(filename)
+        if not unknown:
+            return
+        dlg = QDialog(self)
+        dlg.setWindowTitle("Unknown tags in filename")
+        dlg.setLayout(QVBoxLayout())
+        dlg.layout().addWidget(QLabel("These words are not in the taglist.\nSelect the ones to ADD to the current taglist:"))
+        boxes = []
+        for word in unknown:
+            cb = QCheckBox(word)
+            cb.setChecked(True)
+            dlg.layout().addWidget(cb)
+            boxes.append((cb, word))
+        btns = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        btns.accepted.connect(dlg.accept)
+        btns.rejected.connect(dlg.reject)
+        dlg.layout().addWidget(btns)
+        if dlg.exec() != QDialog.Accepted:
+            return
+        chosen = [w for cb, w in boxes if cb.isChecked()]
+        if not chosen:
+            return
+        target = self.active_taglist_path
+        if not target or not os.path.exists(target):
+            QMessageBox.warning(self, "Taglist not found", "Active taglist file not found; cannot add tags.")
+            return
+        marked = []
+        for w in chosen:
+            fname = getattr(self, '_prompt_filename', filename)
+            if w in self._bracketed_items(fname):
+                marked.append(f"[{w}]")
+            elif f"|{w}|" in fname:
+                marked.append(f"|{w}|")
+            else:
+                marked.append(w)
+        try:
+            with open(target, 'a', newline='') as f:
+                for w in marked:
+                    f.write(f"{w},{w}\n")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Could not append to taglist: {e}")
+            return
+        self.parent.refresh_taglist()
+
     def save_and_next(self):
         # NEW.4: auto-sort the tagline before saving (config: PROCESS_AUTO_SORT)
         auto_sort = strip_comment(self.parent.get_config('DISPLAY', 'PROCESS_AUTO_SORT'))
@@ -1612,6 +1761,7 @@ class TaggeristList(QFrame):
             QMessageBox.warning(self, "Error", "Filename cannot be empty")
             return
         new_filename = self._normalize_tag_segments(new_filename)
+        self.prompt_unknown_tags(new_filename)
         for item in self._bracketed_items(new_filename):
             self._append_tag_candidates([item])
         if not new_filename.lower().endswith(('.jpg', '.jpeg', '.png')):
@@ -1623,18 +1773,18 @@ class TaggeristList(QFrame):
 
         save_error = None
         try:
-            shutil.copy2(old_path, new_path)
-            os.utime(new_path, (os.path.getatime(new_path), int(datetime.now().timestamp())))
-            if old_path != new_path:
+            if os.path.abspath(old_path) != os.path.abspath(new_path):
+                shutil.copy2(old_path, new_path)
+                os.utime(new_path, (os.path.getatime(new_path), int(datetime.now().timestamp())))
                 os.remove(old_path)
-            self.parent.save_settings()
+                self.parent.save_settings()
         except Exception as e:
             save_error = e
         self.parent.tf.refresh_lists()
         if save_error is not None:
             QMessageBox.critical(self, "Error", f"Error saving: {save_error}")
             return
-        self.parent.tf.scroll_to_file(new_filename, proc=True)
+        QTimer.singleShot(0, lambda fn=new_filename: self.parent.tf.scroll_to_file(fn, proc=True))
         if self.search_edit:
             self.search_edit.clear()
             self.search_edit.setFocus()
@@ -1671,6 +1821,126 @@ class TaggeristList(QFrame):
         if hasattr(self, 'search_edit') and self.search_edit:
             self.search_edit.setFocus()
 
+    def keystrokes_file_path(self):
+        try:
+            cfg_dir = strip_comment(self.parent.get_config('DIRECTORIES', 'CONFIGS_DIR'))
+        except Exception:
+            cfg_dir = ''
+        if not cfg_dir or not os.path.isdir(os.path.expanduser(cfg_dir)):
+            cfg_dir = os.path.dirname(self.parent.config_path) or '.'
+        return os.path.join(os.path.expanduser(cfg_dir), 'Taggerist_Keystrokes.txt')
+
+    def default_keystrokes_text(self):
+        return (
+            "PROCESS / SKIP\n"
+            "Process = Alt+P (or Enter)\n"
+            "Skip = Alt+S\n"
+            "\n"
+            "FILENAME\n"
+            "Sort Filename = Alt+T\n"
+            "Reduce = Alt+R\n"
+            "Clear Filename = Alt+L or Alt+C\n"
+            "Fix Date = Alt+D\n"
+            "\n"
+            "BOXES\n"
+            "Focus Boxes = Alt+Arrow keys\n"
+            "Brackets to Search = Arrow Down\n"
+            "Search to Brackets = Arrow Up\n"
+            "Filename to Brackets = Arrow Down\n"
+            "Clear Search+Brackets = Alt+Delete\n"
+            "Search Box = Esc (also clears selection + Search)\n"
+            "Filename Box = Ctrl+Enter\n"
+            "\n"
+            "TAGS\n"
+            "Hot tag = Arrow Left / Arrow Right (in Search)\n"
+            "Accept hot tag = Enter\n"
+            "CI buttons = Alt+1 / Alt+2 / Alt+3\n"
+            "\n"
+            "HELP\n"
+            "This popup = Alt+K or [?]"
+        )
+
+    def _save_config_line(self, section, key, value):
+        cfg_path = self.parent.config_path
+        lines = []
+        try:
+            with open(cfg_path, 'r', encoding='utf-8') as f:
+                lines = f.read().split('\n')
+        except Exception:
+            lines = []
+        want = f"{key} = {value}"
+        cur_section = None
+        replaced = False
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if stripped.startswith('[') and stripped.endswith(']'):
+                cur_section = stripped.strip('[]').lower()
+                continue
+            if cur_section == section.lower() and '=' in line:
+                head = line.split('=', 1)[0].strip().lower()
+                if head == key.lower():
+                    lines[i] = want
+                    replaced = True
+                    break
+        if not replaced:
+            idx = next((i for i, l in enumerate(lines) if l.strip().lower() == '[' + section.lower() + ']'), None)
+            if idx is None:
+                lines.append('[' + section + ']')
+                idx = len(lines) - 1
+            lines.insert(idx + 1, want)
+        with open(cfg_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(lines))
+
+    def toggle_keystroke_popup(self):
+        if getattr(self, 'keystroke_window', None) is not None:
+            self.keystroke_window.close()
+            return
+        path = self.keystrokes_file_path()
+        text = None
+        if os.path.exists(path):
+            try:
+                text = open(path, 'r', encoding='utf-8').read()
+            except Exception:
+                text = None
+        if not text or not text.strip():
+            text = self.default_keystrokes_text()
+            try:
+                with open(path, 'w', encoding='utf-8') as f:
+                    f.write(text)
+            except Exception:
+                pass
+        from PySide6.QtWidgets import QTextBrowser
+        win = QWidget(self, Qt.Tool)
+        win.setWindowTitle('Taggerist Keystrokes')
+        lay = QVBoxLayout(win)
+        lay.setContentsMargins(4, 4, 4, 4)
+        browser = QTextBrowser()
+        browser.setPlainText(text)
+        browser.setStyleSheet('color: #fff; background-color: #000; font-size: 13px;')
+        lay.addWidget(browser)
+        btn = QPushButton('Close')
+        btn.clicked.connect(win.close)
+        btn.setStyleSheet('color: #000; background-color: yellow; font-weight: bold;')
+        lay.addWidget(btn)
+        win.resize(340, 520)
+        try:
+            geo = strip_comment(self.parent.get_config('DISPLAY', 'KEYSTROKE_POPUP_GEOMETRY'))
+            if geo:
+                win.restoreGeometry(bytes.fromhex(geo))
+        except Exception:
+            pass
+        def _closing(event):
+            try:
+                self._save_config_line('DISPLAY', 'KEYSTROKE_POPUP_GEOMETRY',
+                                       win.saveGeometry().toHex().data().decode())
+            except Exception:
+                pass
+            event.accept()
+        win.closeEvent = _closing
+        win.show()
+        self.keystroke_window = win
+        self.keystroke_window.destroyed.connect(lambda: None if not hasattr(self, 'keystroke_window') else setattr(self, 'keystroke_window', None))
+
     def open_readme(self):
         help_path = os.path.expanduser(strip_comment(self.parent.get_config('DIRECTORIES', 'HELP_FILE_PATH')))
         if os.path.exists(help_path):
@@ -1705,6 +1975,12 @@ class TaggeristList(QFrame):
             return
         m = re.search(r'(?P<ci>(?:' + self._ci_alt() + r'))?(?P<ds>(?:19|20)\d{2}(?:[-._ ]+\d{1,4}){1,6})', root)
         if not m:
+            m2 = re.search(r'(?P<ci>(?:' + self._ci_alt() + r'))?(?P<ds>(?:1[0-9]|2[0-9]|30)(?:[-._ ]+\d{1,4}){2,6})', root)
+            if m2 and 10 <= int(re.split(r'[-._ ]+', m2.group('ds'))[0]) <= 30:
+                ds = '20' + m2.group('ds')
+                root = root[:m2.start('ds')] + ds + root[m2.end('ds'):]
+                m = re.search(r'(?P<ci>(?:' + self._ci_alt() + r'))?(?P<ds>(?:19|20)\d{2}(?:[-._ ]+\d{1,4}){1,6})', root)
+        if not m:
             QMessageBox.information(self, "No camera date found", "No camera-style date (like 2024-09-20 00-52-28) found in the filename.\n\nIf the file has no time part, the converted stamp uses zeros for time.")
             return
         parts = re.split(r'[-._ ]+', m.group('ds'))
@@ -1725,6 +2001,8 @@ class TaggeristList(QFrame):
         if re.search(r'(?P<ci>(?:' + self._ci_alt() + r'))?(?P<ds>\d{2,4}\.\d{4}-\d{4}\.\d+)', seg):
             return True
         if re.search(r'(?:^|[^\d])(19|20)\d{2}[-._ ]?\d{1,2}[-._ ]?\d{1,2}', seg):
+            return True
+        if re.search(r'(?:^|[^\d])(1[0-9]|2[0-9]|30)[-._ ]+\d{1,2}[-._ ]+\d{1,2}([-._ ]+\d{1,2}){1,4}', seg):
             return True
         if re.fullmatch(r'(?:' + self._ci_alt() + r')?', seg):
             return True
@@ -1754,7 +2032,7 @@ class TaggeristList(QFrame):
                     with open(path, 'a', encoding='utf-8') as f:
                         f.write(item + '\n')
             except Exception as e:
-                with open('Taggerist_v37.02-buglog.txt', 'a') as dbg:
+                with open('Taggerist_v37.05-buglog.txt', 'a') as dbg:
                     dbg.write(f"tag_candidates ERROR: {e}\n")
 
     def sort_filename_tags(self):
@@ -1777,6 +2055,9 @@ class TaggeristList(QFrame):
         known.update(str(v).lower() for v in self.conversion_table.values())
         first_tag_idx = next((i for i, p in enumerate(parts) if p.lower() in known), None)
         if first_tag_idx is None:
+            QMessageBox.information(self, "Sort Tagline", "No recognized tags in this filename to sort.\n\nWords not in any taglist are left in place; add them to a taglist first (the PROCESS prompt can do it).")
+            if hasattr(self, 'search_edit') and self.search_edit:
+                self.search_edit.setFocus()
             return
         leading = parts[:first_tag_idx]
         tags = [p for p in parts[first_tag_idx:] if p.lower() in known]
@@ -1814,6 +2095,7 @@ class TaggeristList(QFrame):
         self.extract_tags_from_filename(kept + ext)
         self.update_tag_highlights()
         self.update_length_monitor()
+        self.clear_search_and_brackets()
         if hasattr(self, 'search_edit') and self.search_edit:
             self.search_edit.setFocus()
 
@@ -1860,7 +2142,7 @@ class TaggeristList(QFrame):
                     date_likes.append(t)
                 else:
                     dropped.append(t)
-            with open('Taggerist_v37.02-buglog.txt', 'a') as dbg:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as dbg:
                 dbg.write(f"reduce: known-tag pool = {len(known)} (list_tags: {sum(len(v) for v in self.list_tags.values())}, conversions: {len(self.conversion_table)}, all_tags: {len(self.all_tags)})\n")
                 for t in tags:
                     dbg.write(f"reduce: kept '{t}'\n")
@@ -1878,6 +2160,7 @@ class TaggeristList(QFrame):
         self.extract_tags_from_filename(result + ext)
         self.update_tag_highlights()
         self.update_length_monitor()
+        self.clear_search_and_brackets()
         if hasattr(self, 'search_edit') and self.search_edit:
             self.search_edit.setFocus()
 
@@ -2224,7 +2507,7 @@ class TaggeristFiles(QFrame):
     def handle_single_click(self, item):
         try:
             # Debugging: Log the start of the single-click handler
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("handle_single_click called at " + str(datetime.now()) + "\n")
 
             # Get the table and row that was clicked
@@ -2232,19 +2515,19 @@ class TaggeristFiles(QFrame):
             row = item.row()
 
             # Debugging: Log the table object ID
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("  -> Clicked table ID: " + str(id(table)) + "\n")
 
             # Get the filename from the clicked row
             filename_item = table.item(row, 0)
             if not filename_item:
-                with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+                with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                     f.write("  -> No filename_item at row " + str(row) + "\n")
                 return
             filename = filename_item.text()
 
             # Debugging: Log the filename
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("  -> Filename: " + str(filename) + "\n")
 
             # Determine the directory (PROC or UNPROC)
@@ -2256,11 +2539,11 @@ class TaggeristFiles(QFrame):
             filepath = os.path.join(directory, filename)
 
             # Debugging: Log the filepath
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("  -> Filepath: " + str(filepath) + "\n")
 
             # Clear highlights in BOTH tables (PROC and UNPROC) regardless of which was clicked
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("  -> Clearing highlights in proc_table (ID: " + str(id(self.proc_table)) + ") and unproc_table (ID: " + str(id(self.unproc_table)) + ")\n")
             self.clear_highlights(self.proc_table)
             self.clear_highlights(self.unproc_table)
@@ -2284,7 +2567,7 @@ class TaggeristFiles(QFrame):
             processed_filename = self.process_filename(filename)
 
             # Debugging: Log the processed filename
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("  -> Processed Filename: " + str(processed_filename) + "\n")
 
             # Load the processed filename into FilenameEditBox
@@ -2299,19 +2582,19 @@ class TaggeristFiles(QFrame):
             self.parent.tv.load_file(filepath)
 
             # Debugging: Log successful completion
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("  -> Successfully loaded file into TV\n\n")
             if hasattr(self.parent.tl, 'search_edit') and self.parent.tl.search_edit:
                 self.parent.tl.search_edit.setFocus()
 
         except Exception as e:
             # Debugging: Log any errors
-            with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+            with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                 f.write("  -> ERROR: " + str(e) + "\n\n")
 
     def clear_highlights(self, table):
         # Debugging: Log the table being cleared and its object ID
-        with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+        with open('Taggerist_v37.05-buglog.txt', 'a') as f:
             f.write("  -> Clearing highlights in table: " + str(table) + " (ID: " + str(id(table)) + ")\n")
         
         # Clear current cell selection
@@ -2323,7 +2606,7 @@ class TaggeristFiles(QFrame):
                 if item:
                     item.setBackground(QColor("#000"))
                     # Debugging: Log the row and column being cleared
-                    with open('Taggerist_v37.02-buglog.txt', 'a') as f:
+                    with open('Taggerist_v37.05-buglog.txt', 'a') as f:
                         f.write("    -> Cleared row " + str(row) + ", col " + str(col) + "\n")
 
     def process_filename(self, filename):
