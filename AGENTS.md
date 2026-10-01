@@ -83,3 +83,5 @@ new file (full app), not just a diff.
 - When the Taggerist script is modified, the last two digits of the version number (i.e. after the decimal point) are incremented AND the agent provides a link for download of the full, revised script.  (It is too big for copy/paste.)
 - Explanations of why bits of code are problematic or how they are fixed should be described in simplistic, brief narrative form to avoid cognitive overload of an elderly human brain.
 - ALWAYS provide the RAW download link for script files (raw.githubusercontent.com), not the GitHub web-page link. (Jack once saved a web page instead of the script by mistake — it won't run.)
+- When asking the user questions with multiple-choice options, ALWAYS include an
+  'Other' choice so he can explain nuances in his own words.
