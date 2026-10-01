@@ -46,18 +46,8 @@ Taggerist allows you to **individually tag image files** by embedding metadata *
 
 ## ⌨️ Keyboard Shortcuts
 
-- **Alt+P** — PROCESS the current file and move to the next
-- **Alt+S** — SKIP the current file
-- **Alt+R** — REDUCE the filename (strip redundant segments, keep tags/brackets/dates)
-- **Alt+L** or **Alt+C** — CLEAR the filename edit box (two keys, since some Linux desktops reserve Alt+C)
-- **Alt+Delete** — clear the Search and Brackets boxes
-- **Alt+T** — SORT the tags in the filename alphabetically
-- **Alt+D** — FIX DATE: convert a camera-style date (e.g. `2024-08-20 01-25-25-024`) into a Taggerist datestamp
-- **Alt+Delete** — clear the Search and Brackets boxes
-- **Alt+1 / Alt+2 / Alt+3** — press the 1st / 2nd / 3rd CI button (adds CI symbol + date prefix)
-- **Alt+← / Alt+→ / Alt+↑ / Alt+↓** — move focus between the Filename edit box, Brackets box and Search box
-- **← / →** (in the Search box) — move the highlight (hot tag) through the search-result chips
-- **↑ / ↓** (in the Search or Brackets box) — jump focus up/down between the Filename edit box, Brackets box and Search box
-- **Enter** (in Search or Brackets box) — accept the first search result / commit the bracket text
-- **Esc** — jump focus to the Search box
-- **Ctrl+Enter** — jump focus to the Filename edit box
+All keystroke shortcuts live in a movable popup window inside the app:
+
+- **Alt+K** or the yellow **[?]** button — open/close the Keystrokes popup
+- The popup can be dragged anywhere on your screen(s); Taggerist remembers its position
+- The shortcut list itself is plain text in `Taggerist_Keystrokes.txt` (in the config directory) — edit it freely to change wording, order, or grouping

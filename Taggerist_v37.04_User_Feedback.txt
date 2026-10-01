@@ -1,0 +1,91 @@
+Taggerist_v37.04_User_Feedback.txt
+=======
+(in TASKS.md, Remove 'w' from those marked with RESOLVED below)
+
+#55 NOT RESOLVED
+'Error saving: '/home/jack/Pictures/TAGGERIST.test_folders/PROC/!!19.1015-1150.4400|!Wattersonville|[!woods]withlonggrass.JPG' and '/home/jack/Pictures/TAGGERIST.test_folders/PROC/!!19.1015-1150.4400|!Wattersonville|[!woods]withlonggrass.JPG' are the same file'
+---
+#56 NOT RESOLVED
+	a.  left/right arrows move focus between BracketsBox and SearchBox. (OK, good)
+	b. Up arrow moved focus to FilenameEditBox (OK, good)
+	c. Down arrow does not function. **NOT RESOVED**
+	d. If I clicked in SearchResults row, left/right arrows functioned. (OK, good). 
+	e.  Pressing  <Enter> then copied the selected search item to FilenameEditBox. (OK, good)
+---
+NEW BUG: [SortTagline] button is NOT functioning
+---
+NEW BUG: Manually adding [brackets] to text in FilenameEditBox does not color the brackets blue.
+--
+#60 RESOLVED
+---
+NEW FEATURE:  Selecting text in FilenameEditBox copies it to SearchBox. <Esc> clears both selection and SearchBox. (Add to README.me)
+---
+NEW FEATURE: 
+	a1.  Rows are dynamically added to LegendBox as needed to accomodate additional text. 
+	a2. Text  wraps to additional  row. 			
+	a3.  Create meachanism to (dynamically) adjust bottom margin on Taglist accordingly)
+	b. Reverse order in each item as function 1st, followed by KeystrokeShortcut. Add '='.  E.g. 'Alt-P Process' --> 'Process = Alt=P'
+	c. Seperate each keystroke item with '|'. Attempt to consolidate similarly functional items with '||>' and '<||'. ( E.g. '||>Alt-P=Process | Alt-S = Skip | ... <||')
+...	d. Text in LegendBox is set in Config.txt
+(Remind me to download updated config file from Main when done.)
+---
+NOTE   I have changed "taglist_columns' in Taggerist.config.txt to = 25 (was 16). Committed.
+----
+NOTE   Check to make sure the README.md has been updated to include all keystroke shortcuts +brief description.
+---
+#61 RESOLVED
+---
+#62  NOT RESOLVED (need change)
+	a.  Here is filename in FilenameEditBox after I [Fix date] and added [!!],  (I manually added brackets and pipes.)
+
+'!!19.1016-1100.2000[EastBradyBend]fromOutlook|foggy|.JPG'
+
+	b.  Pressed [Process]
+
+	c.  Popup asks add these to Taglist?  ( '{} = checkbox )
+		{} EastBradyBend
+		{} fromOutlook
+		{} foggy
+
+	d.  I de-delected 'fromOutlook and then clicked [OK]
+
+	e.  Focus moved to next file in queue
+
+	f. These items were appended to the CSV:
+		EastBradyBend
+		foggy
+
+	g.  Pressed [Refresh Tags].   Found both terms at bottom of CSV list with no prefix.
+
+___This is all OK, Good, so far.  ___
+
+I found both as the last items follwing  'yel' (yellow) in (sorted) 'COLOR' category in TaglistDisplay.  No 'CLR_' prefix (or other prefix) was asigned to them in CSV yet.
+
+***CHANGE***:  when adding *unrecognized* [words] or |words| from FilenameEditBox to the CSV, *include the brackets or pipes with the words.*
+I.e. the terms in #62.f above should have been appened to the CSV as:
+ 		[EastBradyBend]
+		|foggy|
+
+---
+#63 RESOLVED 
+---
+#64 RESOLVED
+---
+#65 RESOLVED
+--
+#66 RESOLVED
+---
+#67 RESOLVED
+---
+#52 ADD
+Add recognion of similar camera style with two-digit year:
+e.g. '19-10-13-15-05-41'
+Rule: IF first two digits of camera-style date fall within range of 10-30, THEN assume it is a year AND prefix it with '20'.
+E.g. e.g. '19-10-13-15-05-41' --> e.g. '2019-10-13-15-05-41'
+---
+
+QUESTIONS????
+
+
+
+
