@@ -1860,6 +1860,37 @@ class TaggeristList(QFrame):
             "This popup = Alt+K or [?]"
         )
 
+    def _save_config_line(self, section, key, value):
+        cfg_path = self.parent.config_path
+        lines = []
+        try:
+            with open(cfg_path, 'r', encoding='utf-8') as f:
+                lines = f.read().split('\n')
+        except Exception:
+            lines = []
+        want = f"{key} = {value}"
+        cur_section = None
+        replaced = False
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if stripped.startswith('[') and stripped.endswith(']'):
+                cur_section = stripped.strip('[]').lower()
+                continue
+            if cur_section == section.lower() and '=' in line:
+                head = line.split('=', 1)[0].strip().lower()
+                if head == key.lower():
+                    lines[i] = want
+                    replaced = True
+                    break
+        if not replaced:
+            idx = next((i for i, l in enumerate(lines) if l.strip().lower() == '[' + section.lower() + ']'), None)
+            if idx is None:
+                lines.append('[' + section + ']')
+                idx = len(lines) - 1
+            lines.insert(idx + 1, want)
+        with open(cfg_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(lines))
+
     def toggle_keystroke_popup(self):
         if getattr(self, 'keystroke_window', None) is not None:
             self.keystroke_window.close()
@@ -1892,16 +1923,16 @@ class TaggeristList(QFrame):
         btn.setStyleSheet('color: #000; background-color: yellow; font-weight: bold;')
         lay.addWidget(btn)
         win.resize(340, 520)
-        geo = self.parent.config.get('DISPLAY', 'KEYSTROKE_POPUP_GEOMETRY', fallback=None)
-        if geo:
-            try:
+        try:
+            geo = strip_comment(self.parent.get_config('DISPLAY', 'KEYSTROKE_POPUP_GEOMETRY'))
+            if geo:
                 win.restoreGeometry(bytes.fromhex(geo))
-            except Exception:
-                pass
+        except Exception:
+            pass
         def _closing(event):
             try:
-                self.parent.config.set('DISPLAY', 'KEYSTROKE_POPUP_GEOMETRY', win.saveGeometry().toHex().data().decode())
-                self.parent.save_settings()
+                self._save_config_line('DISPLAY', 'KEYSTROKE_POPUP_GEOMETRY',
+                                       win.saveGeometry().toHex().data().decode())
             except Exception:
                 pass
             event.accept()
