@@ -85,3 +85,38 @@ session forward per user request.)
 - #w.67: PROC scroll-to-file after refresh (deferred one event-loop tick).
 - TASKS.md: new #w.64-67; #w.59 -> #0.59; w-band z->a sort.
 - Carried on PR #18 branch (version files); TASKS/session on main.
+
+## v37.04 FEEDBACK (user, commit b4e4683)
+- RESOLVED: #60, #61, #63, #64, #66, #67 -> re-stamped 0-band; #65 almost
+  (Down arrow dead -> fixed v37.05).
+- #55 BUG: re-processing the PROC file '!!19.1015-1150.4400|!Wattersonville|
+  [!woods]withlonggrass.JPG' raised "are the same file" — PROCESS copied the
+  file onto itself (name unchanged). v37.05: unchanged-name re-process is a
+  silent no-op.
+- #56: Down arrow now moves down the box stack.
+- #62 test otherwise OK; CHANGE per user: unknown words append to the CSV
+  WITH their delimiters ([EastBradyBend], |foggy|) as not-yet-edited markers.
+- NEW BUG: [Sort Tagline] dead on his test file — no recognized tags in it;
+  now explains itself instead of silence.
+- NEW BUG: manually typed brackets didn't color blue; now re-rendered on
+  every bracket keystroke.
+- NEW FEATURE: FilenameEditBox selection copies to Search; ESC clears both.
+- #52 ADD: two-digit-year camera dates (19-10-13-15-05-41) recognized when
+  the year digits are 10-30 (assumed 20yy) — in _is_date_like and Fix Date.
+- CONFIG: user set taglist_columns=25 (his commit 1623fae).
+- LEGEND: user proposed (and we agreed) a movable keystroke POPUP driven by
+  an editable Taggerist_Keystrokes.txt; toggled by [?] and Alt+K; replaces the
+  bottom-row legend and the legend-rework items; README trimmed to point at
+  the popup. AGENTS.md: always offer 'Other' in multiple-choice questions.
+
+## v37.05 BUILT (agent)
+- Keystroke popup (#w.72): toggle [?]/Alt+K; text from
+  Taggerist_Keystrokes.txt (default list auto-created on first open);
+  draggable, position saved in config KEYSTROKE_POPUP_GEOMETRY; legend strip
+  now reads 'Keystrokes = Alt+K or [?]'.
+- #w.69 Sort Tagline feedback message; #w.70 bracket re-render on typing;
+  #w.71 selection->Search + ESC clears both; #w.55 same-file no-op; #w.56
+  Down arrow; #w.62 delimiter-preserving CSV append; #0.52 two-digit-year
+  camera dates (stub-tested: '19-10-13-15-05-41' -> '2019-10-13-15-05-41').
+- TASKS.md: #w.60/61/63-67 -> 0-band; new #w.69-72; z->a sort.
+- Carried on PR #18 branch; TASKS/session/README on main.
