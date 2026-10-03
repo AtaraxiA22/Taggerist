@@ -3,11 +3,11 @@
 # Personal Configurations (fallback defaults; overridden by Taggerist.config.txt)
 TAGLIST_1 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[NC].csv,©,white,red'
 TAGLIST_2 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[Xpix].csv,@,white,yellow'
-TAGLIST_3 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv,!!,white,green'
+TAGLIST_3 = '/home/jack/MEGA/TAGGERIST/TAGGERIST.configs/Taggerist.taglist.[RW].csv,^,white,green'
 
 TAGLIST_ID_1 = '©'
 TAGLIST_ID_2 = '@'
-TAGLIST_ID_3 = '!!'
+TAGLIST_ID_3 = '^'
 
 DELIMITERS = ['|', '`']
 
@@ -1351,6 +1351,11 @@ class TaggeristList(QFrame):
         self.pathname_edit.setText(filepath)
         self.extract_tags_and_datestamp(filepath)
         converted_filename = self.convert_delimiters_to_pipes(os.path.basename(filepath))
+        try:
+            if datetime.fromtimestamp(os.path.getmtime(filepath)) < datetime(2026, 10, 1):
+                converted_filename = converted_filename.replace('^', '')
+        except OSError:
+            pass
         self.filename_edit.setText(converted_filename)
         self.selected_tags.clear()
         self.extract_tags_from_filename(converted_filename)
