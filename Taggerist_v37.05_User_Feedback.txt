@@ -1,0 +1,41 @@
+Taggerist_v37.05_User_Feedback.txt
+============
+#72 NOT RESOLVED
+ The keystoke window looks nice and works well the first time I pressed [?].  BUT, then I closed the popup out. When I tried [?] again, nothing happened. No popup. Same for Alt-K. Works the first tie but not a second time.
+
+BTW, I do npot see the txt file for the Help popup in Main. Am I missing it?
+---
+#71  OK/RESOLVED
+---
+
+#70 OK/RESOLVED
+---
+#69 OK/REOLVED
+---
+NEW FEATURE:  in many applications with a search box, at the right margin in the box there is an icon of a small box which has arrow and an 'x' in it *something like* this:
+  ___
+<_x|    (the 'x' is underlined)
+
+Clicking on the icon clears the text from the searchbox.
+Please install this in Taggerist.  If the icon in unavailable, '<x|' will suffice.
+---
+NEW FEATURE 
+ADD [Select2Tags] button. 
+Location: Between Searchbox and [Edit Tags].
+This will append *any* selected text in the Taggerist window to the taglist . (Action checks to see if any existing tags contain selected text. If so, error box appears with this text: "Selected word exists in these existing tags. {list of tags} Continue append to list? Yes/No."  If no, selection clears (not the words) and focus returns to the originating location. 
+---
+BUG: [Fix Date] 
+Original filename: 190915-58-55tippleonAlleghenyRiver.JPG
+Pressed [Fix Date]
+Result: 190915.5855-0000.0000tippleonAlleghenyRiver.JPG
+Suggest error window: "Valid date format not found. [Return]"
+---
+#62 OK/Resolved
+---
+#56 NOT RESOLVED  (arrow keys)
+Arrow keys move from FilenameEditBox to SearchBx to BracketBox.  OK/Good
+NOT RESOLVED: Arrow keys should also go down to into SearchHitBox to allow selection of Found tags to be prefixed to filename in FilenameEditBox.
+---
+#55 OK/RESOLVED
+
+
