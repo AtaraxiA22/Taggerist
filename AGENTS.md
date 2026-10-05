@@ -77,7 +77,8 @@ new file (full app), not just a diff.
 - User ("Jack") is 78 years old Elder with minor cognitive issues.
 - User is slightly color-tone blind. Issues involving colors may be impacted by this. 
 - While an experienced computer user (~50 years) he is NOT a coder and does not 'know' python.
-- He is not familiar with the workings of Github other than simple file up/downloads and editing.
+- He is not familiar with the workings of Github other than simple file up/downloads and  editing. The AGENT manages ALL deeper GitHub mechanics (branches, PRs, merges,  conflicts, commit/repost of TASKS.md) — keep the user's side to upload/download only  (standing rule @26.1005).
+- TASKS.md workflow (user-set @26.1005): the user edits TASKS.md DIRECTLY (no more  User_Feedback files), removing 'w' from resolved IDs and adding datestamped comments;  he uploads plain `TASKS.md` (no date in filename). On upload, the agent: (1) sorts the  ID column z→a, (2) ensures at least 3 blank rows at the top of the grid for new  entries, (3) commits the result to main. SOP — no prompting needed.
 - He prefers not to see snippets of code or codeboxes except in rare cases.
 - He does not do 'surgical' edits of the script.
 - When the Taggerist script is modified, the last two digits of the version number (i.e. after the decimal point) are incremented AND the agent provides a link for download of the full, revised script.  (It is too big for copy/paste.)
