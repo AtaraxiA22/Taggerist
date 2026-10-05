@@ -1928,6 +1928,12 @@ class TaggeristList(QFrame):
             lines.insert(idx + 1, want)
         with open(cfg_path, 'w', encoding='utf-8') as f:
             f.write('\n'.join(lines))
+        try:
+            if not self.parent.config.has_section(section):
+                self.parent.config.add_section(section)
+            self.parent.config.set(section, key, value)
+        except Exception:
+            pass
 
     def toggle_keystroke_popup(self):
         if getattr(self, 'keystroke_window', None) is not None:
