@@ -1,0 +1,71 @@
+# Taggerist Session Log — 26.1005
+(Continuation of Session_26.0930.txt. Standing context, preferences, and
+history through v37.04 live there; this file carries the session forward
+per user request.)
+
+## v37.05 SESSION — THIRD CI SYMBOL CHANGE ('!!' -> '^')
+
+- User changed the third CI (Collection ID) symbol from '!!' to '^'
+  (config-side first, like #w.51 before it). Updated in Taggerist.config.txt
+  (taglist_name_3 + taglist_id_3) and in the v37.05 fallback defaults
+  (TAGLIST_3 / TAGLIST_ID_3). Keystroke legend already just points at [?],
+  so no legend text change was needed.
+- NOTE: unlike the '=' -> '!!' change (#w.51), '!!' was NOT kept as a
+  built-in legacy symbol — files still carrying '!!' in their names are
+  not auto-recognized/highlighted by the new '^' symbol.
+- Delivered via PR #19 (draft) on branch vibe/ci-symbol-caret-e52865;
+  initially targeted v37.04, then REBASED onto v37.05 after the user
+  uploaded v37.05 files to Main (user's upload did not include the '^'
+  changes). PR #19 MERGED into Main (commit 81fdc5f).
+
+## NEW FEATURE — STRIP '^' FROM OLD FILES ON LOAD
+
+- On load into FilenameEditBox: if the file's mtime is before 2026-10-01
+  AND the name contains '^', all '^' are deleted from the in-box text
+  (TL.load_image, Taggerist_v37.05.py). Original file on disk untouched;
+  rename happens only on PROCESS as usual.
+- Caveat noted: check uses filesystem mtime, not the embedded datestamp
+  — a recently copied old file keeps its '^'. User did not request
+  datestamp-based logic (offered, declined/no reply).
+
+## BULK RENAME — RECURSIVE '^'-STRIP CLI (user-run, not in repo)
+
+- User asked for a CLI command to strip '^' from existing filenames,
+  restricted to image + video extensions (.jpg/.jpeg/.png/.gif/.mp4/.mov/
+  .avi/.mkv/.webm/.wmv/.m4v/.mpg/.mpeg/.3gp), run from the collection
+  root. Final working command:
+
+  find . -depth \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
+    -o -iname '*.gif' -o -iname '*.mp4' -o -iname '*.mov' -o -iname '*.avi' \
+    -o -iname '*.mkv' -o -iname '*.webm' -o -iname '*.wmv' -o -iname '*.m4v' \
+    -o -iname '*.mpg' -o -iname '*.mpeg' -o -iname '*.3gp' \) -name '*^*' \
+    -execdir bash -c 'for f in *^*; do [ -f "$f" ] && mv -f -- "$f" "${f//^/}"; done' \;
+
+- Gotchas hit along the way (for future reference):
+  - '*' quoting: inside SINGLE quotes a backslash is literal — '*\^*'
+    matched nothing; correct pattern is bare '*^*'.
+  - mv -i asks per-file (unwanted for hundreds of files); mv -f is silent,
+    mv -n skips collisions without clobbering.
+  - Find/mv are silent on success; a long 0%-CPU run is usually disk I/O
+    (D state), not a hang. Diagnosis chain: ps --ppid walks find -> bash
+    -> mv; mount responsiveness checked via ls.
+  - User has files on both Data-A and Data-B; the find must be run from
+    EACH collection root (find . is per-tree).
+
+## USER-SIDE INCIDENTS
+
+- Taggerist.config.txt on the user's machine got overwritten with a saved
+  GitHub HTML page (started with <!DOCTYPE html>) -> "Error loading config:
+  File contains no section headers." Cause: browser page-save instead of
+  raw-file download. Fix: download the RAW file (raw.githubusercontent /
+  file-page Raw button), never Ctrl+S on the GitHub page.
+- CI button showed old symbol because v37.05 on Main at that time did not
+  carry the '^' changes (pre-merge) — resolved by PR #19 merge.
+- User new to GitHub: draft PR had to be marked "Ready for review" before
+  the Merge button appeared; merge was then blocked by branch protection
+  ("failing merge requirements") — user resolved via Settings -> Branches.
+
+## TERMINOLOGY
+
+- In Taggerist, CI = Collection ID (the ©/@/^ symbol), NOT the DevOps
+  "Continuous Integration". Keep this in mind in future sessions.
