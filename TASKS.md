@@ -5,6 +5,9 @@ Last updated: v37.05 feedback applied (by agent)
 
 | ☐ | ID# | Item description | Comment |
 |:-:|:-:|--------------------------------------------------|--------------------------------------------------|
+| ☐ | #____ | ______ | ______ |
+| ☐ | #____ | ______ | ______ |
+| ☐ | #____ | ______ | ______ |
 | ☐ | #w.75 | v37.05: NEW BUG — [Fix Date] on '190915-58-55tippleonAlleghenyRiver.JPG' produced '190915.5855-0000.0000tippleonAlleghenyRiver.JPG' (no valid camera date was present, but Fix Date fabricated a malformed datestamp anyway). Suggested behavior: error window 'Valid date format not found. [Return]' and leave the filename untouched | NEW // awaiting build |
 | ☐ | #w.74 | v37.05: NEW FEATURE — [Select2Tags] button between the SearchBox and [Edit Tags]: appends ANY selected text in the Taggerist window to the active taglist. Before appending, check whether existing tags contain the selected text; if so show an error box: 'Selected word exists in these existing tags. {list of tags} Continue append to list? Yes/No.' On No: selection clears (the words stay) and focus returns to the originating location | NEW // awaiting build |
 | ☐ | #w.73 | v37.05: NEW FEATURE — clear-'x' icon at the right edge of the SearchBox (standard search-box affordance, like '_x|' with underlined x; '<x|' acceptable if the icon is unavailable): clicking it clears the SearchBox text | NEW // awaiting build |
