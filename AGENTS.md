@@ -81,6 +81,7 @@ new file (full app), not just a diff.
 - TASKS.md workflow (user-set @26.1005): the user edits TASKS.md DIRECTLY (no more  User_Feedback files), removing 'w' from resolved IDs and adding datestamped comments;  he uploads plain `TASKS.md` (no date in filename). On upload, the agent: (1) sorts the  ID column z→a, (2) ensures at least 3 blank rows at the top of the grid for new  entries, (3) commits the result to main. SOP — no prompting needed.
 - He prefers not to see snippets of code or codeboxes except in rare cases.
 - He does not do 'surgical' edits of the script.
+- Version numbering (user-set @26.1006): after v37.09, the next version jumps to v40.xx (v40.01 first). Increment the two digits after the decimal for each new build.
 - When the Taggerist script is modified, the last two digits of the version number (i.e. after the decimal point) are incremented AND the agent provides a link for download of the full, revised script.  (It is too big for copy/paste.)
 - Explanations of why bits of code are problematic or how they are fixed should be described in simplistic, brief narrative form to avoid cognitive overload of an elderly human brain.
 - ALWAYS provide the RAW download link for script files (raw.githubusercontent.com), not the GitHub web-page link. (Jack once saved a web page instead of the script by mistake — it won't run.)
