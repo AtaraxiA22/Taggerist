@@ -30,5 +30,5 @@ text in SearchBox which is not recognized as a tag DOES NOT move to the Brackets
 
 === 
 In TASKS.md:
-	a. Remove'w' from Resolved items
+	a. Remove'w' from Resolved item ID#'s
 	b. Sort the 'ID#' column z-->a
