@@ -1,0 +1,21 @@
+BUG:  When I first fire v37.09 up, it says it is v37.09 in the top row. When I load the first image, it reverts to v37.07.  
+---
+#w.77:  v37.09 - NOT RESOLVED-  DOES NOTHING.
+IF contents of the SearchBox is not a recognized tagname (or alternate thereof ) THEN Alt-LeftArrow (DOES NOT) move the contents of the SearchBox into the BracketsBox ELSE popup message: "Text is already a tagname".  IMPORTANT: if Alt-left-arrow keystroke has been taken by some other program, 
+---
+#3.78:  v37.09 NEW FEATURE : ADD a [<--] button between the SearchBox and the BracketsBox to do same a Alt-leftArrow in #77.
+---
+#3.79: v37.09 NEW COSMETIC: MOVE the 3 vertical CI buttons  TO between [PROCESS] and [SKIP] buttons and orient hoizontally.
+---
+#3.80: v37.09 NEW FEATURE: 
+	a.  convert Taggerist_Keystrokes.txt to  Taggerist_Keystrokes.md
+	b. In Taggerist_Keystrokes.md create 2-column table with headers: col 1='Keystrokes', col = 'Action'.
+	c. Populate table with all current keystrokes indicated in script. Sort by Keystroke as a-->z
+	d. Update [ ? ] button and Alt-K key to accomodate filename Taggerist_Keystrokes.md. 
+---
+BUG: In FilenameEditBox, in the following filename:
+	'|proj.sunroom|19.0909-2331riverviewfrom896houseporch~26.1008-1502.1545'
+	a. When pressing [CI3] (i.e. '[~]') the script did not recognize and prefix the existing date (i.e. '16.0909-2331') with '~'. Instead, it appended the filename with '~26.1008-1502.1545' (current date&time)
+---
+UNRELATED: I noticed there was no buglog for v37.09. Should there be?
+---
