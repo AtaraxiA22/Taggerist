@@ -1,0 +1,24 @@
+This is the last reply you made in the previous session before it was killed.
+===========
+
+
+Building v37.09: `~` as the third CI symbol, caret-prefix tagnames renamed to `~` in the CSV, and a warning popup when a filename starts with `~`. Let me look at the process/load code points for the popup first.
+Now I have all the pieces. Building v37.09 with `~` as the third CI symbol, the tilde-prefix tagname rename in the CSV, and the leading-`~` warning:
+Now the CSV: rename caret-prefix tagnames to tilde-prefix (preserving style flags), update config to `~`, and run stub tests:
+All tests pass. Committing — v37.09 to the PR branch, CSV/config/TASKS.md to main:
+Done — everything is on `~` (tilde) now. Here's the summary:
+
+**What was built (v37.09):**
+- The third CI button now inserts **`~`** before the datestamp (config + built-in defaults).
+- Your **59 caret-prefix tagnames** were carefully renamed to tilde-prefix (`~LOC_Cdga`, `~NOUN_pontoonboat`, …) — including display names, and the `b^`-style font flags like `CHR_b^Thalia` are untouched.
+- The legacy cleanup rule now strips a stray `^` **or** `~` only when it sits directly in front of a datestamp — so your tilde-tagged tagnames can never be eaten by mistake.
+- **The warning popup:** if you press [PROCESS] while the filename *starts* with `~`, a box appears explaining that a leading tilde means "home directory" to Linux tools and can break scripts — with the choice to proceed anyway.
+
+**Downloads (replace both files in your TAGGERIST.configs folder / app folder):**
+- Script: **[Taggerist_v37.09.py](https://raw.githubusercontent.com/AtaraxiA22/Taggerist/vibe/v37.06-fixes-e52865/Taggerist_v37.09.py)**
+- Config: **[Taggerist.config.txt](https://raw.githubusercontent.com/AtaraxiA22/Taggerist/main/Taggerist.config.txt)**
+- Taglist: **[Taggerist.taglist.[MERGED].csv](https://raw.githubusercontent.com/AtaraxiA22/Taggerist/main/Taggerist.taglist.%5BMERGED%5D.csv)**
+
+One caution for the future: when you edit the CSV in LibreOffice Calc, a cell starting with `~` is safe (no formula trigger), but remember your tagname prefixes are now tildes — so if you ever do another mass find-and-replace on `~`, you'd hit both the tags *and* the CI symbol. The two now share one character, which is fine inside Taggerist (the CI is only ever matched in front of a datestamp) — just something to keep in mind.
+
+TASKS.md #3.79 is updated (awaiting your test), and all of it rides in PR [#20](https://github.com/AtaraxiA22/Taggerist/pull/20). Test when ready and mark results in TASKS.md as usual.
