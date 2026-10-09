@@ -1,0 +1,34 @@
+Taggerist_v40.01_buglist.txt
+======
+#w78 - RESOLVED/OK
+---
+#w74 RESOLVED/OK
+--
+#w80 NOT RESOLVED  -- Help screen
+	a. Keystrokes working (Resolved)
+	b. CSA-K is working (Resolved)
+	c. 'Alt' needs to be replaced by 'CSA' in 2nd column in Taggerist_keystrokes.md.
+---
+#83 - v40.02 BUG (cosmetic): 
+	a. [PROCESS]  button: top edge is not flush witn [Clear] button.  (it needs to move up approx. 1/2 height of [Clear] button). 
+	b. CI1, CI2 and CI3  move up flush to bottom of [PRCOESS] button
+	c. [SKIP] move up flush to underside of CI buttons.
+---
+#84 - v40.02 NEW (cosmetic)
+	a. [Fix date] button needs border thickness to match border thickness of other buttons.  Expand to same size as [Clear] button
+	b.  Close space between font size & Cols and the up/down arrows to align with [fix date] button	
+	c. shift left border of Font and Size controls + [Fix Date] leftward to be flush with the TF /TV vertical border
+---
+#82  RESOLVED/OK
+---
+#79 -  RESOVED.OK
+---
+#78 RESOLVED/OK
+---
+#77 NOT RESOLVED
+text in SearchBox which is not recognized as a tag DOES NOT move to the BracketsBox on Alt-T  nor CSA-T.   Should now be mapped to CSA-left-arrow.
+
+=== 
+In TASKS.md:
+	a. Remove'w' from Resolved items
+	b. Sort the 'ID#' column z-->a
