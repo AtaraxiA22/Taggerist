@@ -50,4 +50,4 @@ All keystroke shortcuts live in a movable popup window inside the app:
 
 - **Alt+K** or the yellow **[?]** button — open/close the Keystrokes popup
 - The popup can be dragged anywhere on your screen(s); Taggerist remembers its position
-- The shortcut list itself is plain text in `Taggerist_Keystrokes.txt` (in the config directory) — edit it freely to change wording, order, or grouping
+- The shortcut list itself is a 2-column Markdown table in `Taggerist_Keystrokes.md` (in the config directory) — edit it freely to change wording; an older `.txt` version is converted automatically on first open
