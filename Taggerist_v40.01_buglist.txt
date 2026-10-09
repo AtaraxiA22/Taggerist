@@ -1,0 +1,36 @@
+Taggerist_v40.01_buglog.txt
+=======
+#77 
+	a.  new [ <-- ] tag works well. 
+	b. Alt-left-arrow still not funcional -- CHANGE to Ctrl-Super-Alt-Left-arrow.
+=== 
+v40.01: NEW CHANGE: remap _all_ Alt-key shorcuts to Ctrl-Super-Alt-(key). (Abbreviate as 'CSA') (This should fix any system override issues such as #77, I think). 
+	a. Update Taggerist_keystrokes.md 
+---
+#3.80 Tests OK.(Looks nice!)  No problems. (See NEW CHANGE above)
+---
+v40.01:BUG (cosmetic): Move  [PROCESS] button up so that top horizontal border is flush top of [Clear] button and top of FilenameEditBox borders.
+---
+v40.01:BUG (cosmetic) Change font color of CI2 (@) button to black on yellow background.
+---
+v40.01: NEW: [ <x| ] button clears SearchBox *and * BracketsBox 
+---
+v40.01: NEW: Re: [ <x| ] button:
+	a. CHANGE text to [ <x> ]
+	b. MOVE to between BracketsBox and [ <-- ] button
+----
+v40.01 NEW: When [Select2Tag] creates a new tag, highlight it in the taglist.
+---
+v40.01 BUG??  when I use [Select2Tags] something is causing some (but not all) tags in the CSV to be duplicated 0r triplicated.  The tagllist and #of tags display at bottom of TL do not seem to be affected. (I have uploaded a 'Duplication bug' version of the CSV which shows the dupllcatuin, 
+
+
+
+
+
+
+
+
+
+
+
+
