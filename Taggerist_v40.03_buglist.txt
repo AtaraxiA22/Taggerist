@@ -1,0 +1,52 @@
+Taggerist_v40.03_buglist.txt
+======
+#83 - NOT RESOLVED (see d.)
+	a. (resolved)[PROCESS]  button: top edge is not flush wiht [Clear] button.  (it needs to move up approx. 1/2 height of [Clear] button). 
+	b. (resolved)CI1, CI2 and CI3  move up flush to bottom of [PRCOESS] button
+	c. (resolved) [SKIP] move up flush to underside of CI buttons.
+	d. **NEW** v40.03:  Reduce height of [PROCESS] button by 50%. Move CI buttons and [SKIP] buttons flush upward.  Remove blank line between Processing clusters and Search/Bracket cluster.
+---
+#84 - NOT RESOLVED (see b. and c.)
+	a.  (resolved) [Fix date] button needs border thickness to match border thickness of other buttons.  Expand to same size as [Clear] button
+	b.  (not resolved) Reduce space between 'Font'/ 'Cols' and the up/down arrows to align with [fix date] button. 
+	c. (not resolved) shift left border of Font and Size controls + [Fix Date] leftward to be flush with the TF /TV vertical border
+---
+#85 - NEW BUG  
+	a. Orginal filename:  190909-23-53riverviewfrom896houseporch.JPG
+	b. Manually reformatted the numbers to valid date format: '19.0909-2353'. 
+	c. Pressed [ ~ ].  It found the date and place '~' in front of it: '~19.0909-2353'.
+	d. Added some tags:  '|~EastBrady|porch|River|~19.0909-2353 riverviewfrom896houseporch.JPG'
+	e. Pressed [Reduce]:   it removed the non-tag text (OK) but also removed the ~date:  '|~EastBrady|porch|River|.JPG'  
+(NOTE: if the ~ is still troublesome, I am not opposed to reverting to something like '!!' or '++' as date & tag prefix.)
+---
+#86 - NEW BUG: b. and c. are bugs.
+	a. Loaded file: '190915-55-35 woods ferns close-up.JPG'.  This filename appeared in FilenameEditBox (OK) AND in SearchBox. 
+	b. *BUG*: Search did not identify and highlight  'woods' and 'ferns' which are in the taglist. (Problem)
+	c. Pressed [SKIP] it moved to the next file and put the new filename in FilenamEditBox. (OK).  *BUG*: it did not clear the SearchBox.
+---
+#87 - NEW FEATURE  -- forced date formatting
+	a.  IF a series of numbers in FilenameEditBox is selected AND the [Fix Date] button is pressed (or keystroke CSA-D is employed), THEN those numbers will be reformatted as xx.xxxx-xxxx.xx
+	b. Any non-numerics originally within the selection, such as '-', '/', 'B', etc., are ignored and removed.	
+	c. Numerals will be included VERBATIM. I.e. date/time logic does NOT apply. E.g. if the selected number string is '16-18-04-75-97', it will be reformatted as '16.1804-7597' *even if* they exceed the number of months in the year or the number of hours or minutes in HHMM.
+	d.  IF there are insufficent # of numerals to form the full xx.xxxx-xxxx.xx string, THEN a partial string will be padded with 0's. E.g. '19-19-13-15' would be reformatted as '19.1913-1500.00'.
+	e. Subsequently pressing a CI button will prefix the number string with the CI identifier AND designated as immune to the effects of the [Reduce] button. 
+---
+#88 New Feature -- keypad #'s as hot keys
+	a. CSA-kp1/CSA-kp2/CSA-kp3  are *also* CI buttons
+	b. 'CI Buttons'  in Taggersist.keystrokes.md needs to be updated  to: 'CSA-1/CSA-2/CSA-3 (top row/keypad)'
+---
+#89 CHANGES to KEYSTROKES **and** Taggerist.keystrokes.md file:
+	a. Change 'ACTION' header to 'ACTION (CSA=Ctrl+Super+Alt)'
+	b. Add middle column to .md file for '[Buttons]' and populate 
+	c. CHANGE TO:  up/down arrows move focus between SearchBox, BracketBox,FilenameEditBox, SearchHitsRow (and back) 
+	d. CHANGE TO: left/right arrows *move cursor within text string* in any edit box *OR* select SearchHits.
+	e. CHANGE TO: CSA-right/left arrows MOVE contents of SearchBox <--> BracketsBox.
+	f. CHANGE 'Filename Box/ Ctrl+Enter' to 'Process filename + next/Process/CSA-Enter'
+	g. REMOVE: 'Focus Boxes/CSA+arrow keys'
+	h. REMOVE: 'Process/CSA-P or Enter'
+	i.  CHANGE:  'Search Box/Esc (also clears selection + Search)' --> 'Clear Search/Bracket box/ - / <ESC>
+	j. REMOVE: 'Search to Brackets/Arrow Up'
+	h. UPDATE Taggerist.keystrokes.md as needed. Populate 'Button' column.
+---
+(NOT RESOLVED)  Remove 'w' from Resolved item ID#'s In TASKS.md THEN re-sort '"ID#' column.
+	
